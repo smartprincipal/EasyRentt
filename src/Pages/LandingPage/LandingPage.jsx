@@ -85,7 +85,10 @@ const Landingpage = () => {
       </section>
 
       <section>
+          
           <h4>Find homes that suit your style</h4>
+
+          {/* Carousel Component */}
       </section>
     </div>
   )
