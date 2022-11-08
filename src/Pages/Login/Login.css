@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+.login-container{
+    width: 582px;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    position: relative;
+    padding: 40px 41px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    z-index: 500;
+}
+.login-heading{
+    font-weight: 700;
+font-size: 32px;
+line-height: 42px;
+color: #0D1421;
+text-align: center;
+}
+.login-paragraph{
+    font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+color: #606570;
+margin: 8px 0px 24px 0px;
+text-align: center;
+}
+.login-email, .login-password{
+    font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+color: #111111;
+display: inline-block;
+margin-bottom: 9px;
+}
+.login-email-input, .login-password-input{
+    background: #FFFFFF;
+border: 0.5px solid #FCBC0E;
+border-radius: 8px;
+display: block;
+height: 40px;
+width: 100%;
+padding: 12px;
+font-family: inherit;
+margin-bottom: 25px;
+}
+.login-checkbox-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+color: #111111;
+margin-bottom: 32px;
+}
+.checkbox-label-container{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.login-checkbox{
+    height: 25px;
+    width: 25px;
+    border: 1px solid #111111;
+    /* margin-right: 16px;    */
+}
+.login-checkbox, .checkbox-label{
+    display: block;
+}
+.login-forgot-password{
+    font-weight: 700;
+}
+.login-account-paragraph{
+    margin: 25px 0px 40px 0px;
+    color: #606570;
+    font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+text-align: center;
+}
+.login-signup{
+    font-weight: 700;
+    color: #111111;
+}
+.login-switch{
+    color: #7D7F83;
+    font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+margin-bottom: 24px;
+text-align: center;
+}
+.login-social-logos{
+    text-align: center;
+}
+.login-facebook{
+    margin-left: 43px;
+    margin-right: 43px;
+}
+.times{
+    position: absolute;
+    color: #444444;
+    font-size: 30px;
+    top: 0px;
+    right: 10px;
+}
+
+
+
