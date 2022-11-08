@@ -1,6 +1,6 @@
 import React from 'react'
 import './Locationcard.css'
-import searchicon from '../../Assets/search-icon.svg'
+
 
 
 const Locationcard = ({img, content}) => {
