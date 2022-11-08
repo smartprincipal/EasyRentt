@@ -1,0 +1,39 @@
+.navBar{
+ display: flex;
+ align-items: center;
+ background-color: #fff;
+ padding-left: 111px;
+ padding-right: 122px;
+ height: 60px;
+
+}
+.menuList{
+ display: flex;
+ /* justify-content: space-between; */
+ gap: 2rem;
+ padding-left: 200px;
+}
+li{
+ list-style-type: none;
+}
+a{
+ color: #000;
+ text-decoration: none;
+ font-family: Inter;
+font-size: 18px;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: 0em;
+text-align: center;
+
+}
+.logSig{
+ padding-left: 172px;
+}
+.log{
+ border: none;
+ outline: none;
+ background-color: transparent;
+ width: 93px;
+ height: 22px;
+}
