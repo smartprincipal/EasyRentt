@@ -3,22 +3,31 @@ import './LandingPage.css';
 import NavBar from '../../Components/NavBar/navBar'
 import Locationcard from '../../Components/Locationcard/Locationcard';
 import { useState } from 'react';
-import searchicon from '../../Assets/search-icon.svg'
+import searchicon from '../../Assets/search-icon.svg';
+import lekki from '../../Assets/lekki.svg';
+import vicIsland from '../../Assets/victoria-island.svg';
+import bananaIsland from '../../Assets/banana-island.svg';
+import ikeja from '../../Assets/ikeja.svg';
+import yaba from '../../Assets/yaba.svg';
+import magodo from '../../Assets/magodo.svg';
+import ajah from '../../Assets/ajah.svg';
+import maryLand from '../../Assets/maryland.svg';
+import oshodi from '../../Assets/oshodi.svg'
 
 
 const Landingpage = () => {
 
   // Usestate for Locationcard Component
   const [editLocation] = useState([
-    {content: "Lekki", img: searchicon}, 
-    {content: "Victoria Island", img: searchicon},
-    {content: "Banana Island", img: searchicon},
-    {content: "Ikeja", img: searchicon},
-    {content: "Yaba", img: searchicon},
-    {content: "Magodo", img: searchicon},
-    {content: "Ajah", img: searchicon},
-    {content: "MaryLand", img: searchicon},
-    {content: "Oshodi", img: searchicon},
+    {content: "Lekki", img: lekki}, 
+    {content: "Victoria Island", img: vicIsland},
+    {content: "Banana Island", img: bananaIsland},
+    {content: "Ikeja", img: ikeja},
+    {content: "Yaba", img: yaba},
+    {content: "Magodo", img: magodo},
+    {content: "Ajah", img: ajah},
+    {content: "MaryLand", img: maryLand},
+    {content: "Oshodi", img: oshodi},
       ])
 
 
@@ -51,13 +60,16 @@ const Landingpage = () => {
       </section>
 
       {/* Featured Location Section */}
-      <section>
-          <h3>Featured Locations</h3>
-          <p>Discover thousands of apartments and homes for rent in Lagos</p>
+      <section className='section2'>
 
-        <div>
+          <h3 className='section2heading'>Featured Locations</h3>
+          <p className='section2subheading'>Discover thousands of apartments and homes for rent in Lagos</p>
 
-        {editLocation.map((item) =>(
+
+          {/* Locationcard Component */}
+        <div className='locationcarddiv'>
+
+          {editLocation.map((item) =>(
           <Locationcard content={item.content} img={item.img}/>))}   
         
           {/* <Locationcard content={editLocation.content1} img={editLocation.img1}/>
@@ -72,6 +84,9 @@ const Landingpage = () => {
         </div>
       </section>
 
+      <section>
+          <h4>Find homes that suit your style</h4>
+      </section>
     </div>
   )
 }

@@ -5,8 +5,8 @@ import searchicon from '../../Assets/search-icon.svg'
 
 const Locationcard = ({img, content}) => {
   return (
-    <div style={{backgroundImage: `url(${img})`, backgroundRepeat: 'no-repeat'}}>
-        <h1 className='headd' >{content}</h1>
+    <div className='cardcontainer' style={{backgroundImage: `url(${img})`, backgroundRepeat: 'no-repeat', backgroundSize: 'contain'}}>
+        <h1 className='cardcontent' >{content}</h1>
     </div>
   )
 }
