@@ -1,3 +1,41 @@
 .hero{
-    
+    background-image: url('../../Assets/landing-background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    background-color: linear-gradient(359.38deg, rgba(11, 0, 0, 0.96) 2.23%, rgba(11, 0, 0, 0.05) 41.31%, rgba(11, 0, 0, 0) 50.45%);
+    height: 100vh;
+}
+
+.navcomponent{
+   padding-top: 2rem;
+}
+
+.heroheading{
+    color: rgb(255, 255, 255);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 3.5rem;
+    text-align: center;
+    padding: 5rem 2rem 0 2rem;
+    text-transform: capitalize;
+}
+
+#herosearch{
+    padding: 1rem 3rem;
+    border: none;
+}
+
+.inputdiv{
+    border: 2px solid white;
+    border-radius: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20rem;
+}
+
+.searchicon{
+    width: 3rem;
 }
