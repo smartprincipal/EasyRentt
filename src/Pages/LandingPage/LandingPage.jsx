@@ -6,6 +6,9 @@ import searchicon from '../../Assets/search-icon.svg'
 
 
 const Landingpage = () => {
+
+
+  
   return (
     <div >
 
@@ -30,6 +33,13 @@ const Landingpage = () => {
           <div className='captiondiv'>
             <h2 className='caption'>LIVING SPACE DESIGN WITH EXCELLENCE</h2>
           </div>
+
+      </section>
+
+      {/* Featured Location Section */}
+      <section>
+          <h3>Featured Locations</h3>
+          <p>Discover thousands of apartments and homes for rent in Lagos</p>
 
       </section>
 
