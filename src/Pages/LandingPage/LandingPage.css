@@ -1,9 +1,9 @@
 .hero{
-    background-image: url('../../Assets/landing-background.svg');
+    background-image: linear-gradient(359.38deg, rgba(11, 0, 0, 0.96) 2.23%, rgba(11, 0, 0, 0.05) 41.31%, rgba(11, 0, 0, 0) 50.45%), 
+                        url('../../Assets/landing-background.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: darken;
-    background-color: linear-gradient(359.38deg, rgba(11, 0, 0, 0.96) 2.23%, rgba(11, 0, 0, 0.05) 41.31%, rgba(11, 0, 0, 0) 50.45%);
     height: 100vh;
 }
 
@@ -15,10 +15,10 @@
     color: rgb(255, 255, 255);
     font-style: normal;
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 3.5rem;
     line-height: 3.5rem;
     text-align: center;
-    padding: 5rem 2rem 0 2rem;
+    padding: 4rem 2rem 0 2rem;
     text-transform: capitalize;
 }
 
@@ -43,10 +43,23 @@
     letter-spacing: 0.225em;
     color: white;
     font-weight: 500;
-    /* font-size: 1.5rem; */
 }
 
 .searchicon{
     width: 3rem;
     cursor: pointer;
+}
+
+.captiondiv{
+    background-color: black;
+    width: 25rem;
+    margin-top: 7rem;
+}
+
+.caption{
+    color: white;
+    width: 16rem;
+    border-right: 6px solid #FCBC0E;
+    padding: 1.5rem 1.5rem 1.5rem 5rem;
+    
 }

@@ -13,21 +13,23 @@ const Landingpage = () => {
       <section className='hero'>
     
         {/* Navbar Component */}
-        <div className='navcomponent'>
-            <NavBar />
-        </div>
+          <div className='navcomponent'>
+              <NavBar />
+          </div>
 
-        <h1 className='heroheading'>Renting done right finally</h1>
+        {/* Hero Heading */}
+          <h1 className='heroheading'>Renting done right finally</h1>
         
-        <div className='inputdiv'>
-          <input type="search" name="search" id="herosearch" placeholder='Where do you want to live?.' />
-          <img src={searchicon} alt="searchicon" className='searchicon'/>
+        {/* Hero Input Container */}
+          <div className='inputdiv'>
+            <input type="search" name="search" id="herosearch" placeholder='Where do you want to live?.' />
+            <img src={searchicon} alt="searchicon" className='searchicon'/>
+          </div>
 
-        </div>
-
-        <div>
-
-        </div>
+        {/* Hero Caption */}
+          <div className='captiondiv'>
+            <h2 className='caption'>LIVING SPACE DESIGN WITH EXCELLENCE</h2>
+          </div>
 
       </section>
 
