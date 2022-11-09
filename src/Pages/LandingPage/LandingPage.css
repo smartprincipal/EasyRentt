@@ -53,7 +53,7 @@
 .captiondiv{
     background-color: black;
     width: 25rem;
-    margin-top: 7rem;
+    margin-top: 5rem;
 }
 
 .caption{
@@ -92,7 +92,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0 8rem;
+    padding: 0 6rem;
 }
 
 
@@ -146,14 +146,29 @@
 
 }
 
-.carousellink{
+.carousellink, .carousellink2{
     padding: 1rem;
     background-color: #FCBC0E;
     /* padding: 14rem 7rem 8rem; */
-    text-decoration: none;
-    align-self: center;
-    color: #FFFFFF;
     margin: 0 auto;
-   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.carousellink a, .carousellink2 a{
+    text-decoration: none;
+    color: #FFFFFF;
+    padding-right: 1rem;
+    
+}
+
+#carouselarrow{
+    width: 1.75rem;
+}
+
+.carousellink2{
+    width: 7rem;
+    margin-bottom: 3rem;
 }
 

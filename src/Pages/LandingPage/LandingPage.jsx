@@ -15,6 +15,7 @@ import magodo from '../../Assets/magodo.svg';
 import ajah from '../../Assets/ajah.svg';
 import maryLand from '../../Assets/maryland.svg';
 import oshodi from '../../Assets/oshodi.svg';
+import arrow from '../../Assets/arrow.svg';
 
 
 
@@ -75,15 +76,6 @@ const Landingpage = () => {
           {editLocation.map((item) =>(
           <Locationcard content={item.content} img={item.img}/>))}   
         
-          {/* <Locationcard content={editLocation.content1} img={editLocation.img1}/>
-          <Locationcard content={editLocation.content2}/>
-          <Locationcard content={editLocation.content3}/>
-          <Locationcard content={editLocation.content4}/>
-          <Locationcard content={editLocation.content5}/>
-          <Locationcard content={editLocation.content6}/>
-          <Locationcard content={editLocation.content7}/>
-          <Locationcard content={editLocation.content8}/>
-          <Locationcard content={editLocation.content9}/> */}
         </div>
       </section>
 
@@ -95,26 +87,31 @@ const Landingpage = () => {
           <Carousel className='carousel' autoPlay='true' infiniteLoop='true' interval='3000'>
             <div className='carouseldiv1'>
               <p className='carouseltext'>3-Bedroom Flat</p>
-              <div >
-                <a className='carousellink' href="#"> View Details </a>
-
+              <div className='carousellink'>
+                <a  href="#"> View Details </a>
+                <img id='carouselarrow' src={arrow} alt="arrow"  />
               </div>
             </div>
             <div className='carouseldiv2'>
               <p className='carouseltext'>2-Bedroom Flat</p>
-              <div >
-                <a className='carousellink' href="#"> View Details </a>
-
+              <div className='carousellink'>
+                <a  href="#"> View Details </a>
+                <img id='carouselarrow' src={arrow} alt="arrow"  />
               </div>
             </div>
             <div className='carouseldiv3'>
               <p className='carouseltext'>Duplex</p>
-              <div >
-                <a className='carousellink' href="#"> View Details </a>
-
+              <div className='carousellink'>
+                <a  href="#"> View Details </a>
+                <img id='carouselarrow' src={arrow} alt="arrow"  />
               </div>
             </div>
           </Carousel>
+
+          <div className='carousellink2'>
+                <a  href="#"> Explore </a>
+                <img id='carouselarrow' src={arrow} alt="arrow"  />
+              </div>
       </section>
     </div>
   )
