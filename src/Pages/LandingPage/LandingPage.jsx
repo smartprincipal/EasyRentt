@@ -1,9 +1,8 @@
 import React from 'react'
 import './LandingPage.css';
 import { useState } from 'react';
-import ControlledCarousel from '../../Components/Carousel/ControlledCarousel'
-
-import NavBar from '../../Components/NavBar/navBar'
+import { Carousel } from 'react-responsive-carousel';
+import NavBar from '../../Components/NavBar/navBar';
 import Locationcard from '../../Components/Locationcard/Locationcard';
 import searchicon from '../../Assets/search-icon.svg';
 import lekki from '../../Assets/lekki.svg';
@@ -14,7 +13,7 @@ import yaba from '../../Assets/yaba.svg';
 import magodo from '../../Assets/magodo.svg';
 import ajah from '../../Assets/ajah.svg';
 import maryLand from '../../Assets/maryland.svg';
-import oshodi from '../../Assets/oshodi.svg'
+import oshodi from '../../Assets/oshodi.svg';
 
 
 const Landingpage = () => {
@@ -32,11 +31,6 @@ const Landingpage = () => {
     {content: "Oshodi", img: oshodi},
       ])
 
-      // // Usestate for Carousel
-      // const [index, setIndex] = useState(0);
-
-      // const handleSelect = (selectedIndex, e) => {
-      //   setIndex(selectedIndex);
 
   return (
 
@@ -96,40 +90,11 @@ const Landingpage = () => {
           <h4>Find homes that suit your style</h4>
 
           {/* Carousel Component */}
-
-          {/* <Carousel activeIndex={index} onSelect={handleSelect}>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="holder.js/800x400?text=First slide&bg=373940"
-                alt="First slide"
-              />
-              <Carousel.Caption>
-                <h3>First slide label</h3>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="holder.js/800x400?text=First slide&bg=373940"
-                alt="First slide"
-              />
-              <Carousel.Caption>
-                <h3>First slide label</h3>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="holder.js/800x400?text=First slide&bg=373940"
-                alt="First slide"
-              />
-              <Carousel.Caption>
-                <h3>First slide label</h3>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel> */}
-          <ControlledCarousel />
+          <Carousel>
+            <div></div>
+            <div></div>
+            <div></div>
+          </Carousel>
       </section>
     </div>
   )
