@@ -113,6 +113,9 @@ const Landingpage = () => {
                 <img id='carouselarrow' src={arrow} alt="arrow"  />
               </div>
       </section>
+      <section>
+        
+      </section>
     </div>
   )
 }
