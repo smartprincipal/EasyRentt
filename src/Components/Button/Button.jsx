@@ -2,7 +2,7 @@ import './Button.css'
 const Button = ({style, text, btnClick}) => {
   return (
     <div>
-        <button style={style} onClick='btnClick'>
+        <button type='submit'style={style} >
             {text}
         </button>
     </div>
