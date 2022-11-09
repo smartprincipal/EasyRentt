@@ -1,8 +1,10 @@
 import React from 'react'
 import './LandingPage.css';
+import { useState } from 'react';
+import ControlledCarousel from '../../Components/Carousel/ControlledCarousel'
+
 import NavBar from '../../Components/NavBar/navBar'
 import Locationcard from '../../Components/Locationcard/Locationcard';
-import { useState } from 'react';
 import searchicon from '../../Assets/search-icon.svg';
 import lekki from '../../Assets/lekki.svg';
 import vicIsland from '../../Assets/victoria-island.svg';
@@ -30,6 +32,11 @@ const Landingpage = () => {
     {content: "Oshodi", img: oshodi},
       ])
 
+      // // Usestate for Carousel
+      // const [index, setIndex] = useState(0);
+
+      // const handleSelect = (selectedIndex, e) => {
+      //   setIndex(selectedIndex);
 
   return (
 
@@ -89,6 +96,40 @@ const Landingpage = () => {
           <h4>Find homes that suit your style</h4>
 
           {/* Carousel Component */}
+
+          {/* <Carousel activeIndex={index} onSelect={handleSelect}>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="holder.js/800x400?text=First slide&bg=373940"
+                alt="First slide"
+              />
+              <Carousel.Caption>
+                <h3>First slide label</h3>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="holder.js/800x400?text=First slide&bg=373940"
+                alt="First slide"
+              />
+              <Carousel.Caption>
+                <h3>First slide label</h3>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="holder.js/800x400?text=First slide&bg=373940"
+                alt="First slide"
+              />
+              <Carousel.Caption>
+                <h3>First slide label</h3>
+              </Carousel.Caption>
+            </Carousel.Item>
+          </Carousel> */}
+          <ControlledCarousel />
       </section>
     </div>
   )
