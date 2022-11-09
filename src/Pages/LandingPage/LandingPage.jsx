@@ -1,4 +1,5 @@
 import React from 'react'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './LandingPage.css';
 import { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
@@ -14,6 +15,7 @@ import magodo from '../../Assets/magodo.svg';
 import ajah from '../../Assets/ajah.svg';
 import maryLand from '../../Assets/maryland.svg';
 import oshodi from '../../Assets/oshodi.svg';
+
 
 
 const Landingpage = () => {
@@ -85,15 +87,33 @@ const Landingpage = () => {
         </div>
       </section>
 
-      <section>
+      <section className='section3'>
           
-          <h4>Find homes that suit your style</h4>
+          <h4 className='section3heading'>Find homes that suit your style</h4>
 
           {/* Carousel Component */}
-          <Carousel>
-            <div></div>
-            <div></div>
-            <div></div>
+          <Carousel className='carousel' autoPlay='true' infiniteLoop='true' interval='3000'>
+            <div className='carouseldiv1'>
+              <p className='carouseltext'>3-Bedroom Flat</p>
+              <div >
+                <a className='carousellink' href="#"> View Details </a>
+
+              </div>
+            </div>
+            <div className='carouseldiv2'>
+              <p className='carouseltext'>2-Bedroom Flat</p>
+              <div >
+                <a className='carousellink' href="#"> View Details </a>
+
+              </div>
+            </div>
+            <div className='carouseldiv3'>
+              <p className='carouseltext'>Duplex</p>
+              <div >
+                <a className='carousellink' href="#"> View Details </a>
+
+              </div>
+            </div>
           </Carousel>
       </section>
     </div>
