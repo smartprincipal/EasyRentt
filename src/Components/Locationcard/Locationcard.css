@@ -23,3 +23,24 @@
 .cardcontent:hover{
     font-size: xx-large;
 }
+
+@media screen and (max-width: 900px) {
+    
+    .cardcontainer{
+        width: 17rem;
+        height: 12rem;
+    }
+
+    .cardcontainer:hover{
+        width: 18rem;
+        height: 13rem;
+    }
+    
+    .cardcontent{
+        padding: 4rem 0;
+    }
+
+    .cardcontent:hover{
+        font-size: x-large;
+    }
+}
