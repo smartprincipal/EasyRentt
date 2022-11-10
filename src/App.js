@@ -1,11 +1,11 @@
-// import NavBar from './Components/NavBar/navBar';
+
 import './App.css';
+import Catalogue from './Pages/Catalogue/Catalogue';
 
 function App() {
   return (
     <div className="App">
-
-      {/* <NavBar/> */}
+      <Catalogue/>
 
     </div>
   );
