@@ -1,13 +1,13 @@
 
 import './App.css';
-import Overlay from './Components/Overlay/Overlay';
-import Login from './Pages/Login/Login';
+import Landingpage from './Pages/LandingPage/LandingPage';
 
 function App() {
   return (
-    <div className="App">
-      <Login />
-
+  
+  <div>
+   <Login />
+   <Landingpage />
     </div>
   );
 }

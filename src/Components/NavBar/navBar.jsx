@@ -15,7 +15,7 @@ const navBar = () => {
           <li><Link to='./'>Rent</Link></li>
           <li><Link to='./'>Buy</Link></li>
           <li><Link to='./'>Blog</Link></li>
-          <li><Link to='./'>Patner With Us</Link></li>
+          <li><Link to='./'>Partner With Us</Link></li>
         </ul>
       </div>
 
