@@ -47,9 +47,9 @@ const Landingpage = () => {
       <section className='hero'>
     
         {/* Navbar Component */}
-          {/* <div className='navcomponent'>
+          <div className='navcomponent'>
               <NavBar />
-          </div> */}
+          </div>
 
         {/* Hero Heading */}
           <h1 className='heroheading'>Renting done right finally</h1>

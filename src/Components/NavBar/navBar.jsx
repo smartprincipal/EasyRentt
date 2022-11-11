@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const navBar = () => {
   return (
    <div className='navBar'>
-      <div className="log">
+      <div className="navlogo">
         <img src={Logo} alt="EasyRent-Logo" />
       </div>
 
@@ -19,9 +19,9 @@ const navBar = () => {
         </ul>
       </div>
 
-      <div className="logSig">
-        <Link to='./'><button className='log'>Log In</button></Link>
-        <Link to='./' ><button className='log'>Sign In</button></Link>
+      <div >
+        <Link to='./'><button className="navbutton" id='login'>Log In</button></Link>
+        <Link to='./'><button className="navbutton">Sign Up</button></Link>
       </div>
 
     </div>
