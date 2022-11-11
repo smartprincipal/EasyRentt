@@ -4,11 +4,10 @@ import Landingpage from './Pages/LandingPage/LandingPage';
 
 function App() {
   return (
-    <div>
-      <Landingpage />
- 
-
-
+  
+  <div>
+   <Login />
+   <Landingpage />
     </div>
   );
 }
