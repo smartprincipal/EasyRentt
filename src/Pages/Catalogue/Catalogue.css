@@ -1,6 +1,7 @@
 * {
  padding: 0;
  margin: 0;
+ box-sizing: border-box;
 }
 .heroSection{
 background-image: url(../../Assets/CatalogueHero.png);
@@ -69,4 +70,15 @@ line-height: 22px;
 letter-spacing: 0em;
 text-align: center;
 
+}
+.catalogueContainer{
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ padding: 150px 115px 120px 115px;
+}
+.more{
+ width: 0%;
+ margin-left: auto;
+ margin-right: auto;
 }

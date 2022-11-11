@@ -5,7 +5,7 @@ const ViewBlack = () => {
   return (
     <div>
      <button classname='viewblack'>
-      View details →
+      View details
      </button>
     </div>
   )
