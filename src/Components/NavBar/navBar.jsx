@@ -1,10 +1,10 @@
 import React from 'react'
-import './navBar.css';
+import './Navbar.css';
 import Logo from '../../Assets/EasyRent.svg';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-const navBar = () => {
+const Navbar = () => {
 
   // Usestate for Hamburger display
   const [toggle, setToggle] = useState(false)
@@ -13,6 +13,7 @@ const navBar = () => {
     return setToggle(prevToggle =>!prevToggle)
   }
 
+  
   return (
    <div className='navBar'>
       <div className="navlogo">
@@ -33,8 +34,11 @@ const navBar = () => {
         <Link to='./'><button className="navbutton" id='signup'>Sign Up</button></Link>
       </div>
 
+      <div id="hamburger" onClick={handleToggle}>
+              {toggle ? <div>&times;</div> :  <div>&#9776;</div>}
+      </div>
     </div>
   )
 }
 
-export default navBar
+export default Navbar

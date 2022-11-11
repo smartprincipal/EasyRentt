@@ -61,6 +61,10 @@
 }
 
 
+#hamburger{
+    display: none;
+}
+
 @media screen and (max-width: 900px) {
     .navlogo img{
         width: 7rem;
@@ -70,5 +74,14 @@
 
     .menuList a{
         padding: 0 0.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #hamburger{
+        display: block;
+        cursor: pointer;
+        font-size: 4rem;
+        color: #FCBC0E;
     }
 }
