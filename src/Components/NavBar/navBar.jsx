@@ -20,8 +20,8 @@ const Navbar = () => {
         <img src={Logo} alt="EasyRent-Logo" />
       </div>
 
-      <div>
-        <ul className="menuList">
+      <div className={toggle ? 'active' : 'menuList' }>
+        <ul >
           <li><Link to='./'>Rent</Link></li>
           <li><Link to='./'>Buy</Link></li>
           <li><Link to='./'>Blog</Link></li>
