@@ -28,14 +28,21 @@ function SignUp () {
     
     const validate = (values) => {
         const errors = {};
-        if(values.username) {
-            errors.username = "Enter your first name"
+        const regex = ;
+        if(!values.username) {
+            errors.username = "Enter your first name";
+        } else if(values.username.length < 5) {
+            errors.username = "First name must be more than five(5) characters"
         }
         if(!values.email) {
-            errors.email = "Enter your e-mail address"
+            errors.email = "Enter your e-mail address";
+        } else if(regex.text(values.email)) {
+            errors.email = "This is not a valid email address"
         }
         if(!values.password) {
-            errors.password = "Create a password, it is required"
+            errors.password = "Create a password, it is required";
+        } else if(values.password.lenght < 8) {
+            errors.password = "Enter password characters more than eight(8)"
         }
         return errors;
     }
@@ -79,20 +86,20 @@ function SignUp () {
         <form action="" onSubmit={handleSubmit}>
             <div className="input-wrap">
                 <label htmlFor="username">Username</label>
-                <input type="text" value={inputValues.username} onChange={handleChange} id="firstName" name="username" placeholder="Enter first name..." required />
+                <input type="text" value={inputValues.username} onChange={handleChange} id="firstName" name="username" placeholder="Enter first name..." />
                 <small>{inputErrors.username}</small>
             </div>
 
                      
            <div className="input-wrap">
                 <label htmlFor="email">Email address</label>
-                <input type="email" value={inputValues.email} onChange={handleChange} id="eMail" name="email" placeholder="Enter email address..." required />
+                <input type="email" value={inputValues.email} onChange={handleChange} id="eMail" name="email" placeholder="Enter email address..." />
                 <small>{inputErrors.email}</small>
             </div>
             
             <div className="input-wrap">
                 <label htmlFor="password">Password</label>
-                <input type="password" value={inputValues.password} onChange={handleChange} id="password" name="password" placeholder="Password" required />
+                <input type="password" value={inputValues.password} onChange={handleChange} id="password" name="password" placeholder="Password" />
                 <small>{inputErrors.password}</small>
             </div>
     
