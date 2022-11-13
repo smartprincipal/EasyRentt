@@ -28,7 +28,9 @@ function SignUp () {
     
     const validate = (values) => {
         const errors = {};
-        const regex = ;
+        const nameRegex = /^([A-Za-z0-9]).{5,20}$/;
+        const eMailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        const passwordRegex = /^(?=.*\d)(?=.*[a-zA-Z])(?=.*[A-Z])(?=.*[-\#\$\.\%\&\*])(?=.*[a-zA-Z]).{8,16}$/;
         if(!values.username) {
             errors.username = "Enter your first name";
         } else if(values.username.length < 5) {
@@ -36,13 +38,15 @@ function SignUp () {
         }
         if(!values.email) {
             errors.email = "Enter your e-mail address";
-        } else if(regex.text(values.email)) {
+        } else if(eMailRegex.text(values.email)) {
             errors.email = "This is not a valid email address"
         }
         if(!values.password) {
             errors.password = "Create a password, it is required";
-        } else if(values.password.lenght < 8) {
-            errors.password = "Enter password characters more than eight(8)"
+        } else if(values.password) {
+            errors.password = "Password characters must be more than eight(8)"
+        } else if(passwordRegex.text(values.password)) {
+            errors.password = "Password should contain atleast a number and capital letter"
         }
         return errors;
     }
