@@ -13,6 +13,7 @@ function App() {
    <Landingpage />
    <Catalogue/> */}
    <SignUp />
+
     </div>
   );
 }
