@@ -25,7 +25,6 @@
 
 .menuList{
     flex: 40%;
-    border: 1px solid;
 }
 
 .navbar li{
@@ -87,11 +86,9 @@
 }
 
 .active{
-    display: flex;
-    justify-content: space-between;
     flex: 40%;
-    border: 1px solid;
 }
+
 
 
 
@@ -251,7 +248,7 @@
     #hamburger{
         font-size: 3rem;
     }
-    
+
 }
 
 @media screen and (max-width: 350px) {
