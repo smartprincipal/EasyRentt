@@ -16,10 +16,7 @@ import ajah from '../../Assets/ajah.svg';
 import maryLand from '../../Assets/maryland.svg';
 import oshodi from '../../Assets/oshodi.svg';
 import arrow from '../../Assets/arrow.svg';
-import review1 from '../../Assets/review1.svg';
-import review2 from '../../Assets/review2.svg';
-import review3 from '../../Assets/review3.svg';
-import review4 from '../../Assets/review4.svg';
+import Review from '../../Components/Review/Review';
 
 
 
@@ -118,16 +115,8 @@ const Landingpage = () => {
               </div>
       </section>
 
-      <section className='section4'>
-        
-            <p className='section4heading'>Review</p>
-
-            <div className='reviewcard'>
-              <img src={review1} alt="reviewcard" />
-              <img src={review2} alt="reviewcard" />
-              <img src={review3} alt="reviewcard" />
-              <img src={review4} alt="reviewcard" />
-            </div>
+      <section className="section4">
+        <Review/>
       </section>
     </div>
   )

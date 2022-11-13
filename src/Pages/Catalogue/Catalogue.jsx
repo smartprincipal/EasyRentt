@@ -10,7 +10,8 @@ import Ajah from '../../Assets/ajah.png'
 import Bed from '../../Assets/bed.svg'
 import Bath from '../../Assets/bath.svg'
 import CatalogueCard from '../../Components/CatalogueCard/CatalogueCard'
-import More from '../../Components/Button/More/More'
+import Button from '../../Components/Button/Button'
+import Review from '../../Components/Review/Review';
 
 const Catalogue = () => {
     const catalogue= [
@@ -29,14 +30,27 @@ const Catalogue = () => {
 
     ]
 
+    const moreStyle ={
+      background: "#FCBC0E",
+      width: "250px",
+      height: "60px",
+      fontFamily: "Inter",
+      fontSize: "32px",
+      fontWeight: "500px",
+      lineHeight: "39px",
+      textAlign: "center",
+      color: "#FFF",
+      border:"none"
+    };
+
 
   return (
     <div className='calaogue'>
 
     {/* Hero section */}
-     <div className="heroSection">
+     <section className="heroSection">
 
-      {/* NavBar Import */}
+      {/* NavBar Import */} 
       <div className='navBarr'>
         {/* <NavBar/> */}
       </div>
@@ -79,8 +93,10 @@ const Catalogue = () => {
         </div>
       </div>
       
-     </div>
+     </section>
+     <section clasname='section2'>
 
+      {/* Catalogue Card */}
      <div className="catalogueContainer">{
       catalogue.map((choice) => (
         <CatalogueCard 
@@ -95,10 +111,17 @@ const Catalogue = () => {
       ))
      }
      </div>
-
+     </section>
+      {/* Import Button */}
 <div className="more">
-  <More/>
+  <Button style={moreStyle} text={"More"}/>
 </div>
+
+     <section className='section4'>
+      <Review/>
+     </section>
+
+
 
 
     </div>

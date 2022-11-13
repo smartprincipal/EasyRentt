@@ -1,10 +1,25 @@
 import React from 'react'
 import './CatalogueCard.css'
-import ViewDetailBlack from '../Button/ViewDetailBlack/ViewBlack'
+import Button from '../Button/Button'
 import ShareIcon from '../../Assets/shareIcon.svg'
 import FavouriteIcon from '../../Assets/favouriteIcon.svg'
 
 const CatalogueCard = (props) => {
+
+  const viewBlack={
+    background:"#0B0000",
+    borderRadius: "30px",
+    width: "157px",
+    height: "50px",
+    fontFamily: "Inter",
+    fontSize: "18px",
+    fontWeight: "500px",
+    lineHeight: "22px",
+    letterSpacing: "0em",
+    textAlign: "center",
+    color: "#fff",
+    border: "none"
+  }
   return (
     <div classname='catalogueCard'>
      <img src={props.catalogueImg} alt="" classname='catalogueImg'/>
@@ -39,7 +54,7 @@ const CatalogueCard = (props) => {
       </div>
       <div className="viewSection">
        <div>
-        <ViewDetailBlack/>
+        <Button style={viewBlack} text={"View details"}/>
        </div>
        <div className='viewSectionIcon'>
         <div>
