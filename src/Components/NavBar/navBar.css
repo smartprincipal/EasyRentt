@@ -1,4 +1,4 @@
-.navBar{
+.navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -6,21 +6,33 @@
     background-color: rgba(255, 255, 255, 0.4);
 }
 
-.menuList ul{
+.navbar ul{
     display: flex;
-    justify-content: space-around;
-    padding: 0 1rem;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
-.menuList a{
-    padding: 0 1rem;
+.navlinks, .navdiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.menuList li{
+.navlogo{
+    flex: 10%;
+}
+
+.menuList{
+    flex: 40%;
+    border: 1px solid;
+}
+
+.navbar li{
     list-style-type: none;
 }
 
-.menuList a, .navbutton{
+.navbar a, .navbutton{
     color: #000;
     text-decoration: none;
     font-family: Inter;
@@ -31,8 +43,11 @@
     transition: 1s;
 }
 
+.navlinks a{
+    padding: 0 1rem;
+}
 
-.menuList a:hover{
+.navlinks a:hover{
     font-size: 20px;
     font-weight: 700;
 }
@@ -45,10 +60,14 @@
 }
 
 .navbutton:hover{
-    font-size: 20px;
-    font-weight: 700;
     border: 2px solid #FCBC0E;
     background-color: rgba(255, 255, 255, 0.493);
+}
+
+.navbutton a:hover{
+    font-size: 20px;
+    font-weight: 700;
+    
 }
 
 #login{
@@ -58,14 +77,25 @@
 
 #signup{
     border-left: 1.5px solid #FCBC0E;
+
 }
 
 
+/* Mobile responsiveness reversal */
 #hamburger{
     display: none;
 }
 
-/* @media screen and (max-width: 900px) {
+.active{
+    display: flex;
+    justify-content: space-between;
+    flex: 40%;
+    border: 1px solid;
+}
+
+
+
+@media screen and (max-width: 965px) {
     .navlogo img{
         width: 7rem;
         height: 3rem;
@@ -75,9 +105,23 @@
     .menuList a{
         padding: 0 0.5rem;
     }
+
+    .navlogo{
+        flex: none;
+        padding-right: 5rem;
+    }
+}
+
+@media screen and (max-width: 865px) {
+
+    .navlogo{
+        padding-right: 2rem;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
+
     #hamburger{
         display: block;
         cursor: pointer;
@@ -85,16 +129,17 @@
         color: #FCBC0E;
     }
     
-    .menuList{
-        display: none;
-    }
-
     .active{
         position: absolute;
         top: 8rem;
         left: 0;
-        background-color: #FCBC0E;
+        background-color: rgb(211,193,170);
         width: 100vw;
+        display: block;
+    }
+    
+    .menuList{
+        display: none;
     }
 
     .active ul{
@@ -102,16 +147,27 @@
         height: 70vh;
         text-align: center;
         transition: 0.5s;
-        padding: 0 2rem ;
+        padding: 0 1rem ;
+    }
+
+    .navdiv{
+        display: block;
+    } 
+
+    .navlinks, .buttondiv{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        
     }
 
     .active li{
-        padding: 2rem 0;
+        padding: 1rem  ;
         margin: 1rem 0;
         border-radius: 10px;
         border: 2px solid white;
         list-style-type: none;
-       
     }
     
     .active a{
@@ -123,17 +179,88 @@
         line-height: 22px;
         text-align: center;
         transition: 1s;
-        padding: 2rem 0;
+        padding: 1rem 7rem;
         
     }
 
-    .active li:hover{
+    #special{
+        padding: 1rem 4.2rem;
+    }
+
+    .active li:hover, .navbutton:hover{
         background-color: #ffffff;
-        border: 2px solid black;
+        border: 2px solid #FCBC0E;
     }
 
-    .active a:hover{
-        color: #FCBC0E;
+    .active a:hover, .navbutton a:hover{
+        color: black;
 
     }
-} */
+ 
+    .buttondiv{
+        margin-top: 1rem;
+    }
+
+    .navbutton{
+        border: 2px solid white;
+        padding: 1rem 0;
+        border-radius: 10px;
+    }
+
+    #login{
+        padding: 1rem 0.5rem;
+    }
+   
+    #login{
+        border-right: 2px solid #ffffff;
+    
+    }
+
+    #signup{
+        border-left: 2px solid #ffffff;
+    }
+
+    #login:hover{
+        border-right: 2px solid #FCBC0E;
+
+    }
+
+    #signup:hover{
+        border-left: 2px solid #FCBC0E;
+    
+    }
+}
+
+@media screen and (max-width: 620px) {
+
+    .active ul{
+        height: 90vh;
+    }
+
+    #signup{
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .navbar{
+        padding: 0.5rem 1.5rem;
+    }
+
+    #hamburger{
+        font-size: 3rem;
+    }
+    
+}
+
+@media screen and (max-width: 350px) {
+
+    .active a{
+        padding: 1rem 5rem;
+    }
+
+    #special{
+        padding: 1rem 2.5rem;
+    }
+}
