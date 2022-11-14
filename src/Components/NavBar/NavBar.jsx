@@ -1,10 +1,10 @@
 import React from 'react'
-import './Navbar.css';
+import './NavBar.css';
 import Logo from '../../Assets/EasyRent.svg';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-const Navbar = () => {
+const NavBar = () => {
 
   // Usestate for Hamburger display
   const [toggle, setToggle] = useState(false)
@@ -50,4 +50,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default NavBar
