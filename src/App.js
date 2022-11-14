@@ -7,12 +7,11 @@ import SignUp from './Pages/Signup/Signup';
 
 function App() {
   return (
-  
-  <div>
-   {/* <Login /> */}
-   <Landingpage />
-   <Catalogue/> */}
-   <SignUp />
+    <div className="App">
+
+      {/* <NavBar/> */}
+      <Overlay />
+      <Login />
 
     </div>
   );

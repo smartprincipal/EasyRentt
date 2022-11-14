@@ -5,6 +5,7 @@ import facebook from "../../Assets/facebook.svg";
 import twitter from "../../Assets/twitter.svg";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import Overlay from "../../Components/Overlay/Overlay";
 
 const loginStyle = {
   width: "100%",
@@ -13,6 +14,9 @@ const loginStyle = {
   color: "#fff",
   borderRadius: "8px",
   border: "none",
+  fontFamily: 'DM Sans',
+  fontSize: '19px',
+  fontWeight: '700',
 };
 const Login = () => {
   const formik = useFormik({
@@ -25,11 +29,11 @@ const Login = () => {
     validationSchema: Yup.object({
       email: Yup.string()
         .email("Invalid email address")
-        .required("email address is required"),
+        .required("Email address is required"),
       password: Yup.string()
         .min("8")
         .max("20 ")
-        .required("password is required"),
+        .required("Password is required"),
       remember: Yup.array(),
     }),
     //submit form
@@ -39,8 +43,11 @@ const Login = () => {
   });
   console.log(formik.errors);
 
+  const show = true
   return (
-    <div className="login-container">
+    <>
+    <Overlay />
+    <div className="login-container" style={{transform: show?'translateY(100)':'translateY(0)'}}>
       <h3 className="login-heading">Login</h3>
       <p className="login-paragraph">Fill the information below to signup</p>
       <form onSubmit={formik.handleSubmit}>
@@ -61,7 +68,7 @@ const Login = () => {
             type="text"
             id="login-email"
             className="login-email-input"
-            placeholder="Enter email adress..."
+            placeholder="Enter email address..."
             name="email"
             value={formik.values.email}
             onChange={formik.handleChange}
@@ -116,12 +123,13 @@ const Login = () => {
       </p>
       <p className="login-switch">Or Login with </p>
       <div className="login-social-logos">
-        <img src={google} alt="google logo" />
+        <img src={google} alt="google logo" className="login-google"/>
         <img src={facebook} alt="facebook logo" className="login-facebook" />
-        <img src={twitter} alt="twitter logo" />
+        <img src={twitter} alt="twitter logo" className="login-twitter"/>
       </div>
       <span className="times">&times;</span>
     </div>
+    </>
   );
 };
 
