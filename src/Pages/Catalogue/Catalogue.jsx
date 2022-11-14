@@ -14,6 +14,8 @@ import Button from '../../Components/Button/Button'
 import Review from '../../Components/Review/Review';
 
 const Catalogue = () => {
+
+  
     const catalogue= [
       
       {id:0, catalogueImg: Victoria, catalogueHead:`Magnolia Height`, catalogueAmount:`₦505,000,000`, catalogueBed:`2`,catalogueBath:`2`, catalogueBathImg: Bath,   catalogueBedImg: Bed},
