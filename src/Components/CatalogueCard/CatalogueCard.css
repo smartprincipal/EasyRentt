@@ -1,0 +1,68 @@
+.catalogueCard{
+ height: 690px;
+width: 599px;
+border-radius: 30px;
+background-color: rgba(217, 217, 217, 0.5);
+border: 2px solid red;
+}
+.catalogueImg{
+ border-radius: 15px 15px 0px 0px;
+width: 599px;
+height: 500px;
+}
+.cardContent1{
+ padding-left:36px;
+ padding-right: 18px;
+ border-bottom: 3px solid rgba(125, 127, 131, 0.7);
+}
+.subCardContent1{
+ display: flex;
+ /* gap: 100px; */
+ justify-content: space-between;
+ padding-right: 36px;
+ padding-left: 18px;
+ padding-top: 20px;
+}
+
+.catalogueHead{
+ font-style: italic;
+ font-family: Inter;
+font-size: 24px;
+font-weight: 600;
+line-height: 29px;
+letter-spacing: 0em;
+text-align: center;
+}
+.catalogueAmount{
+ font-style: italic;
+ font-family: Inter;
+font-size: 24px;
+font-weight: 700;
+line-height: 29px;
+letter-spacing: 0em;
+text-align: center;
+}
+
+.subCardcontent2{
+ display: flex;
+ gap: 30px;
+ padding-right: 36px;
+ padding-left: 18px;
+ padding-top: 15px;
+ padding-bottom: 10px;
+ border-bottom: 2px solid red;
+}
+.subCardcontent22{
+ display: flex;
+ gap: 10px;
+}
+.viewSection{
+ padding: 15px 18px 20px 36px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+.viewSectionIcon{
+ display: flex;
+ gap: 10px;
+}
