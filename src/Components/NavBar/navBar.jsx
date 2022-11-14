@@ -1,31 +1,53 @@
 import React from 'react'
-import './navBar.css'
-import Logo from '../../Assets/EasyRent.svg'
-import { Link } from 'react-router-dom'
+import './Navbar.css';
+import Logo from '../../Assets/EasyRent.svg';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
-const navBar = () => {
+const Navbar = () => {
+
+  // Usestate for Hamburger display
+  const [toggle, setToggle] = useState(false)
+
+  const handleToggle = () => {
+    return setToggle(prevToggle =>!prevToggle)
+  }
+
+  
   return (
-   <div className='navBar'>
-      <div className="log">
+   <div className='navbar'>
+      <div className="navlogo">
         <img src={Logo} alt="EasyRent-Logo" />
       </div>
 
-      <div>
-        <ul className="menuList">
-          <li><Link to='./'>Rent</Link></li>
-          <li><Link to='./'>Buy</Link></li>
-          <li><Link to='./'>Blog</Link></li>
-          <li><Link to='./'>Patner With Us</Link></li>
+      <div className={toggle ? 'active' : 'menuList' }>
+        <ul >
+          <div className='navdiv'>
+            <div className='navlinks'>
+              <li><Link to='./'>Rent</Link></li>
+              <li><Link to='./'>Buy</Link></li>
+            </div>
+            <div className='navlinks'>
+              <li><Link to='./'>Blog</Link></li>
+              <li><Link to='./' id='special'>Partner With Us</Link></li>
+            </div>
+          </div>
+
+          <div className='buttondiv'>
+            <button className="navbutton" id='login'><Link to='./'>Log In</Link></button>
+            <button className="navbutton" id='signup'><Link to='./'>Sign Up</Link></button>
+          </div>
         </ul>
+      
+        
       </div>
 
-      <div className="logSig">
-        <Link to='./'><button className='log'>Log In</button></Link>
-        <Link to='./' ><button className='log'>Sign In</button></Link>
-      </div>
 
+      <div id="hamburger" onClick={handleToggle}>
+              {toggle ? <div>&times;</div> :  <div>&#9776;</div>}
+      </div>
     </div>
   )
 }
 
-export default navBar
+export default Navbar
