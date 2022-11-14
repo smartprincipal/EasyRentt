@@ -3,6 +3,7 @@ import './NavBar.css';
 import Logo from '../../Assets/EasyRent.svg';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import Button from "../../Components/Button/Button";
 
 const NavBar = () => {
 
@@ -34,8 +35,10 @@ const NavBar = () => {
           </div>
 
           <div className='buttondiv'>
-            <button className="navbutton" id='login'><Link to='./'>Log In</Link></button>
-            <button className="navbutton" id='signup'><Link to='./'>Sign Up</Link></button>
+            <Button text={"Login"} btnclass={'navbutton1'} />
+            <Button text={"Sign Up"} btnclass={'navbutton2'} />
+            {/* <button className="navbutton" id='login'><Link to='./'>Log In</Link></button>
+            <button className="navbutton" id='signup'><Link to='./'>Sign Up</Link></button> */}
           </div>
         </ul>
       

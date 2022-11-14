@@ -13,7 +13,7 @@
 
 }
 
-.navlinks, .navdiv{
+.navlinks, .navdiv, .buttondiv{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +31,7 @@
     list-style-type: none;
 }
 
-.navbar a, .navbutton{
+.navbar a, .navbutton1, .navbutton2{
     color: #000;
     text-decoration: none;
     font-family: Inter;
@@ -51,30 +51,28 @@
     font-weight: 700;
 }
 
-.navbutton{
+.navbutton1, .navbutton2{
     border: none; 
     background-color: rgba(255, 255, 255, 0.068);
     padding: 0.5rem 1rem;
     cursor: pointer;
+    transition: 1s;
 }
 
-.navbutton:hover{
-    border: 2px solid #FCBC0E;
-    background-color: rgba(255, 255, 255, 0.493);
-}
-
-.navbutton a:hover{
+.navbutton1:hover, .navbutton2:hover{
     font-size: 20px;
     font-weight: 700;
+    border: 2px solid #FCBC0E;
+    background-color: rgba(255, 255, 255, 0.493);
     
 }
 
-#login{
+.navbutton1{
     border-right: 1.5px solid #FCBC0E;
 
 }
 
-#signup{
+.navbutton2{
     border-left: 1.5px solid #FCBC0E;
 
 }
@@ -151,12 +149,19 @@
         display: block;
     } 
 
-    .navlinks, .buttondiv{
+    .navlinks{
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
         
+    }
+    
+    .buttondiv{
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+
     }
 
     .active li{
@@ -184,48 +189,38 @@
         padding: 1rem 4.2rem;
     }
 
-    .active li:hover, .navbutton:hover{
+    .active li:hover{
         background-color: #ffffff;
         border: 2px solid #FCBC0E;
     }
 
-    .active a:hover, .navbutton a:hover{
+    .active a:hover{
         color: black;
 
     }
- 
-    .buttondiv{
-        margin-top: 1rem;
-    }
 
-    .navbutton{
+    .navbutton1, .navbutton2{
         border: 2px solid white;
-        padding: 1rem 0;
         border-radius: 10px;
+        color: #ffffff;
     }
-
-    #login{
-        padding: 1rem 0.5rem;
-    }
-   
-    #login{
-        border-right: 2px solid #ffffff;
     
-    }
-
-    #signup{
-        border-left: 2px solid #ffffff;
-    }
-
-    #login:hover{
-        border-right: 2px solid #FCBC0E;
+    .navbutton1{
+        padding: 1rem 7.65rem;
 
     }
 
-    #signup:hover{
-        border-left: 2px solid #FCBC0E;
-    
+    .navbutton2{
+        padding: 1rem 6.95rem;
     }
+
+    .navbutton1:hover, .navbutton2:hover{
+        background-color: #ffffff;
+        border: 2px solid #FCBC0E;
+        color: black;
+    }
+ 
+
 }
 
 @media screen and (max-width: 620px) {
@@ -234,7 +229,7 @@
         height: 90vh;
     }
 
-    #signup{
+    .navbutton2{
         margin-top: 2rem;
     }
 }
@@ -255,6 +250,15 @@
 
     .active a{
         padding: 1rem 5rem;
+    }
+
+    .navbutton1{
+        padding: 1rem 5.75rem;
+
+    }
+
+    .navbutton2{
+        padding: 1rem 5.25rem;
     }
 
     #special{
