@@ -14,6 +14,7 @@
     margin: 150px auto;
     background-color: #FFFFFF;
     z-index: 500;
+    transition: all 0.3s ease-out;
 }
 .login-heading{
     font-weight: 700;
@@ -56,6 +57,7 @@ width: 100%;
 padding: 12px;
 font-family: inherit;
 margin-bottom: 25px;
+outline: none;
 }
 .login-checkbox-flex{
     display: flex;
@@ -76,13 +78,14 @@ margin-bottom: 32px;
     height: 25px;
     width: 25px;
     border: 1px solid #111111;
-    /* margin-right: 16px;    */
+    outline: none;
 }
 .login-checkbox, .checkbox-label{
     display: block;
 }
 .login-forgot-password{
     font-weight: 700;
+    cursor: pointer;
 }
 .login-account-paragraph{
     margin: 25px 0px 40px 0px;
@@ -95,6 +98,7 @@ text-align: center;
 .login-signup{
     font-weight: 700;
     color: #111111;
+    cursor: pointer;
 }
 .login-switch{
     color: #7D7F83;
@@ -110,6 +114,10 @@ text-align: center;
 .login-facebook{
     margin-left: 43px;
     margin-right: 43px;
+    cursor: pointer;
+}
+.login-google, .login-twitter{
+    cursor: pointer;
 }
 .times{
     position: absolute;
@@ -117,6 +125,7 @@ text-align: center;
     font-size: 30px;
     top: 0px;
     right: 10px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
