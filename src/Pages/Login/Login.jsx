@@ -115,7 +115,7 @@ const Login = () => {
           </div>
           <p className="login-forgot-password">Forgot Password?</p>
         </div>
-        <Button style={loginStyle} text={"Login"} />
+        <Button style={loginStyle} text={"Login"} btnclass={'submit-btn'}/>
       </form>
       <p className="login-account-paragraph">
         Don’t have an account yet?{" "}
