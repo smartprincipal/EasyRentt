@@ -3,7 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './LandingPage.css';
 import { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import NavBar from '../../Components/Navbar/Navbar';
+import NavBar from '../../Components/Navbarss/Navbar';
 import Locationcard from '../../Components/Locationcard/Locationcard';
 import searchicon from '../../Assets/search-icon.svg';
 import lekki from '../../Assets/lekki.svg';
