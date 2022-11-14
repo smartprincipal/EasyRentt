@@ -3,7 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './LandingPage.css';
 import { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import NavBar from '../../Components/NavBar/navBar';
+import NavBar from '../../Components/Navbar/Navbar';
 import Locationcard from '../../Components/Locationcard/Locationcard';
 import searchicon from '../../Assets/search-icon.svg';
 import lekki from '../../Assets/lekki.svg';
@@ -44,9 +44,9 @@ const Landingpage = () => {
       <section className='hero'>
     
         {/* Navbar Component */}
-          {/* <div className='navcomponent'>
+          <div className='navcomponent'>
               <NavBar />
-          </div> */}
+          </div>
 
         {/* Hero Heading */}
           <h1 className='heroheading'>Renting done right finally</h1>
