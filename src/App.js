@@ -1,4 +1,4 @@
-// import NavBar from './Components/NavBar/navBar';
+import NavBar from './Components/NavBar/navBar';
 import './App.css';
 import Overlay from './Components/Overlay/Overlay';
 import Login from './Pages/Login/Login';
@@ -8,7 +8,6 @@ function App() {
     <div className="App">
 
       {/* <NavBar/> */}
-      <Overlay />
       <Login />
 
     </div>
