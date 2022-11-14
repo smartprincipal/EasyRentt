@@ -1,7 +1,7 @@
 
 import './App.css';
 // import Landingpage from './Pages/LandingPage/LandingPage';
-// import Login from '../src/Pages/Login/Login';
+import Login from '../src/Pages/Login/Login';
 // import Catalogue from '../src/Pages/Catalogue/Catalogue';
 import SignUp from './Pages/Signup/Signup';
 
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
 
       {/* <NavBar/> */}
-      <Overlay />
+      {/* <Overlay /> */}
       <Login />
 
     </div>
