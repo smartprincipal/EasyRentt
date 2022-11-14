@@ -1,6 +1,6 @@
 import React from 'react'
 import './Catalogue.css'
-// import NavBar from '../../Components/NavBar/navBar';
+// import NavBar from '../../Components/NavBar/NavBar';
 import SearchImg from '../../Assets/searchImg.png';
 import Victoria from '../../Assets/Victoria.png';
 import Lekki2 from '../../Assets/lekki2.png'
@@ -15,7 +15,7 @@ import Review from '../../Components/Review/Review';
 
 const Catalogue = () => {
 
-  
+
     const catalogue= [
       
       {id:0, catalogueImg: Victoria, catalogueHead:`Magnolia Height`, catalogueAmount:`₦505,000,000`, catalogueBed:`2`,catalogueBath:`2`, catalogueBathImg: Bath,   catalogueBedImg: Bed},

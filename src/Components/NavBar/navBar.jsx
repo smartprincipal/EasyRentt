@@ -1,5 +1,5 @@
 import React from 'react'
-import './navBar.css'
+import './NavBar.css'
 import Logo from '../../Assets/EasyRent.svg'
 import { Link } from 'react-router-dom'
 
