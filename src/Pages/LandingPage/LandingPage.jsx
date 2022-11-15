@@ -3,7 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './LandingPage.css';
 import { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import NavBar from '../../Components/NavBar/NavBar';
+// import NavBar from '../../Components/NavBar/NavBar';
 import Locationcard from '../../Components/Locationcard/Locationcard';
 import searchicon from '../../Assets/search-icon.svg';
 import lekki from '../../Assets/lekki.svg';
@@ -45,7 +45,7 @@ const Landingpage = () => {
     
         {/* Navbar Component */}
           <div className='navcomponent'>
-              <NavBar />
+              {/* <NavBar /> */}
           </div>
 
         {/* Hero Heading */}

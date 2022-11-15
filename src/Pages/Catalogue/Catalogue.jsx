@@ -68,8 +68,53 @@ const Catalogue = () => {
           ▼
           </p>
         </div>
+        <div className="pricebox">
+        <div className="price">
+          <button className="minPrice">
+            <div className="symbol">
+              ₦
+            </div>
+            <div className="min">
+              Min-Price
+            </div>
+          </button>
+          <div className="symbols">
+            -
+          </div>
+          <button className="maxPrice">
+          <div className="symbol">
+              ₦
+            </div>
+            <div className="min">
+              Max-Price
+            </div>
+          </button>
+        </div>
+        <div className="priceAmount">
+          <div className="minmaxAmount">
+            <th>
+              No Min
+            </th>
+              <tr>150,000</tr>
+              <tr>170,000</tr>
+              <tr>200,000</tr>
+              <tr>250,000</tr>
+              <tr>300,000</tr>
+          </div>
+          <div className="minmaxAmount">
+            <th>
+              No Max
+            </th>
+              <tr>150,000</tr>
+              <tr>170,000</tr>
+              <tr>200,000</tr>
+              <tr>250,000</tr>
+              <tr>300,000</tr>
+          </div>
+        </div>
+        </div>
 
-        
+
 
         <div className='ops'>
         <p> Bed 
@@ -77,6 +122,12 @@ const Catalogue = () => {
           <p>
           ▼
           </p>
+        </div>
+        <div className="bedBox">
+          <div className="bedAmount">
+            
+          </div>
+
         </div>
        
         <div className='opss'>
@@ -98,13 +149,13 @@ const Catalogue = () => {
           </div>
         </div>
 
-        {/* Sortby elect dropdown */}
+        {/* Sortby elect dropdown
         <div className="sortBy">
           <label htmlFor="">Sort by:</label>
           <select name="Best Match" id="Best Match" value='Best Match' className='opsort'>
         <option value="Best Match">Best Match</option>
         </select>
-        </div>
+        </div> */}
       </div>
       
      </section>
