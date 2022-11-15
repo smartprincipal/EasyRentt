@@ -17,6 +17,7 @@ import maryLand from '../../Assets/maryland.svg';
 import oshodi from '../../Assets/oshodi.svg';
 import arrow from '../../Assets/arrow.svg';
 import Review from '../../Components/Review/Review';
+import Login from '../Login/Login';
 
 
 
@@ -37,15 +38,21 @@ const Landingpage = () => {
 
 
     const [loginModal, setLoginModal] = useState(false);
+    const loginHandler = () => {
+      setLoginModal(true)
+    }
+    const loginClose = () => {
+      setLoginModal(false)
+    }
   return (
     <div >
-
+      <Login show={loginModal} closeModal={loginClose}/>
       {/* Hero section of the landing page */}
       <section className='hero'>
     
         {/* Navbar Component */}
           <div className='navcomponent'>
-              <NavBar />
+              <NavBar loginClick={loginHandler}/>
           </div>
 
         {/* Hero Heading */}
