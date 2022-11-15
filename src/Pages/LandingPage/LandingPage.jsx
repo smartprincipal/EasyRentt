@@ -36,17 +36,17 @@ const Landingpage = () => {
       ])
 
 
+    const [loginModal, setLoginModal] = useState(false);
   return (
-
     <div >
 
       {/* Hero section of the landing page */}
       <section className='hero'>
     
         {/* Navbar Component */}
-          {/* <div className='navcomponent'>
+          <div className='navcomponent'>
               <NavBar />
-          </div> */}
+          </div>
 
         {/* Hero Heading */}
           <h1 className='heroheading'>Renting done right finally</h1>
