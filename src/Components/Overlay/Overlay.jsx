@@ -1,10 +1,10 @@
 import './Overlay.css'
 
-const Overlay = () => {
+const Overlay = ({OverlayShow, overlayClick}) => {
   return (
-    <div className='overlay-main-container'>
+    OverlayShow ? <div className='overlay-main-container' onClick={overlayClick}>
 
-    </div>
+    </div> : null
   )
 }
 
