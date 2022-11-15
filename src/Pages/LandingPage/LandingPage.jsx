@@ -24,7 +24,7 @@ const Landingpage = () => {
 
   // Usestate for Locationcard Component
   const [editLocation] = useState([
-    {content: "Lekki", img: lekki}, 
+    {content: "Lekki", img: lekki},  
     {content: "Victoria Island", img: vicIsland},
     {content: "Banana Island", img: bananaIsland},
     {content: "Ikeja", img: ikeja},
@@ -38,7 +38,7 @@ const Landingpage = () => {
 
     const [loginModal, setLoginModal] = useState(false);
   return (
-    <div >
+    <div className='landingPage'>
 
       {/* Hero section of the landing page */}
       <section className='hero'>
@@ -74,8 +74,8 @@ const Landingpage = () => {
           {/* Locationcard Component */}
         <div className='locationcarddiv'>
 
-          {editLocation.map((item) =>(
-          <Locationcard content={item.content} img={item.img}/>))}   
+          {editLocation.map((item, index) =>(
+          <Locationcard content={item.content} img={item.img} key={index}/>))}   
         
         </div>
       </section>
@@ -85,7 +85,7 @@ const Landingpage = () => {
           <h4 className='section3heading'>Find homes that suit your style</h4>
 
           {/* Carousel Component */}
-          <Carousel className='carousel' autoPlay='true' infiniteLoop='true' interval='3000'>
+          <Carousel className='carousel' autoPlay='true' infiniteLoop='true' interval='3000' showThumbs={false}>
             <div className='carouseldiv1'>
               <p className='carouseltext'>3-Bedroom Flat</p>
               <div className='carousellink'>
@@ -112,7 +112,7 @@ const Landingpage = () => {
           <div className='carousellink2'>
                 <a  href="#"> Explore </a>
                 <img id='carouselarrow' src={arrow} alt="arrow"  />
-              </div>
+          </div>
       </section>
 
       <section className="section4">
