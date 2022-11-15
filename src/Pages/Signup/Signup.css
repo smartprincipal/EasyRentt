@@ -24,7 +24,7 @@ body {
     
 }
 
-h2 {
+.sign_head {
     text-align: center;
     font-size: 45px;
 }
@@ -43,7 +43,7 @@ h2 {
     padding: 20px 40px;
 }
 
-label {
+.input_label {
     display: block;
     font-weight: 600;
 }
@@ -52,7 +52,7 @@ label {
     margin: 25px 0;
 }
 
-input {
+.input_type {
     display: block;
     width: 100%;
     border-radius: 10px;
@@ -96,7 +96,7 @@ input {
     color: #0B0000;
 }
 
-small {
+.small_tag {
     color: red;
     font-size: 12px;
     font-weight: 600;

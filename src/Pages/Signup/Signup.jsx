@@ -77,7 +77,7 @@ function SignUp () {
         <div className='close_icon'>
             &times;
         </div>
-        <h2>Sign Up</h2>
+        <h2 className="sign_head">Sign Up</h2>
 
         <p className="p-head">
             
@@ -86,28 +86,28 @@ function SignUp () {
 
         <form action="" onSubmit={handleSubmit}>
             <div className="input-wrap">
-                <label htmlFor="username">Username</label>
-                <input type="text" value={inputValues.username} onChange={handleChange} id="firstName" name="username" placeholder="Enter first name..." />
-                <small>{inputErrors.username}</small>
+                <label className="input_label" htmlFor="username">Username</label>
+                <input className="input_type" type="text" value={inputValues.username} onChange={handleChange} id="firstName" name="username" placeholder="Enter first name..." />
+                <small className="small_tag">{inputErrors.username}</small>
             </div>
 
                      
            <div className="input-wrap">
-                <label htmlFor="email">Email address</label>
-                <input type="email" value={inputValues.email} onChange={handleChange} id="eMail" name="email" placeholder="Enter email address..." />
-                <small>{inputErrors.email}</small>
+                <label className="input_label" htmlFor="email">Email address</label>
+                <input className="input_type" type="email" value={inputValues.email} onChange={handleChange} id="eMail" name="email" placeholder="Enter email address..." />
+                <small className="small_tag">{inputErrors.email}</small>
             </div>
             
             <div className="input-wrap">
-                <label htmlFor="password">Password</label>
-                <input type="password" value={inputValues.password} onChange={handleChange} id="password" name="password" placeholder="Password" />
-                <small>{inputErrors.password}</small>
+                <label className="input_label" htmlFor="password">Password</label>
+                <input className="input_type" type="password" value={inputValues.password} onChange={handleChange} id="password" name="password" placeholder="Password" />
+                <small className="small_tag">{inputErrors.password}</small>
             </div>
     
             <div className="input-wrap">
-                <label htmlFor="confirmedPassword">Confirm Password</label>
-                <input type="password" value={inputValues.confirmedPassword} onChange={handleChange} id="password" name="confirmedPassword" placeholder="Confirmed password..." />
-                <small>{inputErrors.confirmedPassword}</small>
+                <label className="input_label" htmlFor="confirmedPassword">Confirm Password</label>
+                <input className="input_type" type="password" value={inputValues.confirmedPassword} onChange={handleChange} id="password" name="confirmedPassword" placeholder="Confirmed password..." />
+                <small className="small_tag">{inputErrors.confirmedPassword}</small>
             </div>
             <button className="signButton">Sign Up</button>
     
