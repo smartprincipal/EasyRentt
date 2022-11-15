@@ -61,15 +61,27 @@ const Catalogue = () => {
       <div className="searchSection">
 
         {/* Select dropdown */}
-        <select name="Price" id="Price" value='Price' className='ops'>
-        <option value="Price">Price</option>
-        </select>
-        <select name="Bed" id="Bed" value='Bed' className='ops'>
-        <option value="Bed">Bed</option>
-        </select>
-        <select name="Bathroom" id="Bathroom" value='Bathroom' className='ops'>
-        <option value="Bathroom">Bathroom</option>
-        </select>
+        <div  className='ops'>
+         <p>  Price 
+          </p>
+          <p>
+          ▼
+          </p>
+        </div>
+
+        
+
+        <div className='ops'>
+        <p> Bed 
+          </p>
+          <p>
+          ▼
+          </p>
+        </div>
+       
+        <div className='opss'>
+          Bathroom ▼
+          </div>
         
         {/* Search Box */}
         <div className="catalogueSearch">
