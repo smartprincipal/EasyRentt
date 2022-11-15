@@ -37,8 +37,6 @@ const NavBar = () => {
           <div className='buttondiv'>
             <Button text={"Login"} btnclass={'navbutton1'} />
             <Button text={"Sign Up"} btnclass={'navbutton2'} />
-            {/* <button className="navbutton" id='login'><Link to='./'>Log In</Link></button>
-            <button className="navbutton" id='signup'><Link to='./'>Sign Up</Link></button> */}
           </div>
         </ul>
       
