@@ -6,6 +6,7 @@ import twitter from "../../Assets/twitter.svg";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import Overlay from "../../Components/Overlay/Overlay";
+import axios from 'axios';
 
 const loginStyle = {
   width: "100%",
@@ -18,13 +19,13 @@ const loginStyle = {
   fontSize: '19px',
   fontWeight: '700',
 };
-const Login = () => {
+const Login = ({ show, closeModal }) => {
   const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
-      remember: "",
     },
+    remember: "",
     //validate form
     validationSchema: Yup.object({
       email: Yup.string()
@@ -37,19 +38,34 @@ const Login = () => {
       remember: Yup.array(),
     }),
     //submit form
-    onSubmit: (values) => {
+    onSubmit: (values, onSubmitProps) => {
       console.log(values);
+      console.log(values.password);
+      // axios.post('https:easyrent.onrender.com/users/login', values)
+      // .then(res => {
+      //   console.log(res)
+      // })
+      onSubmitProps.resetForm()
     },
   });
   console.log(formik.errors);
 
-  const show = true
+
+  // const loginHandler = (e) => {
+  //   e.preventDefault();
+  //   const data = {
+  //     email: email, password: password
+  //   }
+  //   axios.post('https:easyrent.onrender.com/users/login', )
+  // }
+
   return (
     <>
-    <Overlay />
-    <div className="login-container" style={{transform: show?'translateY(100)':'translateY(0)'}}>
+    <Overlay OverlayShow={show} overlayClick={closeModal}/>
+    <div className="login-container" style={{transform: show ? 'translateY(0)':'translateY(-100vh)', opacity: show? '1':'0'}}>
       <h3 className="login-heading">Login</h3>
       <p className="login-paragraph">Fill the information below to signup</p>
+      {/* <form onSubmit={loginHandler}> */}
       <form onSubmit={formik.handleSubmit}>
         <div>
           <label
@@ -106,7 +122,7 @@ const Login = () => {
               name="checkbox"
               id="login-checkbox"
               className="login-checkbox"
-              value="checked"
+              value={formik.values.remember}
               onChange={formik.handleChange}
             />
             <label htmlFor="login-checkbox" className="checkbox-label">
@@ -115,7 +131,7 @@ const Login = () => {
           </div>
           <p className="login-forgot-password">Forgot Password?</p>
         </div>
-        <Button style={loginStyle} text={"Login"} btnclass={'submit-btn'}/>
+        <Button style={loginStyle} text={"Login"} btnclass={'submit-btn'} />
       </form>
       <p className="login-account-paragraph">
         Don’t have an account yet?{" "}
@@ -127,7 +143,7 @@ const Login = () => {
         <img src={facebook} alt="facebook logo" className="login-facebook" />
         <img src={twitter} alt="twitter logo" className="login-twitter"/>
       </div>
-      <span className="times">&times;</span>
+      <span className="times" onClick={closeModal}>&times;</span>
     </div>
     </>
   );
