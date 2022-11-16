@@ -156,6 +156,38 @@ display: flex;
 gap: 10px
 
 }
+.bathroomBox{
+ height: 115px;
+width: 409px;
+border-radius: 15px;
+background-color: #FFFFFF;
+position: absolute;
+top:120px;
+left: 380px;
+display: none;
+}
+.bathroomAmount{
+ display: flex;
+ justify-content: center;
+ gap: 15px;
+ padding-top: 30px;
+}
+.bathroomCount{
+ height: 50px;
+width: 85px;
+border-radius: 25px;
+text-align: center;
+color: rgba(217, 217, 217, 1);
+border: 1px solid rgba(217, 217, 217, 1);
+padding-top: 10px;
+font-size: 20px;
+}
+.bathroomCount:hover{
+ color: gold;
+ background-color: black;
+ cursor: pointer;
+}
+
 .catalogueSearch{
  width: 512px;
  height: 50px;

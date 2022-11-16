@@ -138,6 +138,14 @@ const Catalogue = () => {
         <div className='opss'>
           Bathroom ▼
           </div>
+          <div className="bathroomBox">
+            <div className="bathroomAmount">
+              <div className="bathroomCount">1</div>
+              <div className="bathroomCount">2</div>
+              <div className="bathroomCount">3</div>
+            </div>
+
+          </div>
         
         {/* Search Box */}
         <div className="catalogueSearch">
