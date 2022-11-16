@@ -2,6 +2,7 @@
  padding: 0;
  margin: 0;
  box-sizing: border-box;
+ /* position: relative; */
 }
 .heroSection{
 background-image: url(../../Assets/CatalogueHero.png);
@@ -38,13 +39,15 @@ gap: 10px
 
 }
 .pricebox{
- width: 465px;
- height: 447px;
+ width: 365px;
+ height: 230px;
  background: #FFFFFF;
  border-radius: 15px;
  padding-left: 15px;
  padding-top: 10px;
  display: none;
+ position: absolute;
+ top: 115px;
 
 }
 .price{
@@ -107,7 +110,32 @@ left: 2308px;
 top: -2613px;
 border-radius: 15px;
 background: #FFFFFF;
-
+position: absolute;
+top: 120px;
+left: 250px;
+display: none;
+}
+.bedAmount{
+ display: flex;
+ gap: 10px;
+ padding-left: 10px;
+ padding-right: 10px;
+ padding-top: 25px;
+ cursor: pointer;
+}
+.count{
+ height: 50px;
+width: 85px;
+border-radius: 25px;
+color: rgba(217, 217, 217, 1);
+border: 1px solid rgba(217, 217, 217, 1);
+text-align: center;
+padding-top: 12px;
+font-size: 18px;
+}
+.count:hover{
+ color: gold;
+ background-color: black;
 }
 .opss{
  width: 120px ;

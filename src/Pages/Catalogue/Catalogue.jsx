@@ -125,7 +125,12 @@ const Catalogue = () => {
         </div>
         <div className="bedBox">
           <div className="bedAmount">
-            
+            <div className="count">Any</div>
+            <div className="count">Studio</div>
+            <div className="count">1</div>
+            <div className="count">2</div>
+            <div className="count">3</div>
+            <div className="count">4+</div>
           </div>
 
         </div>
