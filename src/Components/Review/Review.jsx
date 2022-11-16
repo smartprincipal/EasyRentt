@@ -7,11 +7,7 @@ import review4 from '../../Assets/review4.svg';
 
 const Review = () => {
   return (
-    <div>
-      {/* <button classname='review'>
-       Review
-      </button> */}
-      <section className='review'>
+    <div className='review'>
         
         <p className='reviewheading'>Review</p>
 
@@ -21,7 +17,7 @@ const Review = () => {
           <img src={review3} alt="reviewcard" />
           <img src={review4} alt="reviewcard" />
         </div>
-  </section>
+    
     </div>
   )
 }
