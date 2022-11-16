@@ -6,15 +6,15 @@ import { Carousel } from 'react-responsive-carousel';
 import NavBar from '../../Components/NavBar/NavBar';
 import Locationcard from '../../Components/Locationcard/Locationcard';
 import searchicon from '../../Assets/search-icon.svg';
-import lekki from '../../Assets/lekki.svg';
-import vicIsland from '../../Assets/victoria-island.svg';
-import bananaIsland from '../../Assets/banana-island.svg';
-import ikeja from '../../Assets/ikeja.svg';
-import yaba from '../../Assets/yaba.svg';
-import magodo from '../../Assets/magodo.svg';
-import ajah from '../../Assets/ajah.svg';
-import maryLand from '../../Assets/maryland.svg';
-import oshodi from '../../Assets/oshodi.svg';
+import lekki from '../../Assets/lekki-home.png';
+import vicIsland from '../../Assets/vi-home.png';
+import bananaIsland from '../../Assets/banana-home.png';
+import ikeja from '../../Assets/ikeja-home.png';
+import yaba from '../../Assets/yaba-home.png';
+import magodo from '../../Assets/magodo-home.png';
+import ajah from '../../Assets/ajah-home.png';
+import maryLand from '../../Assets/maryland-home.png';
+import oshodi from '../../Assets/oshodi-home.png';
 import arrow from '../../Assets/arrow.svg';
 import Review from '../../Components/Review/Review';
 import Login from '../Login/Login';
@@ -36,19 +36,19 @@ const Landingpage = () => {
     {content: "Oshodi", img: oshodi},
       ])
 
-
+    // Usestate for Login Component
     const [loginModal, setLoginModal] = useState(false);
     const loginHandler = () => {
       setLoginModal(true)
     }
+
     const loginClose = () => {
       setLoginModal(false)
     }
+
   return (
     <div className='landingPage'>
 
-
-    <div >
       <Login show={loginModal} closeModal={loginClose}/>
 
       {/* Hero section of the landing page */}
