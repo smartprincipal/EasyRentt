@@ -49,10 +49,7 @@ const Landingpage = () => {
 
   return (
     <div className='landingPage'>
-<<<<<<< HEAD
-=======
 
->>>>>>> 544ab17b79644d43adf2da80c4989d17ae3a300c
       <Login show={loginModal} closeModal={loginClose}/>
       
       {/* Hero section of the landing page */}
