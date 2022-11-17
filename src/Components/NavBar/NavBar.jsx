@@ -17,6 +17,7 @@ const NavBar = ({loginClick}) => {
   
   return (
    <div className='navbar'>
+
       <div className="navlogo">
         <img src={Logo} alt="EasyRent-Logo" />
       </div>
