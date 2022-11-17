@@ -9,9 +9,14 @@
     width: 582px;
     font-family: 'DM Sans', sans-serif;
     font-style: normal;
-    position: relative;
+    /* position: relative; */
+    position: fixed;
     padding: 40px 41px;
-    margin: 150px auto;
+    margin: 2% 30%;
+    /* margin: 0 auto; */
+    /* top: 10%;
+    bottom: 10%; */
+    /* left: 30%; */
     background-color: #FFFFFF;
     z-index: 500;
     transition: all 0.3s ease-out;
@@ -128,6 +133,22 @@ text-align: center;
     cursor: pointer;
 }
 
+@media screen and (max-width: 1300px) {
+    .login-container{
+    margin: 10% 26%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .login-container{
+    margin: 10% 21%
+    }
+}
+@media screen and (max-width: 900px) {
+    .login-container{
+    margin: 10% 14%
+    }
+}
+
 @media screen and (max-width: 768px) {
     .login-container{
         width: 500px
@@ -139,6 +160,11 @@ text-align: center;
         padding: 40px 20px;
     }
 }
+@media screen and (max-width: 500px) {
+    .login-container{
+        margin: 10% 8%;
+    }
+}
 @media screen and (max-width: 450px) {
     .login-container{
         width: 300px;
@@ -146,6 +172,16 @@ text-align: center;
     }
     .checkbox-label-container{
         gap: 3px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .login-container{
+        margin: 10% 13%;
+    }
+}
+@media screen and (max-width: 320px) {
+    .login-container{
+        margin: 10% 8%;
     }
 }
 

@@ -3,7 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './LandingPage.css';
 import { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
-// import NavBar from '../../Components/NavBar/NavBar';
+import NavBar from '../../Components/NavBar/NavBar';
 import Locationcard from '../../Components/Locationcard/Locationcard';
 import searchicon from '../../Assets/search-icon.svg';
 import lekki from '../../Assets/lekki.svg';
@@ -17,6 +17,7 @@ import maryLand from '../../Assets/maryland.svg';
 import oshodi from '../../Assets/oshodi.svg';
 import arrow from '../../Assets/arrow.svg';
 import Review from '../../Components/Review/Review';
+import Login from '../Login/Login';
 
 
 
@@ -24,7 +25,7 @@ const Landingpage = () => {
 
   // Usestate for Locationcard Component
   const [editLocation] = useState([
-    {content: "Lekki", img: lekki}, 
+    {content: "Lekki", img: lekki},  
     {content: "Victoria Island", img: vicIsland},
     {content: "Banana Island", img: bananaIsland},
     {content: "Ikeja", img: ikeja},
@@ -37,15 +38,24 @@ const Landingpage = () => {
 
 
     const [loginModal, setLoginModal] = useState(false);
+    const loginHandler = () => {
+      setLoginModal(true)
+    }
+    const loginClose = () => {
+      setLoginModal(false)
+    }
   return (
-    <div >
+    <div className='landingPage'>
 
+    <div >
+      <Login show={loginModal} closeModal={loginClose}/>
+      
       {/* Hero section of the landing page */}
       <section className='hero'>
     
         {/* Navbar Component */}
           <div className='navcomponent'>
-              {/* <NavBar /> */}
+              <NavBar loginClick={loginHandler}/>
           </div>
 
         {/* Hero Heading */}
@@ -74,8 +84,8 @@ const Landingpage = () => {
           {/* Locationcard Component */}
         <div className='locationcarddiv'>
 
-          {editLocation.map((item) =>(
-          <Locationcard content={item.content} img={item.img}/>))}   
+          {editLocation.map((item, index) =>(
+          <Locationcard content={item.content} img={item.img} key={index}/>))}   
         
         </div>
       </section>
@@ -85,7 +95,7 @@ const Landingpage = () => {
           <h4 className='section3heading'>Find homes that suit your style</h4>
 
           {/* Carousel Component */}
-          <Carousel className='carousel' autoPlay='true' infiniteLoop='true' interval='3000'>
+          <Carousel className='carousel' autoPlay='true' infiniteLoop='true' interval='3000' showThumbs={false}>
             <div className='carouseldiv1'>
               <p className='carouseltext'>3-Bedroom Flat</p>
               <div className='carousellink'>
@@ -112,7 +122,7 @@ const Landingpage = () => {
           <div className='carousellink2'>
                 <a  href="#"> Explore </a>
                 <img id='carouselarrow' src={arrow} alt="arrow"  />
-              </div>
+          </div>
       </section>
 
       <section className="section4">
