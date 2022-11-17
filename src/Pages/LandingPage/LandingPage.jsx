@@ -4,20 +4,21 @@ import './LandingPage.css';
 import { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import NavBar from '../../Components/NavBar/NavBar';
+import Login from '../Login/Login';
 import Locationcard from '../../Components/Locationcard/Locationcard';
+import Button from '../../Components/Button/Button';
 import searchicon from '../../Assets/search-icon.svg';
-import lekki from '../../Assets/lekki.svg';
-import vicIsland from '../../Assets/victoria-island.svg';
-import bananaIsland from '../../Assets/banana-island.svg';
-import ikeja from '../../Assets/ikeja.svg';
-import yaba from '../../Assets/yaba.svg';
-import magodo from '../../Assets/magodo.svg';
-import ajah from '../../Assets/ajah.svg';
-import maryLand from '../../Assets/maryland.svg';
-import oshodi from '../../Assets/oshodi.svg';
+import lekki from '../../Assets/lekki-home.png';
+import vicIsland from '../../Assets/vi-home.png';
+import bananaIsland from '../../Assets/banana-home.png';
+import ikeja from '../../Assets/ikeja-home.png';
+import yaba from '../../Assets/yaba-home.png';
+import magodo from '../../Assets/magodo-home.png';
+import ajah from '../../Assets/ajah-home.png';
+import maryLand from '../../Assets/maryland-home.png';
+import oshodi from '../../Assets/oshodi-home.png';
 import arrow from '../../Assets/arrow.svg';
 import Review from '../../Components/Review/Review';
-import Login from '../Login/Login';
 
 
 
@@ -36,16 +37,22 @@ const Landingpage = () => {
     {content: "Oshodi", img: oshodi},
       ])
 
-
+    // Usestate for Login Component
     const [loginModal, setLoginModal] = useState(false);
     const loginHandler = () => {
       setLoginModal(true)
     }
+
     const loginClose = () => {
       setLoginModal(false)
     }
+
   return (
     <div className='landingPage'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 544ab17b79644d43adf2da80c4989d17ae3a300c
       <Login show={loginModal} closeModal={loginClose}/>
       
       {/* Hero section of the landing page */}
@@ -96,30 +103,27 @@ const Landingpage = () => {
           <Carousel className='carousel' autoPlay='true' infiniteLoop='true' interval='3000' showThumbs={false}>
             <div className='carouseldiv1'>
               <p className='carouseltext'>3-Bedroom Flat</p>
-              <div className='carousellink'>
-                <a  href="#"> View Details </a>
-                <img id='carouselarrow' src={arrow} alt="arrow"  />
+              <div>
+                <Button text={"View Details"} btnclass={'carouselbutton'} icon={arrow} />
               </div>
             </div>
             <div className='carouseldiv2'>
               <p className='carouseltext'>2-Bedroom Flat</p>
-              <div className='carousellink'>
-                <a  href="#"> View Details </a>
-                <img id='carouselarrow' src={arrow} alt="arrow"  />
+              <div>
+                <Button text={"View Details"} btnclass={'carouselbutton'} icon={arrow} />
+                
               </div>
             </div>
             <div className='carouseldiv3'>
               <p className='carouseltext'>Duplex</p>
-              <div className='carousellink'>
-                <a  href="#"> View Details </a>
-                <img id='carouselarrow' src={arrow} alt="arrow"  />
+              <div>
+                  <Button text={"View Details"} btnclass={'carouselbutton'} icon={arrow} />
               </div>
             </div>
           </Carousel>
 
-          <div className='carousellink2'>
-                <a  href="#"> Explore </a>
-                <img id='carouselarrow' src={arrow} alt="arrow"  />
+          <div className='explorediv'>
+              <Button text={"Explore"} btnclass={'carouselbutton'} icon={arrow} />
           </div>
       </section>
 

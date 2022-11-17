@@ -157,30 +157,25 @@
 
 }
 
-.carousellink, .carousellink2{
+.carouselbutton{
     padding: 1rem;
     background-color: #FCBC0E;
-    /* padding: 14rem 7rem 8rem; */
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-}
-.carousellink a, .carousellink2 a{
-    text-decoration: none;
     color: #FFFFFF;
-    padding-right: 1rem;
-    
+    border: none;
 }
 
-#carouselarrow{
-    width: 1.75rem;
+.carouselbutton img{
+    width: 2rem !important;
+    padding-left: 0.5rem;
 }
 
-.carousellink2{
-    width: 7rem;
-    margin: 3rem auto;
+.explorediv{
+    margin: 3rem 0 1rem 0;
 }
 
 .section4{
@@ -301,25 +296,26 @@
 @media screen and (max-width: 400px) {
     
     .heroheading{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
-    .navcomponent{
+    /* .navcomponent{
         padding-top: 0;
-    }
+    } */
     
     .inputdiv{
         margin: 0 1.75rem;
     }
 
     .captiondiv{
-        width: 18rem;
+        width: 15rem;
     }
 
     .caption{
-        width: 16rem;
+        width: 13rem;
         padding: 1.5rem 1.5rem 1.5rem 3.5rem;
         font-size: 1rem;
+        line-height: 15px;
     }
 
     .section2heading, .section3heading, .section4heading{
@@ -337,12 +333,4 @@
         line-height: 2rem;
     }
 
-    .carousellink a, .carousellink2 a{
-        font-size: 0.75rem;
-        
-    }
-
-    #carouselarrow{
-        width: 1.25rem;
-    }
 }
