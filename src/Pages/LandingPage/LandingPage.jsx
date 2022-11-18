@@ -51,7 +51,7 @@ const Landingpage = () => {
     <div className='landingPage'>
 
       <Login show={loginModal} closeModal={loginClose}/>
-
+      
       {/* Hero section of the landing page */}
       <section className='hero'>
     
