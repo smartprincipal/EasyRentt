@@ -1,0 +1,32 @@
+.footer{
+    font-family: 'Inter';
+    font-style: normal;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-image: url('../../Assets/footerbckgrnd.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: rgba(252, 188, 14, 0.9);
+}
+
+.footersubdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.footersubdiv h2{
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.footersubdiv p{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin: 0.5rem 0.1rem;
+}

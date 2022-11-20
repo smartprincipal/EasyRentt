@@ -25,6 +25,7 @@ import review3 from '../../Assets/review3.svg';
 import review4 from '../../Assets/review4.svg';
 import review5 from '../../Assets/review5.svg';
 import review6 from '../../Assets/review6.svg';
+import Footer from '../../Components/Footer/Footer';
 
 
 
@@ -163,6 +164,11 @@ const Landingpage = () => {
                 <Review heading={item.heading} img={item.img} key={index}/>))}   
             </div>
           </Carousel>
+      </section>
+
+      {/* Footer Component */}
+      <section>
+            <Footer />
       </section>
     </div>
   )
