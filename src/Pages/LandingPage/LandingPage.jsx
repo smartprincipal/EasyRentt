@@ -49,7 +49,7 @@ const Landingpage = () => {
     const [myReview1] = useState([
     {heading: 'Nicholas & Dammy', img: review1},  
     {heading: "Austine Ette", img: review2},
-    {heading: "Kate shaw", img: review3}
+    {heading: "Kate Shaw", img: review3}
       ])
 
     const [myReview2] = useState([
@@ -148,7 +148,7 @@ const Landingpage = () => {
         {/* Review Component */}
       <section className="section4">
             <h5 className="section4heading">Thousands of happy stories from our users</h5>
-          <Carousel className='carousel' autoPlay='true' infiniteLoop='true' interval='8000' showThumbs={false}>
+          <Carousel className='reviewcarousel' autoPlay='true' infiniteLoop='true' interval='8000' showThumbs={false}>
             <div className='review'>
               {myReview1.map((item, index) =>(
                 <Review heading={item.heading} img={item.img} key={index}/>))}   
@@ -164,6 +164,21 @@ const Landingpage = () => {
                 <Review heading={item.heading} img={item.img} key={index}/>))}   
             </div>
           </Carousel>
+      </section>
+
+        {/* Carousel strictly for mobile viewport only */}
+      <section>
+        <Carousel className='mobilecarousel' autoPlay='true' infiniteLoop='true' interval='3000' showThumbs={false}>
+          <div>
+            <Review img={review1} heading='Nicholas & Dammy' />
+          </div>
+          <div>
+            <Review img={review2} heading='Austine Ette' />
+          </div>
+          <div>
+            <Review img={review3} heading='Kate Shaw' />
+          </div>
+        </Carousel>
       </section>
 
       {/* Footer Component */}

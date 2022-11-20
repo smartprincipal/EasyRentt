@@ -117,7 +117,7 @@
     text-transform: uppercase;
 }
 
-.carousel{
+.carousel, .reviewcarousel{
     width: 90vw;
     margin: 3.5rem auto ;
   }
@@ -196,6 +196,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.mobilecarousel{
+    display: none;
 }
 
 @media screen and (max-width: 1125px) {
@@ -280,6 +284,15 @@
         font-size: 2rem;
         line-height: 2rem;
     }
+
+    .reviewcarousel{
+        display: none;
+    }
+
+    .mobilecarousel{
+        display: block;
+    }
+    
 }
 
 @media screen and (max-width: 400px) {
@@ -288,10 +301,6 @@
         font-size: 2rem;
     }
 
-    /* .navcomponent{
-        padding-top: 0;
-    } */
-    
     .inputdiv{
         margin: 0 1.75rem;
     }

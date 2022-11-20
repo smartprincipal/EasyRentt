@@ -14,7 +14,7 @@
     font-size: 1rem;
     line-height: 1rem;
     margin: 1rem 0.2rem;
-    text-align:start;
+    text-align: start;
 }
 
 .reviewcontent{
@@ -23,40 +23,21 @@
     font-size: 12px;
     line-height: 1rem;
 }
-/* 
 
 
-.reviewheading{
- border: 1px solid #0B0000 ;
- padding: 1rem 3rem;
- background-color: #0B0000;
- width: 14rem;
- font-size: 2rem;
- color: white;
- margin: 2.5rem auto;
- text-transform: uppercase;
- display: block;
-}
 
-.reviewcard{
- display: flex;
- justify-content: space-around;
- align-items: center;
- flex-wrap: wrap;
- margin: 4.5rem 0;
-}
-
-.reviewcard img{
- width: 18rem;
- height: 16rem;
- margin-bottom: 1rem;
-}
-
-@media screen and (max-width: 400px) {
-
+@media screen and (max-width: 600px) {
     .reviewheading{
-        margin: 1.5rem auto;
-        width: 12rem;
+        text-align: center;
     }
 
-} */
+    .reviewcard img{
+       max-height: 20rem;
+       margin: 0 auto;
+    }
+
+    .reviewcontent{
+        padding: 0 2rem;
+    }
+}
+
