@@ -7,6 +7,8 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import Overlay from "../../Components/Overlay/Overlay";
 import axios from 'axios';
+import { Link } from "react-router-dom";
+import SignUp from "../Signup/Signup";
 
 const loginStyle = {
   width: "100%",
@@ -24,7 +26,8 @@ const Login = ({ show, closeModal }) => {
     initialValues: {
       email: "",
       password: "",
-    },
+    }
+    ,
     remember: "",
     //validate form
     validationSchema: Yup.object({
@@ -41,31 +44,44 @@ const Login = ({ show, closeModal }) => {
     onSubmit: (values, onSubmitProps) => {
       console.log(values);
       console.log(values.password);
-      // axios.post('https:easyrent.onrender.com/users/login', values)
-      // .then(res => {
-      //   console.log(res)
-      // })
+      // let data = {...values}
+      axios.post('https:easyrent.onrender.com/users/login', values)
+      .then(res => {
+        console.log(res.data)
+        // setToken(res.data.token)
+      })
+      .catch(err => console.log(err))
+      console.log(values)
       onSubmitProps.resetForm()
     },
   });
-  console.log(formik.errors);
+  // console.log(formik.errors);
 
 
-  // const loginHandler = (e) => {
-  //   e.preventDefault();
-  //   const data = {
-  //     email: email, password: password
-  //   }
-  //   axios.post('https:easyrent.onrender.com/users/login', )
-  // }
+  const googleLoginHandler = () =>  {
+    axios.get('https://easyrent.onrender.com/users/auth/google')
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
+  }
+  const facebookLoginHandler = () =>  {
+    axios.get('https://easyrent.onrender.com/users/auth/facebook')
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
+  }
+  const twitterLoginHandler = () =>  {
+    axios.get('https://easyrent.onrender.com/users/auth/twitter/oauth')
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
+  }
+
+
 
   return (
     <>
     <Overlay OverlayShow={show} overlayClick={closeModal}/>
-    <div className="login-container" style={{transform: show ? 'translateY(0)':'translateY(-100vh)', opacity: show? '1':'0'}}>
+    <div className="login-container" style={{transform: show ? 'translateY(0)':'translateY(-100vh)', opacity: show ? '1':'0'}}>
       <h3 className="login-heading">Login</h3>
       <p className="login-paragraph">Fill the information below to signup</p>
-      {/* <form onSubmit={loginHandler}> */}
       <form onSubmit={formik.handleSubmit}>
         <div>
           <label
@@ -135,13 +151,13 @@ const Login = ({ show, closeModal }) => {
       </form>
       <p className="login-account-paragraph">
         Don’t have an account yet?{" "}
-        <span className="login-signup">Sign Up.</span>
+        <Link to={'SignUp'}><span className="login-signup">Sign Up</span></Link>
       </p>
       <p className="login-switch">Or Login with </p>
       <div className="login-social-logos">
-        <img src={google} alt="google logo" className="login-google"/>
-        <img src={facebook} alt="facebook logo" className="login-facebook" />
-        <img src={twitter} alt="twitter logo" className="login-twitter"/>
+        <img src={google} alt="google logo" className="login-google" onClick={googleLoginHandler}/>
+        <img src={facebook} alt="facebook logo" className="login-facebook" onClick={facebookLoginHandler}/>
+        <img src={twitter} alt="twitter logo" className="login-twitter" onClick={twitterLoginHandler}/>
       </div>
       <span className="times" onClick={closeModal}>&times;</span>
     </div>
