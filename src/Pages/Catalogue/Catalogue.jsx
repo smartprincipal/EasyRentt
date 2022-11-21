@@ -1,6 +1,6 @@
 import React from 'react'
 import './Catalogue.css'
-// import NavBar from '../../Components/NavBar/navBar';
+// import NavBar from '../../Components/NavBar/NavBar';
 import SearchImg from '../../Assets/searchImg.png';
 import Victoria from '../../Assets/Victoria.png';
 import Lekki2 from '../../Assets/lekki2.png'
@@ -15,7 +15,7 @@ import Review from '../../Components/Review/Review';
 
 const Catalogue = () => {
 
-  
+
     const catalogue= [
       
       {id:0, catalogueImg: Victoria, catalogueHead:`Magnolia Height`, catalogueAmount:`₦505,000,000`, catalogueBed:`2`,catalogueBath:`2`, catalogueBathImg: Bath,   catalogueBedImg: Bed},
@@ -61,15 +61,91 @@ const Catalogue = () => {
       <div className="searchSection">
 
         {/* Select dropdown */}
-        <select name="Price" id="Price" value='Price' className='ops'>
-        <option value="Price">Price</option>
-        </select>
-        <select name="Bed" id="Bed" value='Bed' className='ops'>
-        <option value="Bed">Bed</option>
-        </select>
-        <select name="Bathroom" id="Bathroom" value='Bathroom' className='ops'>
-        <option value="Bathroom">Bathroom</option>
-        </select>
+        <div  className='ops'>
+         <p>  Price 
+          </p>
+          <p>
+          ▼
+          </p>
+        </div>
+        <div className="pricebox">
+        <div className="price">
+          <button className="minPrice">
+            <div className="symbol">
+              ₦
+            </div>
+            <div className="min">
+              Min-Price
+            </div>
+          </button>
+          <div className="symbols">
+            -
+          </div>
+          <button className="maxPrice">
+          <div className="symbol">
+              ₦
+            </div>
+            <div className="min">
+              Max-Price
+            </div>
+          </button>
+        </div>
+        <div className="priceAmount">
+          <div className="minmaxAmount">
+            <th>
+              No Min
+            </th>
+              <tr>150,000</tr>
+              <tr>170,000</tr>
+              <tr>200,000</tr>
+              <tr>250,000</tr>
+              <tr>300,000</tr>
+          </div>
+          <div className="minmaxAmount">
+            <th>
+              No Max
+            </th>
+              <tr>150,000</tr>
+              <tr>170,000</tr>
+              <tr>200,000</tr>
+              <tr>250,000</tr>
+              <tr>300,000</tr>
+          </div>
+        </div>
+        </div>
+
+
+
+        <div className='ops'>
+        <p> Bed 
+          </p>
+          <p>
+          ▼
+          </p>
+        </div>
+        <div className="bedBox">
+          <div className="bedAmount">
+            <div className="count">Any</div>
+            <div className="count">Studio</div>
+            <div className="count">1</div>
+            <div className="count">2</div>
+            <div className="count">3</div>
+            <div className="count">4+</div>
+          </div>
+
+        </div>
+       
+        <div className='opss'>
+          Bathroom ▼
+          </div>
+          <div className="bathroomBox">
+            <div className="bathroomAmount">
+              <div className="bathroomCount">1</div>
+              <div className="bathroomCount">2</div>
+              <div className="bathroomCount">3</div>
+            </div>
+
+          </div>
         
         {/* Search Box */}
         <div className="catalogueSearch">
@@ -86,13 +162,13 @@ const Catalogue = () => {
           </div>
         </div>
 
-        {/* Sortby elect dropdown */}
+        {/* Sortby elect dropdown
         <div className="sortBy">
           <label htmlFor="">Sort by:</label>
           <select name="Best Match" id="Best Match" value='Best Match' className='opsort'>
         <option value="Best Match">Best Match</option>
         </select>
-        </div>
+        </div> */}
       </div>
       
      </section>

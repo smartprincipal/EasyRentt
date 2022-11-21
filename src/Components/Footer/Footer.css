@@ -1,0 +1,119 @@
+.footer{
+    font-family: 'Inter';
+    font-style: normal;
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-image: url('../../Assets/footerbckgrnd.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode:soft-light;
+    background-color: rgba(252, 188, 14, 0.9);
+}
+
+.footerlogo{
+    display: block;
+}
+
+.footermaindiv{
+    flex: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footersubdiv{
+    flex: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.footercontent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.footercontent h2{
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.footercontent p{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin: 0.5rem 0.1rem;
+    cursor: pointer;
+}
+
+.footercontent p:hover{
+    color: white;
+}
+
+.footericon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footericon img{
+    width: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 800px) {
+
+    .footerlogo{
+        margin-bottom: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .footermaindiv{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .footersubdiv{
+        margin-bottom: 1.5rem;
+    }
+
+    #footermobile1{
+        margin-right: 5rem;
+    }
+
+    #footermobile2{
+        margin-right: 8rem;
+    }
+
+}
+
+
+@media screen and (max-width: 450px) {
+    #footermobile1{
+        margin-right: 3rem;
+    }
+
+    #footermobile2{
+        margin-right: 6rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .footersubdiv{
+        display: block;
+    }
+
+    #footermobile1, #footermobile2{
+        margin-bottom: 1.5rem;
+    }
+}

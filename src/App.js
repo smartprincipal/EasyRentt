@@ -1,3 +1,4 @@
+
 import "./App.css";
 import Landingpage from "./Pages/LandingPage/LandingPage";
 import Login from "./Pages/Login/Login";
@@ -17,6 +18,7 @@ function App() {
       {/* <Landingpage /> */}
       {/* <Catalogue/>  */}
       {/* <SignUp /> */}
+
     </div>
   );
 }
