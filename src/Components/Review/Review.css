@@ -1,11 +1,10 @@
 .reviewcard{
  padding: 2rem;
-
  font-family: 'Inter';
  display: flex;
  flex-direction: column;
  justify-content: space-around;
- /* align-items: center; */
+
 
 }
 
