@@ -36,16 +36,28 @@ const Landingpage = () => {
     {content: "Oshodi", img: oshodi},
       ])
 
-    // Usestate for Login Component
+    // State for Login Component
     const [loginModal, setLoginModal] = useState(false);
+     // Login authorization state 
+     const [token, setToken] = useState();
+    
     const loginHandler = () => {
       setLoginModal(true)
     }
-
     const loginClose = () => {
       setLoginModal(false)
     }
 
+    const LocationLoginAuth = () => {
+      if(!token){
+        setLoginModal(true)
+      }
+    }
+
+   
+  // if (!token) {
+  //   return <Login setToken={setToken} />;
+  // }
   return (
     <div className='landingPage'>
 
@@ -86,7 +98,7 @@ const Landingpage = () => {
         <div className='locationcarddiv'>
 
           {editLocation.map((item, index) =>(
-          <Locationcard content={item.content} img={item.img} key={index}/>))}   
+          <Locationcard content={item.content} img={item.img} key={index} locationClick={LocationLoginAuth}/>))}   
         
         </div>
       </section>
