@@ -8,10 +8,11 @@
 }
 
 .cardcontainer:hover{
-    width: 21.5rem;
+    transform: scale(1.10);
+    /* width: 21.5rem;
     height: 16.5rem;
    transition-timing-function: linear;
-   /* transform: scale(2,2); */
+   transform: scale(2,2); */
 }
 .cardcontent{
     padding: 6.5rem 0 5rem 0;

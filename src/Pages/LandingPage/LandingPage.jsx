@@ -19,6 +19,13 @@ import maryLand from '../../Assets/maryland-home.png';
 import oshodi from '../../Assets/oshodi-home.png';
 import arrow from '../../Assets/arrow.svg';
 import Review from '../../Components/Review/Review';
+import review1 from '../../Assets/review1.svg';
+import review2 from '../../Assets/review2.svg';
+import review3 from '../../Assets/review3.svg';
+import review4 from '../../Assets/review4.svg';
+import review5 from '../../Assets/review5.svg';
+import review6 from '../../Assets/review6.svg';
+import Footer from '../../Components/Footer/Footer';
 
 
 
@@ -35,6 +42,20 @@ const Landingpage = () => {
     {content: "Ajah", img: ajah},
     {content: "MaryLand", img: maryLand},
     {content: "Oshodi", img: oshodi},
+      ]);
+
+
+      // Usestate for Reviewcard Component
+    const [myReview1] = useState([
+    {heading: 'Nicholas & Dammy', img: review1},  
+    {heading: "Austine Ette", img: review2},
+    {heading: "Kate Shaw", img: review3}
+      ])
+
+    const [myReview2] = useState([
+    {heading: 'Debra & Jerry', img: review4},  
+    {heading: "Julia", img: review5},
+    {heading: "Betty", img: review6}
       ])
 
     // Usestate for Login Component
@@ -124,8 +145,45 @@ const Landingpage = () => {
           </div>
       </section>
 
+        {/* Review Component */}
       <section className="section4">
-        <Review/>
+            <h5 className="section4heading">Thousands of happy stories from our users</h5>
+          <Carousel className='reviewcarousel' autoPlay='true' infiniteLoop='true' interval='8000' showThumbs={false}>
+            <div className='review'>
+              {myReview1.map((item, index) =>(
+                <Review heading={item.heading} img={item.img} key={index}/>))}   
+            </div>
+
+            <div className='review'>
+              {myReview2.map((item, index) =>(
+                <Review heading={item.heading} img={item.img} key={index}/>))}   
+            </div>
+
+            <div className='review'>
+              {myReview1.map((item, index) =>(
+                <Review heading={item.heading} img={item.img} key={index}/>))}   
+            </div>
+          </Carousel>
+      </section>
+
+        {/* Carousel strictly for mobile viewport only */}
+      <section>
+        <Carousel className='mobilecarousel' autoPlay='true' infiniteLoop='true' interval='3000' showThumbs={false}>
+          <div>
+            <Review img={review1} heading='Nicholas & Dammy' />
+          </div>
+          <div>
+            <Review img={review2} heading='Austine Ette' />
+          </div>
+          <div>
+            <Review img={review3} heading='Kate Shaw' />
+          </div>
+        </Carousel>
+      </section>
+
+      {/* Footer Component */}
+      <section>
+            <Footer />
       </section>
     </div>
   )
