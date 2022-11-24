@@ -5,7 +5,7 @@ import Login from "./Pages/Login/Login";
 import Catalogue from "../src/Pages/Catalogue/Catalogue";
 import SignUp from "./Pages/Signup/Signup";
 import { Routes, Route } from "react-router-dom";
-import Overview from "./Components/Overview/Overview";
+import Likebutton from "./Components/Button/LikeButton/Likebutton";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route path="/Catalogue" element={<Catalogue />} />
         <Route path="/Signup" element={<SignUp />} />
       </Routes> */}
-      <Overview />
+      <Likebutton />
       {/* <Login /> */}
       {/* <Landingpage /> */}
       {/* <Catalogue/>  */}
