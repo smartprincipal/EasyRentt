@@ -2,6 +2,7 @@ import React from 'react'
 import './CatalogueCard.css'
 import Button from '../Button/Button'
 import ShareIcon from '../../Assets/shareIcon.svg'
+import Likebutton from "../Button/LikeButton/Likebutton";
 import FavouriteIcon from '../../Assets/favouriteIcon.svg'
 
 const CatalogueCard = (props) => {
@@ -19,7 +20,9 @@ const CatalogueCard = (props) => {
     textAlign: "center",
     color: "#fff",
     border: "none"
-  }
+  };
+
+  
   return (
     <div classname='catalogueCard'>
      <img src={props.catalogueImg} alt="" classname='catalogueImg'/>
@@ -61,7 +64,7 @@ const CatalogueCard = (props) => {
          <img src={ShareIcon} alt="" />
         </div>
         <div>
-         <img src={FavouriteIcon} alt="" />
+            <Likebutton  />
         </div>
        </div>
       </div>
