@@ -1,17 +1,22 @@
 import React from 'react'
 import './Overview.css';
+import bizdev from '../../Assets/briefcase.svg';
+import culture from '../../Assets/culture-icon.png';
+import landmark from '../../Assets/landmark-icon.svg';
+import outdoor from '../../Assets/outdoor-icon.svg';
+import transport from '../../Assets/transport-icon.svg';
 
 const Overview = () => {
   return (
     <div className='overview'>
         <h1 className='overheading1'>Magodo</h1>
-        <p>
+        <p className='overcontent'>
             Victoria is the capital of Germany, but at the same time, 
             it is a global cosmopolitan hub that differs greatly from other German towns. 
             The city is famous for its diverse mixture of attractions, rich cultural scene, 
             and unique lifestyle that is both rapid and relaxed.
         </p>
-        <div>
+        <div className='overdiv'>
             <h2 className='overheading2'>Overview</h2>
             <p className='overcontent'>
                 A stark contrast between the traditional and the modern is what distinguishes Berlin from many other European capitals. 
@@ -25,11 +30,12 @@ const Overview = () => {
                 socialist-era buildings are converted into social club centers. In many respects, Berlin today is actively reinventing 
                 and redefining itself, and it is fascinating to observe.
             </p>
-            <hr />
+            <hr className='linebreak' />
+            <br />
         </div>
         <div>
-            <div>
-                <img src="" alt=""  />
+            <div className='oversubdiv'>
+                <img src={bizdev} alt="work-icon"  />
                 <h3>Business and Economy</h3>
             </div>
             <p className='overcontent'>
@@ -45,8 +51,8 @@ const Overview = () => {
             </p>
         </div>
         <div>
-            <div>
-                <img src="" alt=""  />
+            <div className='oversubdiv'>
+                <img src={culture} alt="culture-icon"  />
                 <h3>Culture</h3>
             </div>
             <p className='overcontent'>
@@ -62,8 +68,8 @@ const Overview = () => {
             </p>
         </div>
         <div>
-            <div>
-                <img src="" alt=""  />
+            <div className='oversubdiv'>
+                <img src={landmark} alt="landmark-icon"  />
                 <h3>Landmarks</h3>
             </div>
             <p className='overcontent'>
@@ -76,8 +82,8 @@ const Overview = () => {
             </p>
         </div>
         <div>
-            <div>
-                <img src="" alt=""  />
+            <div className='oversubdiv'>
+                <img src={outdoor} alt="outdoor-icon"  />
                 <h3>Outdoor</h3>
             </div>
             <p className='overcontent'>
@@ -96,8 +102,8 @@ const Overview = () => {
             </p>
         </div>
         <div>
-            <div>
-                <img src="" alt=""  />
+            <div className='oversubdiv'>
+                <img src={transport} alt="transport-icon"  />
                 <h3>Transportation</h3>
             </div>
             <p className='overcontent'>
