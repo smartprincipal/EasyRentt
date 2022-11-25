@@ -66,3 +66,20 @@ text-align: center;
  display: flex;
  gap: 10px;
 }
+
+
+/* Strictly for Share button toggle */
+.inactive{
+    display: none;
+}
+
+.active{
+    display: flex;
+  
+    justify-content: space-evenly;
+    background-color: rgb(196, 186, 186);
+    position: absolute;
+    left: 23rem;
+    width: 12rem;
+    height: 5rem;
+}

@@ -1,8 +1,9 @@
-import React from 'react'
+import { useState } from 'react';
 import './CatalogueCard.css'
 import Button from '../Button/Button'
 import ShareIcon from '../../Assets/shareIcon.svg'
 import Likebutton from "../Button/LikeButton/Likebutton";
+import {EmailShareButton, FacebookShareButton,  TwitterShareButton, WhatsappShareButton, EmailIcon, FacebookIcon, TwitterIcon, WhatsappIcon,} from "react-share";
 import FavouriteIcon from '../../Assets/favouriteIcon.svg'
 
 const CatalogueCard = (props) => {
@@ -22,7 +23,17 @@ const CatalogueCard = (props) => {
     border: "none"
   };
 
-  
+   // Usestate for Share button
+   const [shareToggle, setShareToggle] = useState(false)
+
+   const handleShareToggle = () => {
+     return setShareToggle(prevToggle =>!prevToggle)
+   };
+
+  const sharedUrl = 'www.google.com';
+
+
+
   return (
     <div classname='catalogueCard'>
      <img src={props.catalogueImg} alt="" classname='catalogueImg'/>
@@ -60,12 +71,31 @@ const CatalogueCard = (props) => {
         <Button style={viewBlack} text={"View details"}/>
        </div>
        <div className='viewSectionIcon'>
-        <div>
-         <img src={ShareIcon} alt="" />
+        <div onClick={handleShareToggle}>
+         <img src={ShareIcon} alt="share-icon" />
         </div>
         <div>
             <Likebutton  />
         </div>
+        <div className={shareToggle ? 'active' : 'inactive' }>
+            <FacebookShareButton url={sharedUrl}>
+              <FacebookIcon size={40} round={true} />
+            </FacebookShareButton>
+
+            <EmailShareButton url={sharedUrl}>
+              <EmailIcon size={40} round={true} />
+            </EmailShareButton>
+
+            <TwitterShareButton url={sharedUrl}>
+              <TwitterIcon size={40} round={true} />
+            </TwitterShareButton>
+
+            <WhatsappShareButton url={sharedUrl}>
+              <WhatsappIcon size={40} round={true} />
+            </WhatsappShareButton>
+            
+        </div>
+        
        </div>
       </div>
       
