@@ -4,7 +4,8 @@ import Button from '../Button/Button'
 import ShareIcon from '../../Assets/shareIcon.svg'
 import Likebutton from "../Button/LikeButton/Likebutton";
 import {EmailShareButton, FacebookShareButton,  TwitterShareButton, WhatsappShareButton, EmailIcon, FacebookIcon, TwitterIcon, WhatsappIcon,} from "react-share";
-import FavouriteIcon from '../../Assets/favouriteIcon.svg'
+import FavouriteIcon from '../../Assets/favouriteIcon.svg';
+import { FaTimesCircle } from 'react-icons/fa';
 
 const CatalogueCard = (props) => {
 
@@ -32,7 +33,7 @@ const CatalogueCard = (props) => {
 
   const sharedUrl = 'www.google.com';
 
-
+  const timesButtonStyle = { fontSize: "3rem" };
 
   return (
     <div classname='catalogueCard'>
@@ -72,27 +73,33 @@ const CatalogueCard = (props) => {
        </div>
        <div className='viewSectionIcon'>
         <div onClick={handleShareToggle}>
-         <img src={ShareIcon} alt="share-icon" />
+          {shareToggle ? <FaTimesCircle style={timesButtonStyle}/> :  <img src={ShareIcon} alt="share-icon" />}
+         
         </div>
         <div>
             <Likebutton  />
         </div>
         <div className={shareToggle ? 'active' : 'inactive' }>
+          <div className='shareicon'>
             <FacebookShareButton url={sharedUrl}>
-              <FacebookIcon size={40} round={true} />
+              <FacebookIcon size={45} round={true} />
             </FacebookShareButton>
-
+          </div>
+          <div className='shareicon'>
             <EmailShareButton url={sharedUrl}>
-              <EmailIcon size={40} round={true} />
+              <EmailIcon size={45} round={true} />
             </EmailShareButton>
-
+          </div>
+          <div className='shareicon'>
             <TwitterShareButton url={sharedUrl}>
-              <TwitterIcon size={40} round={true} />
+              <TwitterIcon size={45} round={true} />
             </TwitterShareButton>
-
+          </div>
+          <div className='shareicon'>
             <WhatsappShareButton url={sharedUrl}>
-              <WhatsappIcon size={40} round={true} />
+              <WhatsappIcon size={45} round={true} />
             </WhatsappShareButton>
+          </div>
             
         </div>
         

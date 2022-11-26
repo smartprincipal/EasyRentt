@@ -77,9 +77,12 @@ text-align: center;
     display: flex;
   
     justify-content: space-evenly;
-    background-color: rgb(196, 186, 186);
+    /* background-color: rgb(196, 186, 186); */
     position: absolute;
-    left: 23rem;
-    width: 12rem;
-    height: 5rem;
+    left: 21rem;
+    width: 15rem;
+    /* height: 3rem; */
+   
+    transition:height 0.3s ease-in-out;
 }
+

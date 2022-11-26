@@ -1,12 +1,20 @@
 import React from 'react'
+import { useState } from 'react';
 import './Overview.css';
 import bizdev from '../../Assets/briefcase.svg';
 import culture from '../../Assets/culture-icon.png';
 import landmark from '../../Assets/landmark-icon.svg';
 import outdoor from '../../Assets/outdoor-icon.svg';
 import transport from '../../Assets/transport-icon.svg';
-
+import dropup from '../../Assets/drop-up.svg';
+import dropdown from '../../Assets/drop-down.svg';
 const Overview = () => {
+
+    // Usestate for accordion toggle
+    const [isActive, setIsActive] = useState(false);
+
+
+
   return (
     <div className='overview'>
         <h1 className='overheading1'>Magodo</h1>
@@ -16,7 +24,7 @@ const Overview = () => {
             The city is famous for its diverse mixture of attractions, rich cultural scene, 
             and unique lifestyle that is both rapid and relaxed.
         </p>
-        <div className='overdiv'>
+        { isActive && <div> <div className='overdiv'>
             <h2 className='overheading2'>Overview</h2>
             <p className='overcontent'>
                 A stark contrast between the traditional and the modern is what distinguishes Berlin from many other European capitals. 
@@ -117,7 +125,20 @@ const Overview = () => {
                 and a couple of ferry services. Thanks to all this variety, there is no lack 
                 of interchange stations and transport nodes in the city.
             </p>
-        </div>
+        </div> </div>}
+       
+            {/* {isActive && <div>
+                <h6>The city's public transportation system consists of separate networks, with 
+                five different light and heavy rail systems. That includes the S-Bahn and 
+                U-Bahn rail systems, regional rail infrastructure, a tram and bus network, 
+                and a couple of ferry services. Thanks to all this variety, there is no lack 
+                of interchange stations and transport nodes in the city.</h6>
+                </div>} */}
+     
+            <div onClick={() => setIsActive(!isActive)}>
+                {isActive ? <img src={dropup} alt=""  /> : <img src={dropdown} alt=""  />}
+
+            </div>
     </div>
   )
 }
