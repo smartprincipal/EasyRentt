@@ -57,3 +57,16 @@
     color: #D9D9D9;
     background-color: #bdbaba;
 }
+
+.accordionimg img{
+    width: 3rem;
+    transition: 0.75s;
+}
+
+.accordionimg img:hover{
+    width: 4rem;
+}
+
+.accordionimg{
+    text-align: center;
+}
