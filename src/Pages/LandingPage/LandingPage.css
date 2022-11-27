@@ -41,6 +41,9 @@
     border: none;
     background-color: rgba(255, 255, 255, 0);
     flex: 80%;
+    color: white;
+    font-family: inherit;
+    font-weight: 500;
 }
 
 #herosearch:focus{
@@ -61,8 +64,9 @@
 .captiondiv{
     background-color: black;
     width: 25rem;
-    margin-top: 5rem;
+    margin-top: 9rem;
 }
+
 
 .caption{
     color: white;
@@ -132,6 +136,10 @@
 
 .carouseldiv3{
     background-image: url('../../Assets/carousel1.svg');   
+}
+
+.carousel-status{
+    display: none;
 }
 
 .carouseldiv1, .carouseldiv2, .carouseldiv3{

@@ -130,7 +130,7 @@ const Landingpage = () => {
           <h4 className='section3heading'>Find homes that suit your style</h4>
 
           {/* Carousel Component */}
-          <Carousel className='carousel' autoPlay='true' infiniteLoop='true' interval='3000' showThumbs={false}>
+          <Carousel className='carousel' autoPlay='true' infiniteLoop='true' interval='3000' showThumbs='false'>
             <div className='carouseldiv1'>
               <p className='carouseltext'>3-Bedroom Flat</p>
               <div>
@@ -160,7 +160,7 @@ const Landingpage = () => {
         {/* Review Component */}
       <section className="section4">
             <h5 className="section4heading">Thousands of happy stories from our users</h5>
-          <Carousel className='reviewcarousel' autoPlay='true' infiniteLoop='true' interval='8000' showThumbs={false}>
+          <Carousel className='reviewcarousel' autoPlay='true' infiniteLoop='true' interval='9000' showThumbs={false}>
             <div className='review'>
               {myReview1.map((item, index) =>(
                 <Review heading={item.heading} img={item.img} key={index}/>))}   
