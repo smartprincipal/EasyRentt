@@ -8,6 +8,9 @@
 background-image: url(../../Assets/CatalogueHero.png);
 height: 281px;
 }
+.navBarr{
+ padding-top: 40px;
+}
 
 .searchSection{
  padding-top: 55px;
@@ -35,8 +38,12 @@ letter-spacing: 0em;
 padding-left: 10px;
 padding-top: 7px;
 display: flex;
-gap: 10px
+gap: 10px;
+cursor: pointer;
 
+}
+.inactive{
+ display: none;
 }
 .pricebox{
  width: 365px;
@@ -45,9 +52,11 @@ gap: 10px
  border-radius: 15px;
  padding-left: 15px;
  padding-top: 10px;
- display: none;
+ display: block;
  position: absolute;
- top: 115px;
+ top: 210px;
+ left: -100;
+ cursor: pointer;
 
 }
 .price{
@@ -138,7 +147,7 @@ font-size: 18px;
  background-color: black;
 }
 .opss{
- width: 120px ;
+ width: 130px ;
  height: 40px;
  background: rgba(217, 217, 217, 0.9);
 border-radius: 90px;

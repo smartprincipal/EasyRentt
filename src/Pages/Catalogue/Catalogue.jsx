@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Catalogue.css'
-// import NavBar from '../../Components/NavBar/NavBar';
+import NavBar from '../../Components/NavBar/NavBar';
 import SearchImg from '../../Assets/searchImg.png';
 import Victoria from '../../Assets/Victoria.png';
 import Lekki2 from '../../Assets/lekki2.png'
@@ -45,6 +45,17 @@ const Catalogue = () => {
       border:"none"
     };
 
+    const [toggle, setToggle] =useState(true)
+    const handlePrice = () => {
+      return setToggle(prevToggle =>!prevToggle)
+    }
+    const handleBed = () => {
+      return setToggle(prevToggle =>!prevToggle)
+    }
+    const handleBath = () => {
+      return setToggle(prevToggle =>!prevToggle)
+    }
+
 
   return (
     <div className='calaogue'>
@@ -54,21 +65,21 @@ const Catalogue = () => {
 
       {/* NavBar Import */} 
       <div className='navBarr'>
-        {/* <NavBar/> */}
+        <NavBar/>
       </div>
 
       {/* Filter Section */}
       <div className="searchSection">
 
         {/* Select dropdown */}
-        <div  className='ops'>
+        <div  className='ops' onClick={handlePrice}>
          <p>  Price 
           </p>
           <p>
           ▼
           </p>
         </div>
-        <div className="pricebox">
+        <div className={toggle ? 'inactive' : 'pricebox'} >
         <div className="price">
           <button className="minPrice">
             <div className="symbol">
@@ -116,14 +127,14 @@ const Catalogue = () => {
 
 
 
-        <div className='ops'>
+        <div className='ops' onClick={handleBed}>
         <p> Bed 
           </p>
           <p>
           ▼
           </p>
         </div>
-        <div className="bedBox">
+        <div className={toggle ? 'inactive' : 'bedBox'}>
           <div className="bedAmount">
             <div className="count">Any</div>
             <div className="count">Studio</div>
@@ -135,7 +146,7 @@ const Catalogue = () => {
 
         </div>
        
-        <div className='opss'>
+        <div className='opss' onClick={handleBath}>
           Bathroom ▼
           </div>
           <div className="bathroomBox">
