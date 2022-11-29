@@ -3,8 +3,36 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 15rem;
+    font-family: 'Inter';
+    font-style: normal;
 }
 
 .navcontainer{
     padding-top: 2rem;
+}
+
+.filtercontainer{
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.selectfilter{
+    width: 10rem;
+}
+
+#demo-simple-select-label{
+    font-weight: 600;
+    font-size: 1rem ;
+}
+
+.inputdiv2{
+    border: 2px solid black;
+    border-radius: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 0 20rem; */
+    padding: 0.5rem;
 }

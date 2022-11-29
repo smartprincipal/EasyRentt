@@ -7,19 +7,20 @@ import SignUp from "./Pages/Signup/Signup";
 import { Routes, Route } from "react-router-dom";
 import Overview from "./Components/Overview/Overview";
 import CatalogueNavbar from "./Components/CatalogueNavbar/CatalogueNavbar";
+import Searchbar from "./Components/Searchbar/Searchbar";
 
 
 
 function App() {
   return (
     <div>
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<Landingpage />} />
-        <Route path="/" element={<Catalogue />} />
+        {/* <Route path="/" element={<Catalogue />} /> */}
         <Route path="/Signup" element={<SignUp />} />
-      </Routes> */}
-      <CatalogueNavbar />
-
+      </Routes>
+      {/* <CatalogueNavbar /> */}
+      {/* <Searchbar /> */}
     </div>
   );
 }

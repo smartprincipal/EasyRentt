@@ -2,6 +2,8 @@ import React from 'react'
 import './CatalogueNavbar.css';
 import NavBar from '../NavBar/NavBar';
 import { Select, FormControl, MenuItem, InputLabel } from '@mui/material';
+import Searchbar from '../Searchbar/Searchbar';
+import searchicon from '../../Assets/search-icon2.svg';
 
 const CatalogueNavbar = () => {
   return (
@@ -10,9 +12,9 @@ const CatalogueNavbar = () => {
             <NavBar />
         </div>
         
-        <div>
+        <div className='filtercontainer'>
             <div>
-                <FormControl fullWidth>
+                <FormControl className='selectfilter'>
                     <InputLabel id="demo-simple-select-label">Price</InputLabel>
                     <Select id="demo-simple-select"  label="Price">
                         <MenuItem value={1}>#250,000 - 500,000</MenuItem>
@@ -23,7 +25,7 @@ const CatalogueNavbar = () => {
                 </FormControl>
             </div>
             <div>
-                <FormControl fullWidth>
+                <FormControl className='selectfilter'>
                     <InputLabel id="demo-simple-select-label">Beds</InputLabel>
                     <Select id="demo-simple-select"  label="Beds">
                         <MenuItem value={1}>Any</MenuItem>
@@ -36,7 +38,7 @@ const CatalogueNavbar = () => {
                 </FormControl>
             </div>
             <div>
-                <FormControl fullWidth>
+                <FormControl className='selectfilter'>
                     <InputLabel id="demo-simple-select-label">Baths</InputLabel>
                     <Select id="demo-simple-select"  label="Baths">
                         <MenuItem value={1}>1</MenuItem>
@@ -44,6 +46,9 @@ const CatalogueNavbar = () => {
                         <MenuItem value={3}>3+</MenuItem>
                     </Select>
                 </FormControl>
+            </div>
+            <div>
+                <Searchbar searchdiv='inputdiv2' imgsource={searchicon} />
             </div>
         </div>
     </div>
