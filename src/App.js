@@ -11,12 +11,12 @@ import Overview from "./Components/Overview/Overview";
 function App() {
   return (
     <div>
-      {/* <Routes>
-        <Route path="/" element={<Landingpage />} />
+      <Routes>
+        {/* <Route path="/" element={<Landingpage />} /> */}
         <Route path="/" element={<Catalogue />} />
         <Route path="/Signup" element={<SignUp />} />
-      </Routes> */}
-      <Overview />
+      </Routes>
+      {/* <Overview /> */}
       {/* <Login /> */}
       {/* <Landingpage /> */}
       {/* <Catalogue/>  */}

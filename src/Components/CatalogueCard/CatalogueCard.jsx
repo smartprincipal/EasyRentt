@@ -33,7 +33,7 @@ const CatalogueCard = (props) => {
 
   const sharedUrl = 'www.google.com';
 
-  const timesButtonStyle = { fontSize: "3rem" };
+  const timesButtonStyle = { fontSize: "3rem", cursor: 'pointer' };
 
   return (
     <div classname='catalogueCard'>
@@ -73,7 +73,7 @@ const CatalogueCard = (props) => {
        </div>
        <div className='viewSectionIcon'>
         <div onClick={handleShareToggle}>
-          {shareToggle ? <FaTimesCircle style={timesButtonStyle}/> :  <img src={ShareIcon} alt="share-icon" />}
+          {shareToggle ? <FaTimesCircle style={timesButtonStyle}/> :  <img src={ShareIcon} className='shareimg' alt="share-icon" />}
          
         </div>
         <div>

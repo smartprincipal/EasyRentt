@@ -4,14 +4,14 @@ import { FcLikePlaceholder, FcLike } from 'react-icons/fc';
 const Likebutton = () => {
 
 
-    // Usestate for like button display
+    // useState for like button display
   const [toggle, setToggle] = useState(false)
 
   const handleToggle = () => {
     return setToggle(prevToggle =>!prevToggle)
   };
 
-  const likeButtonStyle = { fontSize: "3rem" };
+  const likeButtonStyle = { fontSize: "3rem", cursor: 'pointer' };
 
   return (
     <div className='likebutton' onClick={handleToggle}>

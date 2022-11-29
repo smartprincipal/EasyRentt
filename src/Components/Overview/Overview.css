@@ -61,6 +61,7 @@
 .accordionimg img{
     width: 3rem;
     transition: 0.75s;
+    cursor: pointer;
 }
 
 .accordionimg img:hover{
