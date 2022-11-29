@@ -1,0 +1,10 @@
+.catnavbar{
+    background-image: url('../../Assets/CatalogueHero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15rem;
+}
+
+.navcontainer{
+    padding-top: 2rem;
+}
