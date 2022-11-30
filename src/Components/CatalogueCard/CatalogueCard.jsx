@@ -1,11 +1,18 @@
 import { useState } from 'react';
 import './CatalogueCard.css'
 import Button from '../Button/Button'
+import locateIcon from '../../Assets/location-icon.svg'
+import imgtab from '../../Assets/imgtab.png'
+import Victoria from '../../Assets/Victoria.png';
 import ShareIcon from '../../Assets/shareIcon.svg'
 import Likebutton from "../Button/LikeButton/Likebutton";
 import {EmailShareButton, FacebookShareButton,  TwitterShareButton, WhatsappShareButton, EmailIcon, FacebookIcon, TwitterIcon, WhatsappIcon,} from "react-share";
 import FavouriteIcon from '../../Assets/favouriteIcon.svg';
 import { FaTimesCircle } from 'react-icons/fa';
+import { TbCurrencyNaira } from 'react-icons/tb';
+import { FaBed } from 'react-icons/fa';
+import { BiBath } from 'react-icons/bi';
+
 
 const CatalogueCard = (props) => {
 
@@ -24,7 +31,7 @@ const CatalogueCard = (props) => {
     border: "none"
   };
 
-   // Usestate for Share button
+   //Usestate for Share button
    const [shareToggle, setShareToggle] = useState(false)
 
    const handleShareToggle = () => {
@@ -34,10 +41,69 @@ const CatalogueCard = (props) => {
   const sharedUrl = 'www.google.com';
 
   const timesButtonStyle = { fontSize: "3rem", cursor: 'pointer' };
+  const bedBathIcon = { color: "grey"}
 
   return (
     <div classname='catalogueCard'>
-     <img src={props.catalogueImg} alt="" classname='catalogueImg'/>
+      <div className='catcardmaindiv'>
+        <div className='catlocationdiv'>
+          <img src={locateIcon} alt="location"/>
+            <p>Maryland</p>
+        </div>
+        <img src={imgtab} alt="imgtab"  />
+      </div>
+      <div className='catcardfooterdiv'>
+          <div className='catcardsubdiv1'>
+              <p>Plant View  Bedroom</p>
+              <p><TbCurrencyNaira />205,000,000</p>
+          </div>
+          <div className='catcardsubdiv2'>
+              <div className='bed-div'>
+                  <FaBed style={bedBathIcon}/>
+                  <p>5 Beds</p>
+              </div>
+              <div className='bath-div'>
+                  <BiBath style={bedBathIcon}/>
+                  <p>2 Baths</p>
+              </div>
+          </div>
+          <hr />
+          <div className='catcardsubdiv3'>
+              <Button style={viewBlack} text={"View details"}/>
+              <div className='sharelikediv'>
+                  <div onClick={handleShareToggle}>
+                    {shareToggle ? <FaTimesCircle style={timesButtonStyle}/> :  <img src={ShareIcon} className='shareimg' alt="share-icon" />}
+                  </div>
+                  <div className='like-div'>
+                    <Likebutton  />
+                  </div>
+                  <div className={shareToggle ? 'shareactive' : 'shareinactive' }>
+                      <div className='shareicon'>
+                        <FacebookShareButton url={sharedUrl}>
+                          <FacebookIcon size={45} round={true} />
+                        </FacebookShareButton>
+                      </div>
+                      <div className='shareicon'>
+                        <EmailShareButton url={sharedUrl}>
+                          <EmailIcon size={45} round={true} />
+                        </EmailShareButton>
+                      </div>
+                      <div className='shareicon'>
+                        <TwitterShareButton url={sharedUrl}>
+                          <TwitterIcon size={45} round={true} />
+                        </TwitterShareButton>
+                      </div>
+                      <div className='shareicon'>
+                        <WhatsappShareButton url={sharedUrl}>
+                          <WhatsappIcon size={45} round={true} />
+                        </WhatsappShareButton>
+                      </div>
+            
+                    </div>
+              </div>
+          </div>
+      </div>
+     {/* <img src={props.catalogueImg} alt="" classname='catalogueImg'/>
      <div className="cardcontent1">
       <div className="subCardContent1">
        <div>
@@ -107,7 +173,7 @@ const CatalogueCard = (props) => {
       </div>
       
 
-     </div>
+     </div> */}
 
     </div>
   )

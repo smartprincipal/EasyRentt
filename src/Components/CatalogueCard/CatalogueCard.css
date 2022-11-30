@@ -1,11 +1,116 @@
-.catalogueCard{
- height: 690px;
-width: 599px;
-border-radius: 30px;
-background-color: rgba(217, 217, 217, 0.5);
-border: 2px solid red;
+ .catalogueCard{
+    height: 50rem;
+    width: 599px;
+    border-radius: 30px;
+    background-color: rgba(217, 217, 217, 0.5);
+    font-family: 'Inter';
+    border: 1px solid black;
 }
-.catalogueImg{
+
+.catcardmaindiv{
+    background-image: url('../../Assets/Victoria.png');   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem 25rem 1rem;
+}
+
+/* .catcardmaindiv:hover{
+    transform: scale(1.10);
+} */
+
+.catlocationdiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: yellow;
+    border-radius: 30px;
+    padding: 0.75rem 1rem;
+    min-width: 9rem;
+}
+
+.catlocationdiv p{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    
+}
+
+.catcardfooterdiv{
+    background: rgba(217, 217, 217, 0.5);
+    border-radius:  0px 0px 30px 30px;
+    padding: 1rem 2rem;
+}
+
+.catcardsubdiv1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.catcardsubdiv1 p{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+}
+
+.catcardsubdiv2, .bed-div, .bath-div{
+    display: flex; 
+    align-items: center;
+}
+
+.catcardsubdiv2{
+    justify-content: flex-start;
+    padding: 0.75rem 0;
+}
+
+.bed-div{
+    justify-content: space-evenly;
+    border-right: 1px solid rgba(125, 127, 131, 0.7);
+}
+
+.bath-div{
+    justify-content: space-evenly;
+    border-left: 1px solid rgba(125, 127, 131, 0.7);
+    padding-left: 0.5rem;
+}
+
+.bed-div p, .bath-div p{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgba(125, 127, 131, 0.7);
+    padding: 0 0.5rem;
+}
+
+.catcardsubdiv3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.sharelikediv{
+    display: flex ;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+
+.like-div{
+    margin-left: 0.75rem;
+}
+
+
+/*.catalogueImg{
  border-radius: 15px 15px 0px 0px;
 width: 599px;
 height: 500px;
@@ -17,7 +122,7 @@ height: 500px;
 }
 .subCardContent1{
  display: flex;
- /* gap: 100px; */
+ gap: 100px;
  justify-content: space-between;
  padding-right: 36px;
  padding-left: 18px;
@@ -65,7 +170,7 @@ text-align: center;
 .viewSectionIcon{
  display: flex;
  gap: 10px;
-}
+} */
 
 
 /* Strictly for Share button toggle */

@@ -4,6 +4,7 @@ import NavBar from '../NavBar/NavBar';
 import { Select, FormControl, MenuItem, InputLabel } from '@mui/material';
 import Searchbar from '../Searchbar/Searchbar';
 import searchicon from '../../Assets/search-icon2.svg';
+import { TbCurrencyNaira } from 'react-icons/tb';
 
 const CatalogueNavbar = () => {
   return (
@@ -11,16 +12,15 @@ const CatalogueNavbar = () => {
         <div className='navcontainer'>
             <NavBar />
         </div>
-        
         <div className='filtercontainer'>
             <div>
                  <FormControl className='selectfilter'>
                     <InputLabel id="demo-simple-select-label">Price</InputLabel>
                     <Select id="demo-simple-select"  label="Price">
-                        <MenuItem value='1'>#250,000 - 500,000</MenuItem>
-                        <MenuItem value='2'>#500,000 - 1,000,000</MenuItem>
-                        <MenuItem value='3'>#1,000,000 - 5,000,000</MenuItem>
-                        <MenuItem value='4'>#5,000,000 - 10,000,000</MenuItem>
+                        <MenuItem value='1'><TbCurrencyNaira />250,000 - 500,000</MenuItem>
+                        <MenuItem value='2'><TbCurrencyNaira />500,000 - 1,000,000</MenuItem>
+                        <MenuItem value='3'><TbCurrencyNaira />1,000,000 - 5,000,000</MenuItem>
+                        <MenuItem value='4'><TbCurrencyNaira />5,000,000 - 10,000,000</MenuItem>
                     </Select>
                 </FormControl>
             </div>
