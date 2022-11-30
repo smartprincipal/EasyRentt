@@ -35,7 +35,7 @@
     margin: 0 20rem;
     padding: 0.5rem;
 }
-/*
+
 #herosearch{
     padding: 1rem 3rem;
     border: none;
@@ -55,11 +55,6 @@
     color: white;
     font-weight: 500;
 }
-
-.searchicon{
-    width: 3rem;
-    cursor: pointer;
-} */
 
 .captiondiv{
     background-color: black;

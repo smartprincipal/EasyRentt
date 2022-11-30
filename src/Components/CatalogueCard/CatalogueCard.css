@@ -69,13 +69,12 @@ text-align: center;
 
 
 /* Strictly for Share button toggle */
-.inactive{
+.shareinactive{
     display: none;
 }
 
-.active{
+.shareactive{
     display: flex;
-
     justify-content: space-evenly;
     position: absolute;
     left: 21rem;

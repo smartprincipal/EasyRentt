@@ -99,7 +99,7 @@ const Landingpage = () => {
         
         {/* Hero Input Container */}
         <div>
-          <Searchbar searchdiv='inputdiv' imgsource={searchicon} />
+          <Searchbar searchdiv='inputdiv' imgsource={searchicon} searchinput='herosearch' />
         </div>
           {/* <div className='inputdiv'>
             <input type="search" name="search" id="herosearch" placeholder='Where do you want to live?.' />

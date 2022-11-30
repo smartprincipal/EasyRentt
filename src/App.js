@@ -7,20 +7,22 @@ import SignUp from "./Pages/Signup/Signup";
 import { Routes, Route } from "react-router-dom";
 import Overview from "./Components/Overview/Overview";
 import CatalogueNavbar from "./Components/CatalogueNavbar/CatalogueNavbar";
-import Searchbar from "./Components/Searchbar/Searchbar";
+import NavBar from "./Components/NavBar/NavBar";
+import CatalogueCard from "./Components/CatalogueCard/CatalogueCard";
 
 
 
 function App() {
   return (
     <div>
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Landingpage />} />
-        {/* <Route path="/" element={<Catalogue />} /> */}
+        <Route path="/" element={<Catalogue />} />
         <Route path="/Signup" element={<SignUp />} />
-      </Routes>
+      </Routes> */}
+      {/* <NavBar /> */}
       {/* <CatalogueNavbar /> */}
-      {/* <Searchbar /> */}
+      <CatalogueCard />
     </div>
   );
 }

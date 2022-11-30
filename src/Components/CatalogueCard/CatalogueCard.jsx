@@ -79,7 +79,7 @@ const CatalogueCard = (props) => {
         <div>
             <Likebutton  />
         </div>
-        <div className={shareToggle ? 'active' : 'inactive' }>
+        <div className={shareToggle ? 'shareactive' : 'shareinactive' }>
           <div className='shareicon'>
             <FacebookShareButton url={sharedUrl}>
               <FacebookIcon size={45} round={true} />
