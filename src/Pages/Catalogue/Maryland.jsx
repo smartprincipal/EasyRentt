@@ -13,16 +13,16 @@ const Maryland = () => {
         </div>
         <h1 className='catcardheading'>Apartments</h1>
         <div className='cat-carddiv'>
-            <CatalogueCard />
-            <CatalogueCard />
+            <CatalogueCard location='Maryland' catcardmaindiv='catcardmaindiv1'/>
+            <CatalogueCard location='Maryland' catcardmaindiv='catcardmaindiv2'/>
         </div>
         <div className='cat-carddiv'>
-            <CatalogueCard />
-            <CatalogueCard />
+            <CatalogueCard location='Maryland' catcardmaindiv='catcardmaindiv3'/>
+            <CatalogueCard location='Maryland' catcardmaindiv='catcardmaindiv4'/>
         </div>
         <div className='cat-carddiv'>
-            <CatalogueCard />
-            <CatalogueCard />
+            <CatalogueCard location='Maryland' catcardmaindiv='catcardmaindiv5'/>
+            <CatalogueCard location='Maryland' catcardmaindiv='catcardmaindiv6'/>
         </div>
         <div>
             <Overview heading='Maryland' />

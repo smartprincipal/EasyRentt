@@ -14,7 +14,7 @@ import { FaBed } from 'react-icons/fa';
 import { BiBath } from 'react-icons/bi';
 
 
-const CatalogueCard = (props) => {
+const CatalogueCard = ({location, catcardmaindiv}) => {
 
   const viewBlack={
     background:"#0B0000",
@@ -45,10 +45,10 @@ const CatalogueCard = (props) => {
 
   return (
     <div className='catCard'>
-      <div className='catcardmaindiv'>
+      <div className={catcardmaindiv}>
         <div className='catlocationdiv'>
           <img src={locateIcon} alt="location"/>
-            <p>Maryland</p>
+            <p>{location}</p>
         </div>
         <img src={imgtab} className='imgtab'alt="imgtab"  />
       </div>

@@ -16,12 +16,12 @@ import Maryland from "./Pages/Catalogue/Maryland";
 function App() {
   return (
     <div>
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<Landingpage />} />
         <Route path="/" element={<Catalogue />} />
         <Route path="/Signup" element={<SignUp />} />
-      </Routes> */}
-      <Maryland />
+      </Routes>
+      {/* <Maryland /> */}
       {/* <CatalogueNavbar /> */}
       {/* <CatalogueCard /> */}
     </div>

@@ -8,22 +8,6 @@
     
 }
 
-.catcardmaindiv{
-    background-image: url('../../Assets/Victoria.png');   
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: darken;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1rem 15rem 1rem;
-    border-radius: 20px 20px 0 0;
-}
-
-/* .catcardmaindiv:hover{
-    transform: scale(1.10);
-} */
-
 .catlocationdiv{
     display: flex;
     justify-content: space-between;
@@ -113,6 +97,7 @@
     display: flex ;
     justify-content: space-evenly;
     align-items: center; 
+    position: relative;
 }
 
 .like-div{
@@ -192,7 +177,7 @@ text-align: center;
     display: flex;
     justify-content: space-evenly;
     position: absolute;
-    left: 13rem;
+    right: 5.5rem;
     width: 10rem;
     transition: 0.3s ease-in-out;
 }
