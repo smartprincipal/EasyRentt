@@ -4,18 +4,17 @@
     border-radius: 20px;
     background-color: rgba(217, 217, 217, 0.5);
     font-family: 'Inter';
-    border: 1px solid black;
     
 }
 
 .catlocationdiv{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     background-color: #FCBC0E;;
     border-radius: 30px;
     padding: 0.5rem 1rem;
-    min-width: 7.5rem;
+    min-width: 6rem;
 }
 
 .catlocationdiv img{
@@ -187,3 +186,30 @@ text-align: center;
     width: 2rem;
 }
 
+@media screen and  (max-width: 850px){
+    .catCard{
+        width: 350px;
+    }
+
+}
+
+@media screen and  (max-width: 730px){
+    .catCard{
+        width: 300px;
+    }
+
+}
+
+@media screen and  (max-width: 730px){
+    .catCard{
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media screen and  (max-width: 350px){
+    .catCard{
+        width: 270px;
+    }
+
+}

@@ -11,20 +11,20 @@ import NavBar from "./Components/NavBar/NavBar";
 import CatalogueCard from "./Components/CatalogueCard/CatalogueCard";
 import Maryland from "./Pages/Catalogue/Maryland";
 import Ajah from "./Pages/Catalogue/Ajah";
-import Ikeja from "./Pages/Catalogue/Ikeja";
+import Bananaisland from "./Pages/Catalogue/Bananaisland";
 
 
 
 function App() {
   return (
     <div>
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<Landingpage />} />
-        <Route path="/" element={<Catalogue />} />
+        {/* <Route path="/" element={<Catalogue />} /> */}
         <Route path="/Signup" element={<SignUp />} />
-      </Routes> */}
+      </Routes>
       {/* <Maryland /> */}
-      <Ikeja />
+      {/* <Bananaisland /> */}
       {/* <CatalogueNavbar /> */}
       {/* <CatalogueCard /> */}
     </div>

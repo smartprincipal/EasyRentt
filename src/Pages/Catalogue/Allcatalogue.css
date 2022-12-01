@@ -1,5 +1,6 @@
 .maincatcardcontainer{
     font-family: 'Inter';
+    
 }
 
 .catcardheading{
@@ -13,8 +14,9 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     margin: 2rem 0;
+    padding: 0 5rem;
     /* width: 4rem; */
 }
 
@@ -53,3 +55,24 @@
 .catcardmaindiv6{
     background-image: url('../../Assets/Victoria.png');   
 }
+
+@media screen and  (max-width: 970px){
+    .cat-carddiv{
+        padding: 0 2rem;
+       
+    }
+}
+
+@media screen and  (max-width: 870px){
+    .cat-carddiv{
+        padding: 0;
+    }
+}
+
+@media screen and  (max-width: 600px){
+    .cat-carddiv{
+        flex-wrap: wrap;
+        margin: 0;
+    }
+}
+

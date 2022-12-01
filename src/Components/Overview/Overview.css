@@ -22,7 +22,7 @@
 
 .overcontent{
     font-weight: 100;
-    font-size: 1.75rem;
+    font-size: 20px;
     line-height: 2rem;
     text-align: justify;
     margin-bottom: 3rem;
@@ -65,7 +65,7 @@
 }
 
 .accordionimg img:hover{
-    width: 4rem;
+    width: 3.25rem;
 }
 
 .accordionimg{

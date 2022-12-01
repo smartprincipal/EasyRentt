@@ -48,7 +48,7 @@ const CatalogueCard = ({location, catcardmaindiv}) => {
       <div className={catcardmaindiv}>
         <div className='catlocationdiv'>
           <img src={locateIcon} alt="location"/>
-            <p>{location}</p>
+          <p>{location}</p>
         </div>
         <img src={imgtab} className='imgtab'alt="imgtab"  />
       </div>
