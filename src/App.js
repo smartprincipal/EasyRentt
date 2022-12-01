@@ -9,6 +9,7 @@ import Overview from "./Components/Overview/Overview";
 import CatalogueNavbar from "./Components/CatalogueNavbar/CatalogueNavbar";
 import NavBar from "./Components/NavBar/NavBar";
 import CatalogueCard from "./Components/CatalogueCard/CatalogueCard";
+import Maryland from "./Pages/Catalogue/Maryland";
 
 
 
@@ -20,9 +21,9 @@ function App() {
         <Route path="/" element={<Catalogue />} />
         <Route path="/Signup" element={<SignUp />} />
       </Routes> */}
-      {/* <NavBar /> */}
+      <Maryland />
       {/* <CatalogueNavbar /> */}
-      <CatalogueCard />
+      {/* <CatalogueCard /> */}
     </div>
   );
 }

@@ -19,10 +19,10 @@ const CatalogueCard = (props) => {
   const viewBlack={
     background:"#0B0000",
     borderRadius: "30px",
-    width: "157px",
-    height: "50px",
+    width: "120px",
+    height: "40px",
     fontFamily: "Inter",
-    fontSize: "18px",
+    fontSize: "12px",
     fontWeight: "500px",
     lineHeight: "22px",
     letterSpacing: "0em",
@@ -40,17 +40,17 @@ const CatalogueCard = (props) => {
 
   const sharedUrl = 'www.google.com';
 
-  const timesButtonStyle = { fontSize: "3rem", cursor: 'pointer' };
+  const timesButtonStyle = { fontSize: "2rem", cursor: 'pointer' };
   const bedBathIcon = { color: "grey"}
 
   return (
-    <div classname='catalogueCard'>
+    <div className='catCard'>
       <div className='catcardmaindiv'>
         <div className='catlocationdiv'>
           <img src={locateIcon} alt="location"/>
             <p>Maryland</p>
         </div>
-        <img src={imgtab} alt="imgtab"  />
+        <img src={imgtab} className='imgtab'alt="imgtab"  />
       </div>
       <div className='catcardfooterdiv'>
           <div className='catcardsubdiv1'>
@@ -75,27 +75,27 @@ const CatalogueCard = (props) => {
                     {shareToggle ? <FaTimesCircle style={timesButtonStyle}/> :  <img src={ShareIcon} className='shareimg' alt="share-icon" />}
                   </div>
                   <div className='like-div'>
-                    <Likebutton  />
+                    <Likebutton style={timesButtonStyle} />
                   </div>
                   <div className={shareToggle ? 'shareactive' : 'shareinactive' }>
                       <div className='shareicon'>
                         <FacebookShareButton url={sharedUrl}>
-                          <FacebookIcon size={45} round={true} />
+                          <FacebookIcon size={25} round={true} />
                         </FacebookShareButton>
                       </div>
                       <div className='shareicon'>
                         <EmailShareButton url={sharedUrl}>
-                          <EmailIcon size={45} round={true} />
+                          <EmailIcon size={25} round={true} />
                         </EmailShareButton>
                       </div>
                       <div className='shareicon'>
                         <TwitterShareButton url={sharedUrl}>
-                          <TwitterIcon size={45} round={true} />
+                          <TwitterIcon size={25} round={true} />
                         </TwitterShareButton>
                       </div>
                       <div className='shareicon'>
                         <WhatsappShareButton url={sharedUrl}>
-                          <WhatsappIcon size={45} round={true} />
+                          <WhatsappIcon size={25} round={true} />
                         </WhatsappShareButton>
                       </div>
             

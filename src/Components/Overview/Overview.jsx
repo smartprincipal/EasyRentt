@@ -8,7 +8,9 @@ import outdoor from '../../Assets/outdoor-icon.svg';
 import transport from '../../Assets/transport-icon.svg';
 import dropup from '../../Assets/drop-up.svg';
 import dropdown from '../../Assets/drop-down.svg';
-const Overview = () => {
+
+
+const Overview = ({heading}) => {
 
     // Usestate and Onclick funtion for accordion toggle
     const [isActive, setIsActive] = useState(false);
@@ -19,7 +21,7 @@ const Overview = () => {
 
   return (
     <div className='overview'>
-        <h1 className='overheading1'>Magodo</h1>
+        <h1 className='overheading1'>{heading}</h1>
         <p className='overcontent'>
             Victoria is the capital of Germany, but at the same time, 
             it is a global cosmopolitan hub that differs greatly from other German towns. 
