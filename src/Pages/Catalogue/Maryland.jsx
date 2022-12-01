@@ -1,9 +1,9 @@
 import React from 'react'
-import './Allcatalogue.css'
-import CatalogueCard from '../../Components/CatalogueCard/CatalogueCard'
-import CatalogueNavbar from '../../Components/CatalogueNavbar/CatalogueNavbar'
-import Overview from '../../Components/Overview/Overview'
-import Footer from '../../Components/Footer/Footer'
+import './Allcatalogue.css';
+import CatalogueCard from '../../Components/CatalogueCard/CatalogueCard';
+import CatalogueNavbar from '../../Components/CatalogueNavbar/CatalogueNavbar';
+import Overview from '../../Components/Overview/Overview';
+import Footer from '../../Components/Footer/Footer';
 
 const Maryland = () => {
   return (
