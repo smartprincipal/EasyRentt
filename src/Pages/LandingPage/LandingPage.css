@@ -41,6 +41,9 @@
     border: none;
     background-color: rgba(255, 255, 255, 0);
     flex: 80%;
+    color: white;
+    font-family: inherit;
+    font-weight: 500;
 }
 
 #herosearch:focus{
@@ -61,8 +64,9 @@
 .captiondiv{
     background-color: black;
     width: 25rem;
-    margin-top: 5rem;
+    margin-top: 9rem;
 }
+
 
 .caption{
     color: white;
@@ -87,7 +91,7 @@
 
 .section2heading{
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 4.5rem;
     text-transform: uppercase;
 }
@@ -110,16 +114,16 @@
 
 .section3heading{
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 3rem;
     text-align: center;
     color: #FFFFFF;
     text-transform: uppercase;
 }
 
-.carousel{
+.carousel, .reviewcarousel{
     width: 90vw;
-    margin: 5rem auto 0;
+    margin: 3.5rem auto ;
   }
 
 .carouseldiv1{
@@ -132,6 +136,10 @@
 
 .carouseldiv3{
     background-image: url('../../Assets/carousel1.svg');   
+}
+
+.carousel-status{
+    display: none;
 }
 
 .carouseldiv1, .carouseldiv2, .carouseldiv3{
@@ -180,34 +188,27 @@
 
 .section4{
     padding: 2rem;
-    background-color: #D9D9D9;;
 }
 
-/* .section4heading{
-    border: 1px solid #0B0000 ;
-    padding: 1rem 3rem;
-    background-color: #0B0000;
-    width: 7rem;
+.section4heading{
+    font-style: normal;
+    font-weight: 500;
     font-size: 2rem;
-    color: white;
-    margin: 3rem auto;
+    line-height: 2.5rem;
+    text-align: center;
     text-transform: uppercase;
+    margin-top: 1.5rem;
 }
 
-.reviewcard{
+.review{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
-    margin: 4.5rem 0;
 }
 
-.reviewcard img{
-    width: 18rem;
-    height: 16rem;
-    margin-bottom: 1rem;
-} */
-
+.mobilecarousel{
+    display: none;
+}
 
 @media screen and (max-width: 1125px) {
     .inputdiv{
@@ -291,6 +292,15 @@
         font-size: 2rem;
         line-height: 2rem;
     }
+
+    .reviewcarousel{
+        display: none;
+    }
+
+    .mobilecarousel{
+        display: block;
+    }
+    
 }
 
 @media screen and (max-width: 400px) {
@@ -299,10 +309,6 @@
         font-size: 2rem;
     }
 
-    /* .navcomponent{
-        padding-top: 0;
-    } */
-    
     .inputdiv{
         margin: 0 1.75rem;
     }
