@@ -21,6 +21,7 @@ height: 281px;
  align-items: center;
  padding-bottom: 44px;
  border-bottom: 4px solid #F4F2F2;
+ justify-content: center;
 }
 .ops{
  width: 84px;
@@ -54,8 +55,8 @@ cursor: pointer;
  padding-top: 10px;
  display: block;
  position: absolute;
- top: 210px;
- left: -100;
+ top: 205px;
+ left: 300px;
  cursor: pointer;
 
 }
@@ -114,15 +115,12 @@ tr{
 
 .bedBox{
  height: 115px;
-width: 682px;
-left: 2308px;
-top: -2613px;
+width: 582px;
 border-radius: 15px;
 background: #FFFFFF;
 position: absolute;
-top: 120px;
-left: 250px;
-display: none;
+top: 210px;
+left: 420px;
 }
 .bedAmount{
  display: flex;
@@ -167,13 +165,13 @@ gap: 10px
 }
 .bathroomBox{
  height: 115px;
-width: 409px;
+width: 309px;
 border-radius: 15px;
 background-color: #FFFFFF;
 position: absolute;
-top:120px;
-left: 380px;
-display: none;
+top:210px;
+left: 550px;
+cursor: pointer;
 }
 .bathroomAmount{
  display: flex;
@@ -234,12 +232,7 @@ letter-spacing: 0em;
 text-align: center;
 
 }
-.catalogueContainer{
- display: flex;
- justify-content: space-between;
- flex-wrap: wrap;
- padding: 150px 115px 120px 115px;
-}
+
 .more{
  width: 15%;
  margin-left: auto;
