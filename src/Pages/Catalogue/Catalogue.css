@@ -8,6 +8,9 @@
 background-image: url(../../Assets/CatalogueHero.png);
 height: 281px;
 }
+.navBarr{
+ padding-top: 40px;
+}
 
 .searchSection{
  padding-top: 55px;
@@ -18,6 +21,7 @@ height: 281px;
  align-items: center;
  padding-bottom: 44px;
  border-bottom: 4px solid #F4F2F2;
+ justify-content: center;
 }
 .ops{
  width: 84px;
@@ -35,8 +39,12 @@ letter-spacing: 0em;
 padding-left: 10px;
 padding-top: 7px;
 display: flex;
-gap: 10px
+gap: 10px;
+cursor: pointer;
 
+}
+.inactive{
+ display: none;
 }
 .pricebox{
  width: 365px;
@@ -45,9 +53,11 @@ gap: 10px
  border-radius: 15px;
  padding-left: 15px;
  padding-top: 10px;
- display: none;
+ display: block;
  position: absolute;
- top: 115px;
+ top: 205px;
+ left: 300px;
+ cursor: pointer;
 
 }
 .price{
@@ -105,15 +115,12 @@ tr{
 
 .bedBox{
  height: 115px;
-width: 682px;
-left: 2308px;
-top: -2613px;
+width: 582px;
 border-radius: 15px;
 background: #FFFFFF;
 position: absolute;
-top: 120px;
-left: 250px;
-display: none;
+top: 210px;
+left: 420px;
 }
 .bedAmount{
  display: flex;
@@ -138,7 +145,7 @@ font-size: 18px;
  background-color: black;
 }
 .opss{
- width: 120px ;
+ width: 130px ;
  height: 40px;
  background: rgba(217, 217, 217, 0.9);
 border-radius: 90px;
@@ -158,13 +165,13 @@ gap: 10px
 }
 .bathroomBox{
  height: 115px;
-width: 409px;
+width: 309px;
 border-radius: 15px;
 background-color: #FFFFFF;
 position: absolute;
-top:120px;
-left: 380px;
-display: none;
+top:210px;
+left: 550px;
+cursor: pointer;
 }
 .bathroomAmount{
  display: flex;
@@ -225,12 +232,7 @@ letter-spacing: 0em;
 text-align: center;
 
 }
-.catalogueContainer{
- display: flex;
- justify-content: space-between;
- flex-wrap: wrap;
- padding: 150px 115px 120px 115px;
-}
+
 .more{
  width: 15%;
  margin-left: auto;
