@@ -13,16 +13,16 @@ const Magodo = () => {
         </div>
         <h1 className='catcardheading'>Apartments</h1>
         <div className='cat-carddiv'>
-            <CatalogueCard location='Magodo' catcardmaindiv='catcardmaindiv1'/>
-            <CatalogueCard location='Magodo' catcardmaindiv='catcardmaindiv2'/>
+            <CatalogueCard location='Magodo' catcardmaindiv='catcardmaindiv1'cardtype='Magnolia Height'/>
+            <CatalogueCard location='Magodo' catcardmaindiv='catcardmaindiv2' cardtype='Suite 9 Bedroom'/>
         </div>
         <div className='cat-carddiv'>
-            <CatalogueCard location='Magodo' catcardmaindiv='catcardmaindiv3'/>
-            <CatalogueCard location='Magodo' catcardmaindiv='catcardmaindiv4'/>
+            <CatalogueCard location='Magodo' catcardmaindiv='catcardmaindiv3'cardtype='Suite 9 Bedroom'/>
+            <CatalogueCard location='Magodo' catcardmaindiv='catcardmaindiv4' cardtype='Plant View Bedroom'/>
         </div>
         <div className='cat-carddiv'>
-            <CatalogueCard location='Magodo' catcardmaindiv='catcardmaindiv5'/>
-            <CatalogueCard location='Magodo' catcardmaindiv='catcardmaindiv6'/>
+            <CatalogueCard location='Magodo' catcardmaindiv='catcardmaindiv5' cardtype='Plant View Bedroom'/>
+            <CatalogueCard location='Magodo' catcardmaindiv='catcardmaindiv6'cardtype='Magnolia Height'/>
         </div>
         <div>
             <Overview heading='Magodo' />

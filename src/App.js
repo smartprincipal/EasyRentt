@@ -18,15 +18,16 @@ import Bananaisland from "./Pages/Catalogue/Bananaisland";
 function App() {
   return (
     <div>
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Landingpage />} />
-        {/* <Route path="/" element={<Catalogue />} /> */}
+        <Route path="/" element={<Catalogue />} />
         <Route path="/Signup" element={<SignUp />} />
-      </Routes>
+      </Routes> */}
       {/* <Maryland /> */}
-      {/* <Bananaisland /> */}
+      <Bananaisland />
       {/* <CatalogueNavbar /> */}
       {/* <CatalogueCard /> */}
+      {/* <NavBar /> */}
     </div>
   );
 }

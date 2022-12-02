@@ -13,16 +13,16 @@ const Bananaisland = () => {
         </div>
         <h1 className='catcardheading'>Apartments</h1>
         <div className='cat-carddiv'>
-            <CatalogueCard location='Banana Island' catcardmaindiv='catcardmaindiv2'/>
-            <CatalogueCard location='Banana Island' catcardmaindiv='catcardmaindiv3'/>
+            <CatalogueCard location='Banana Island' catcardmaindiv='catcardmaindiv2' cardtype='Magnolia Height'/>
+            <CatalogueCard location='Banana Island' catcardmaindiv='catcardmaindiv3' cardtype='Plant View Bedroom'/>
         </div>
         <div className='cat-carddiv'>
-            <CatalogueCard location='Banana Island' catcardmaindiv='catcardmaindiv4'/>
-            <CatalogueCard location='Banana Island' catcardmaindiv='catcardmaindiv1'/>
+            <CatalogueCard location='Banana Island' catcardmaindiv='catcardmaindiv4' cardtype='Suite 9 Bedroom'/>
+            <CatalogueCard location='Banana Island' catcardmaindiv='catcardmaindiv1' cardtype='Magnolia Height'/>
         </div>
         <div className='cat-carddiv'>
-            <CatalogueCard location='Banana Island' catcardmaindiv='catcardmaindiv6'/>
-            <CatalogueCard location='Banana Island' catcardmaindiv='catcardmaindiv5'/>
+            <CatalogueCard location='Banana Island' catcardmaindiv='catcardmaindiv6' cardtype='Plant View Bedroom'/>
+            <CatalogueCard location='Banana Island' catcardmaindiv='catcardmaindiv5' cardtype='Suite 9 Bedroom'/>
         </div>
         <div>
             <Overview heading='Banana Island' />

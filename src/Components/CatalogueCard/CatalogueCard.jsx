@@ -14,7 +14,7 @@ import { FaBed } from 'react-icons/fa';
 import { BiBath } from 'react-icons/bi';
 
 
-const CatalogueCard = ({location, catcardmaindiv}) => {
+const CatalogueCard = ({location, catcardmaindiv, cardtype}) => {
 
   const viewBlack={
     background:"#0B0000",
@@ -54,7 +54,7 @@ const CatalogueCard = ({location, catcardmaindiv}) => {
       </div>
       <div className='catcardfooterdiv'>
           <div className='catcardsubdiv1'>
-              <p>Plant View  Bedroom</p>
+              <p>{cardtype}</p>
               <p><TbCurrencyNaira />205,000,000</p>
           </div>
           <div className='catcardsubdiv2'>
