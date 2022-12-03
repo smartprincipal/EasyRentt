@@ -1,17 +1,14 @@
 
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
 import Landingpage from "./Pages/LandingPage/LandingPage";
 import Login from "./Pages/Login/Login";
 import Catalogue from "../src/Pages/Catalogue/Catalogue";
 import SignUp from "./Pages/Signup/Signup";
-import { Routes, Route } from "react-router-dom";
-import Overview from "./Components/Overview/Overview";
 import CatalogueNavbar from "./Components/CatalogueNavbar/CatalogueNavbar";
-import NavBar from "./Components/NavBar/NavBar";
 import CatalogueCard from "./Components/CatalogueCard/CatalogueCard";
 import Maryland from "./Pages/Catalogue/Maryland";
-import Ajah from "./Pages/Catalogue/Ajah";
-import Bananaisland from "./Pages/Catalogue/Bananaisland";
+
 
 
 
@@ -20,14 +17,16 @@ function App() {
     <div>
       {/* <Routes>
         <Route path="/" element={<Landingpage />} />
-        <Route path="/" element={<Catalogue />} />
+        <Route path="/Catalogue" element={<Catalogue />} />
         <Route path="/Signup" element={<SignUp />} />
+        <Route path="/Login" element={<Login />} />
       </Routes> */}
-      {/* <Maryland /> */}
-      <Bananaisland />
+      
+      <Maryland />
+
       {/* <CatalogueNavbar /> */}
       {/* <CatalogueCard /> */}
-      {/* <NavBar /> */}
+    
     </div>
   );
 }
