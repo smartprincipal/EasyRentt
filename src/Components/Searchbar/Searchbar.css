@@ -1,0 +1,10 @@
+.searchicon{
+    width: 3rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 350px) {
+    .searchicon{
+        width: 2rem;
+    }
+}

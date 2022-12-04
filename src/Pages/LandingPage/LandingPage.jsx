@@ -26,6 +26,7 @@ import review4 from '../../Assets/review4.svg';
 import review5 from '../../Assets/review5.svg';
 import review6 from '../../Assets/review6.svg';
 import Footer from '../../Components/Footer/Footer';
+import Searchbar from '../../Components/Searchbar/Searchbar';
 
 
 
@@ -97,10 +98,13 @@ const Landingpage = () => {
           <h1 className='heroheading'>Renting done right finally</h1>
         
         {/* Hero Input Container */}
-          <div className='inputdiv'>
+        <div>
+          <Searchbar searchdiv='inputdiv' imgsource={searchicon} searchinput='herosearch' />
+        </div>
+          {/* <div className='inputdiv'>
             <input type="search" name="search" id="herosearch" placeholder='Where do you want to live?.' />
             <img src={searchicon} alt="searchicon" className='searchicon'/>
-          </div>
+          </div> */}
 
         {/* Hero Caption */}
           <div className='captiondiv'>

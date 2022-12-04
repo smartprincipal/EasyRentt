@@ -26,7 +26,7 @@
     text-transform: capitalize;
 }
 
-.inputdiv{
+ .inputdiv{
     border: 2px solid white;
     border-radius: 90px;
     display: flex;
@@ -54,11 +54,6 @@
     letter-spacing: 0.225em;
     color: white;
     font-weight: 500;
-}
-
-.searchicon{
-    width: 3rem;
-    cursor: pointer;
 }
 
 .captiondiv{

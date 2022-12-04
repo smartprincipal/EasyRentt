@@ -8,7 +8,9 @@ import outdoor from '../../Assets/outdoor-icon.svg';
 import transport from '../../Assets/transport-icon.svg';
 import dropup from '../../Assets/drop-up.svg';
 import dropdown from '../../Assets/drop-down.svg';
-const Overview = () => {
+
+
+const Overview = ({heading}) => {
 
     // Usestate and Onclick funtion for accordion toggle
     const [isActive, setIsActive] = useState(false);
@@ -19,7 +21,7 @@ const Overview = () => {
 
   return (
     <div className='overview'>
-        <h1 className='overheading1'>Magodo</h1>
+        <h1 className='overheading1'>{heading}</h1>
         <p className='overcontent'>
             Victoria is the capital of Germany, but at the same time, 
             it is a global cosmopolitan hub that differs greatly from other German towns. 
@@ -47,7 +49,7 @@ const Overview = () => {
             <div>
                 <div className='oversubdiv'>
                     <img src={bizdev} alt="work-icon"  />
-                    <h3>Business and Economy</h3>
+                    <h3 className='contentheading'>Business and Economy</h3>
                 </div>
                 <p className='overcontent'>
                     Berlin is one of those European cities with a thriving and remarkable art scene. 
@@ -64,7 +66,7 @@ const Overview = () => {
             <div>
                 <div className='oversubdiv'>
                     <img src={culture} alt="culture-icon"  />
-                    <h3>Culture</h3>
+                    <h3 className='contentheading'>Culture</h3>
                 </div>
                 <p className='overcontent'>
                     Berlin is one of those European cities with a thriving and remarkable art scene. The city has 
@@ -81,7 +83,7 @@ const Overview = () => {
             <div>
                 <div className='oversubdiv'>
                     <img src={landmark} alt="landmark-icon"  />
-                    <h3>Landmarks</h3>
+                    <h3 className='contentheading'>Landmarks</h3>
                 </div>
                 <p className='overcontent'>
                     From the Charlottenburg Palace to the Berlin Wall Memorial to the Reichstag Building, countless landmarks 
@@ -94,7 +96,7 @@ const Overview = () => {
             <div>
                 <div className='oversubdiv'>
                     <img src={outdoor} alt="outdoor-icon"  />
-                    <h3>Outdoor</h3>
+                    <h3 className='contentheading'>Outdoor</h3>
                 </div>
                 <p className='overcontent'>
                     Berlin fosters a relaxed and slow way of living with lots of parks and open 
@@ -114,7 +116,7 @@ const Overview = () => {
             <div>
                 <div className='oversubdiv'>
                     <img src={transport} alt="transport-icon"  />
-                    <h3>Transportation</h3>
+                    <h3 className='contentheading'>Transportation</h3>
                 </div>
                 <p className='overcontent'>
                     Berlin has a complex transport infrastructure and offers its inhabitants 
