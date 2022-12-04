@@ -1,11 +1,17 @@
 import React from 'react'
+// import NavBar from '../NavBar/NavBar'
 import './Herosection.css'
 
-const Herosection = () => {
+const Herosection = ({style,}) => {
   return (
-    <div>
+    // <div className='heroSection' style={style}>
+    //   <div className='navBarr'>
+    //     <NavBar/>
 
-    </div>
+    //   </div>
+
+
+    // </div>
   )
 }
 

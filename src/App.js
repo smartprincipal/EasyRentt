@@ -17,10 +17,10 @@ function App() {
         <Route path="/" element={<Catalogue />} />
         <Route path="/Signup" element={<SignUp />} />
       </Routes> */}
-      <Overview />
+      {/* <Overview /> */}
       {/* <Login /> */}
       {/* <Landingpage /> */}
-      {/* <Catalogue/>  */}
+      <Catalogue/>
       {/* <SignUp /> */}
 
     </div>
