@@ -1,0 +1,42 @@
+.reviewcard{
+ padding: 2rem;
+ font-family: 'Inter';
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+
+
+}
+
+.reviewheading{
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin: 1rem 0.2rem;
+    text-align: start;
+}
+
+.reviewcontent{
+    font-style: italic;
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 1rem;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .reviewheading{
+        text-align: center;
+    }
+
+    .reviewcard img{
+       max-height: 20rem;
+       margin: 0 auto;
+    }
+
+    .reviewcontent{
+        padding: 0 2rem;
+    }
+}
+

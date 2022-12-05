@@ -1,0 +1,104 @@
+.catnavbar{
+    background-image: url('../../Assets/CatalogueHero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Inter';
+    font-style: normal;
+}
+
+.navcontainer{
+    padding-top: 2rem;
+}
+
+.filtercontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.selectfilter{
+    width: 8rem;
+    margin: 0 0.5rem !important;
+}
+
+#demo-simple-select-label{
+    font-weight: 600;
+    font-size: 1rem ;
+}
+
+#demo-simple-select{
+    /* border: 1px solid; */
+    border-radius: 10px;
+    text-align: center;
+    /* z-index: -1; */
+}
+
+.inputdiv2{
+    border: 2px solid black;
+    border-radius: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5rem;
+    padding: 0.5rem;
+}
+
+#herosearch2{
+    padding: 1rem 3rem;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    flex: 80%;
+    color: black;
+    font-family: inherit;
+    font-weight: 500;
+}
+
+#herosearch2:focus{
+    outline: none;
+}
+
+#herosearch2::placeholder{
+    letter-spacing: 0.225em;
+    color: rgb(75, 72, 72, 0.7);
+    font-weight: 500;
+}
+
+.searchcompdiv{
+    flex: 50%;
+    margin: 1rem 0;
+}
+
+@media screen and (max-width: 610px) {
+    .selectfilter{
+     
+        margin: 1rem !important;
+    }
+    #herosearch2{
+        padding: 1rem 2rem;
+    }
+    .searchcompdiv{
+        flex: 0;
+        margin: 0;
+        display: inline-block;
+    }
+    .filtercontainer{
+        padding: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .inputdiv2{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #herosearch2{
+        padding: 1rem;
+    }
+    /* .inputdiv2{
+        padding: 0;
+    } */
+}

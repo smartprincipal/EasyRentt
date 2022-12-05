@@ -1,0 +1,78 @@
+.maincatcardcontainer{
+    font-family: 'Inter';
+    
+}
+
+.catcardheading{
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+.cat-carddiv{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    margin: 2rem 0;
+    padding: 0 5rem;
+    /* width: 4rem; */
+}
+
+.catcardmaindiv1, .catcardmaindiv2, .catcardmaindiv3,
+.catcardmaindiv4, .catcardmaindiv5, .catcardmaindiv6{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem 15rem 1rem;
+    border-radius: 20px 20px 0 0;
+}
+
+.catcardmaindiv1{
+    background-image: url('../../Assets/Victoria.png');   
+}
+
+.catcardmaindiv2{
+    background-image: url('../../Assets/lekki2.png');   
+}
+
+.catcardmaindiv3{
+    background-image: url('../../Assets/lekki.png');   
+}
+
+.catcardmaindiv4{
+    background-image: url('../../Assets/maryland.png');   
+}
+
+.catcardmaindiv5{
+    background-image: url('../../Assets/ajah.png');   
+}
+
+.catcardmaindiv6{
+    background-image: url('../../Assets/Victoria.png');   
+}
+
+@media screen and  (max-width: 970px){
+    .cat-carddiv{
+        padding: 0 2rem;
+       
+    }
+}
+
+@media screen and  (max-width: 870px){
+    .cat-carddiv{
+        padding: 0;
+    }
+}
+
+@media screen and  (max-width: 600px){
+    .cat-carddiv{
+        flex-wrap: wrap;
+        margin: 0;
+    }
+}
+
