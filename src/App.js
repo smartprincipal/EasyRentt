@@ -22,12 +22,12 @@ function App() {
         <Route path="/Signup" element={<SignUp />} />
         <Route path="/Login" element={<Login />} />
       </Routes> */}
-      
-      <Maryland />
+      {/* <Overview /> */}
+      {/* <Login /> */}
+      {/* <Landingpage /> */}
+      <Catalogue/>
+      {/* <SignUp /> */}
 
-      {/* <CatalogueNavbar /> */}
-      {/* <CatalogueCard /> */}
-    
     </div>
   );
 }
