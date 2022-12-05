@@ -3,7 +3,7 @@ import CatalogueNavbar from '../../Components/CatalogueNavbar/CatalogueNavbar'
 import './Viewmore.css'
 import { FaEye } from 'react-icons/fa';
 import { FaRegClock } from 'react-icons/fa';
-import { FaBed } from 'react-icons/fa';
+import { FaBed , FaCouch } from 'react-icons/fa';
 import { BiBath } from 'react-icons/bi';
 import { TbCurrencyNaira } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
@@ -12,6 +12,10 @@ import Pick2 from '../../Assets/Pick2.png';
 import Pick3 from '../../Assets/Pick3.png';
 // import { useState } from 'react';
 import ViewMoreImg from '../../Components/ViewMoreImg/ViewMoreImg';
+// import Map from '../../Components/Map/Map';
+import Footer from '../../Components/Footer/Footer';
+// import { color } from '@mui/system';
+import Post from '../../Components/Post/Post'
 
 const Viewmore = () => {
  const bedBathIcon = { color: "grey"}
@@ -20,6 +24,7 @@ const Viewmore = () => {
   {id:1 , viewImg: Pick2},
   {id:2 , viewImg: Pick3}
  ]
+
   return (
     <div>
      <section className="section1">
@@ -99,7 +104,43 @@ const Viewmore = () => {
      </section>
 
      <section className='section3'>
-       
+        {/* <AppointmentPicker/> */}
+
+        <div className='apartmentDescription'>
+        <h2>Apartment Description</h2>
+        <h5>Overview</h5>
+        <p className='section3Content'>
+Pictures are given for furnished apartment but we are offering this apartment without furniture. Beautiful and spacious two room apartment in a residential complex. Optimal layout and design for a comfortable living. It's a perfect place to be at home and relax. The apartment offers shorter commute due to the proximity to public transport and other recreational hot spots around the area. ** No Cellar available
+</p>
+        </div>
+        <div className="amenities">
+         <h2>Amenities</h2>
+         <div className="amenitiesflex">
+          <div>
+           <FaCouch style={bedBathIcon}/>
+          </div>
+          <div>
+           Furniture
+          </div>
+
+         </div>
+
+        </div>
+
+     </section>
+
+
+     {/* <section className="section4">
+      <div className="mapp">
+       <Map/>
+      </div>
+     </section> */}
+     <section className='section5'>
+      <Post/>
+     </section>
+
+     <section className='section6'>
+      <Footer/>
      </section>
     </div>
   )
