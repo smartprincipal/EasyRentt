@@ -9,11 +9,17 @@
     width: 582px;
     font-family: 'DM Sans', sans-serif;
     font-style: normal;
-    position: relative;
+    /* position: relative; */
+    position: fixed;
     padding: 40px 41px;
-    margin: 150px auto;
+    margin: 2% 30%;
+    /* margin: 0 auto; */
+    /* top: 10%;
+    bottom: 10%; */
+    /* left: 30%; */
     background-color: #FFFFFF;
     z-index: 500;
+    transition: all 0.3s ease-out;
 }
 .login-heading{
     font-weight: 700;
@@ -56,6 +62,7 @@ width: 100%;
 padding: 12px;
 font-family: inherit;
 margin-bottom: 25px;
+outline: none;
 }
 .login-checkbox-flex{
     display: flex;
@@ -76,13 +83,14 @@ margin-bottom: 32px;
     height: 25px;
     width: 25px;
     border: 1px solid #111111;
-    /* margin-right: 16px;    */
+    outline: none;
 }
 .login-checkbox, .checkbox-label{
     display: block;
 }
 .login-forgot-password{
     font-weight: 700;
+    cursor: pointer;
 }
 .login-account-paragraph{
     margin: 25px 0px 40px 0px;
@@ -95,6 +103,7 @@ text-align: center;
 .login-signup{
     font-weight: 700;
     color: #111111;
+    cursor: pointer;
 }
 .login-switch{
     color: #7D7F83;
@@ -110,6 +119,10 @@ text-align: center;
 .login-facebook{
     margin-left: 43px;
     margin-right: 43px;
+    cursor: pointer;
+}
+.login-google, .login-twitter{
+    cursor: pointer;
 }
 .times{
     position: absolute;
@@ -117,6 +130,23 @@ text-align: center;
     font-size: 30px;
     top: 0px;
     right: 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1300px) {
+    .login-container{
+    margin: 10% 26%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .login-container{
+    margin: 10% 21%
+    }
+}
+@media screen and (max-width: 900px) {
+    .login-container{
+    margin: 10% 14%
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -130,6 +160,11 @@ text-align: center;
         padding: 40px 20px;
     }
 }
+@media screen and (max-width: 500px) {
+    .login-container{
+        margin: 10% 8%;
+    }
+}
 @media screen and (max-width: 450px) {
     .login-container{
         width: 300px;
@@ -137,6 +172,16 @@ text-align: center;
     }
     .checkbox-label-container{
         gap: 3px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .login-container{
+        margin: 10% 13%;
+    }
+}
+@media screen and (max-width: 320px) {
+    .login-container{
+        margin: 10% 8%;
     }
 }
 

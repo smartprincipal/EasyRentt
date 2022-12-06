@@ -1,0 +1,6 @@
+.catalogueContainer{
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ padding: 150px 115px 120px 115px;
+}

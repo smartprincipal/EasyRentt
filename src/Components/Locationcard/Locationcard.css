@@ -8,13 +8,11 @@
 }
 
 .cardcontainer:hover{
-    width: 21.5rem;
-    height: 16.5rem;
-   transition-timing-function: linear;
-   /* transform: scale(2,2); */
+    transform: scale(1.10);
 }
+
 .cardcontent{
-    padding: 5rem 0;
+    padding: 6.5rem 0 5rem 0;
     color: white;
     text-align: center;
     transition: 0.5s;
@@ -37,7 +35,7 @@
     }
     
     .cardcontent{
-        padding: 4rem 0;
+        padding: 5rem 0 4rem 0;
     }
 
     .cardcontent:hover{

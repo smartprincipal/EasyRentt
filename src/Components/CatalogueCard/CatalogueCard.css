@@ -1,14 +1,115 @@
-.catalogueCard{
- height: 690px;
-width: 599px;
-border-radius: 30px;
-background-color: rgba(217, 217, 217, 0.5);
-border: 2px solid red;
+ .catCard{
+    /* height: 50rem; */
+    width: 400px;
+    border-radius: 20px;
+    background-color: rgba(217, 217, 217, 0.5);
+    font-family: 'Inter';
+    
 }
-.catalogueImg{
+
+.catlocationdiv{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #FCBC0E;;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    min-width: 6rem;
+}
+
+.catlocationdiv img{
+    width: 1rem;
+    
+}
+
+.imgtab{
+    width: 2.5rem;
+}
+.catlocationdiv p{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    
+}
+
+.catcardfooterdiv{
+    background: rgba(217, 217, 217, 0.5);
+    border-radius:  0px 0px 30px 30px;
+    padding: 0.5rem 1rem;
+}
+
+.catcardsubdiv1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.catcardsubdiv1 p{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 29px;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+}
+
+.catcardsubdiv2, .bed-div, .bath-div{
+    display: flex; 
+    align-items: center;
+}
+
+.catcardsubdiv2{
+    justify-content: flex-start;
+    padding: 0.5rem 0;
+}
+
+.bed-div{
+    justify-content: space-evenly;
+    border-right: 1px solid rgba(125, 127, 131, 0.7);
+}
+
+.bath-div{
+    justify-content: space-evenly;
+    border-left: 1px solid rgba(125, 127, 131, 0.7);
+    padding-left: 0.5rem;
+}
+
+.bed-div p, .bath-div p{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 22px;
+    color: rgba(125, 127, 131, 0.7);
+    padding: 0 0.5rem;
+}
+
+.catcardsubdiv3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.25rem;
+}
+
+.sharelikediv{
+    display: flex ;
+    justify-content: space-evenly;
+    align-items: center; 
+    position: relative;
+}
+
+.like-div{
+    margin-left: 0.75rem;
+}
+
+
+/*.catalogueImg{
  border-radius: 15px 15px 0px 0px;
 width: 599px;
 height: 500px;
+transition: 1s;
+cursor: pointer;
 }
 .cardContent1{
  padding-left:36px;
@@ -17,7 +118,7 @@ height: 500px;
 }
 .subCardContent1{
  display: flex;
- /* gap: 100px; */
+ gap: 100px;
  justify-content: space-between;
  padding-right: 36px;
  padding-left: 18px;
@@ -65,4 +166,52 @@ text-align: center;
 .viewSectionIcon{
  display: flex;
  gap: 10px;
+} */
+
+
+/* Strictly for Share button toggle */
+.shareinactive{
+    display: none;
+}
+
+.shareactive{
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 5.5rem;
+    width: 10rem;
+    transition: 0.3s ease-in-out;
+}
+
+.shareimg{
+    cursor: pointer;
+    width: 2rem;
+}
+
+@media screen and  (max-width: 850px){
+    .catCard{
+        width: 350px;
+    }
+
+}
+
+@media screen and  (max-width: 730px){
+    .catCard{
+        width: 300px;
+    }
+
+}
+
+@media screen and  (max-width: 730px){
+    .catCard{
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media screen and  (max-width: 350px){
+    .catCard{
+        width: 270px;
+    }
+
 }
