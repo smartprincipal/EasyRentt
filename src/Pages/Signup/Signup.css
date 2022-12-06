@@ -6,10 +6,31 @@
 }
     
 body {
-    background-color: #000000;
-    /* background: transparent; */
     font-family: "DM sans", sans-serif;
+    font-size: 16px;
+    background-color: rgba(0,0,0,0.9)
+} 
+
+.login-form {
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    background-size: cover;
+    padding: 0 30px 50px 30px;
+    /* border: 1px solid black; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    overflow-y: auto;
 }
+.closeModal {
+    display: none;
+}
+
 .success_note {
     color: darkgreen;
     text-align: center;
@@ -20,44 +41,48 @@ body {
 .close_icon {
     font-weight: bold;
     font-size: 40px;
+    display: block;
     text-align: right;
+    /* position: relative;
+    top: -20px;
+    left: 30%; */
     
 }
 
 .sign_head {
     text-align: center;
-    font-size: 45px;
+    font-size: 40px;
 }
 
 .p-head {
     text-align: center;
     font-size: 18px;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
-.login-form {
-    width: 50%;
-    height: 100%;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 20px 40px;
+
+.signup_form {
+    padding: 0 20px;
+    width: 100%;
 }
 
 .input_label {
     display: block;
-    font-weight: 600;
+    font-weight: 400;
+    margin-bottom: 10px;
 }
 
 .input-wrap  {
-    margin: 25px 0;
+    margin: 30px 0;
+    width: 100%;
 }
 
 .input_type {
-    display: block;
+    display: inline-block;
     width: 100%;
     border-radius: 10px;
-    padding: 15px;
-    margin: 10px 0;
+    padding: 20px;
+    margin: 10px auto;
     font-size: 16px;
     border: 1px solid #FCBC0E;
 }
@@ -68,7 +93,7 @@ body {
     border-radius: 10px;
     border: none;
     background-color: #FCBC0E;
-    margin: 20px 0;
+    margin: 15px 0;
     font-size: 20px;
     color: #ffffff;
 }
@@ -117,7 +142,7 @@ body {
     width: 90%;
     display: flex;
     justify-content: space-around;
-    /* padding: 10px 0;*/
+    
 }
 .m-icon {
     display: inline-block;

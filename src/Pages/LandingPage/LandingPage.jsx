@@ -18,6 +18,8 @@ import oshodi from '../../Assets/oshodi.svg';
 import arrow from '../../Assets/arrow.svg';
 import Review from '../../Components/Review/Review';
 
+import SignUp from '../Signup/Signup';
+
 
 
 const Landingpage = () => {
@@ -33,7 +35,13 @@ const Landingpage = () => {
     {content: "Ajah", img: ajah},
     {content: "MaryLand", img: maryLand},
     {content: "Oshodi", img: oshodi},
-      ])
+  ])
+    
+  const [display, setDisplay] = useState(false);
+  
+ const handleClick = () => {
+    setDisplay(display => !display)
+  }
 
 
   return (
@@ -54,8 +62,13 @@ const Landingpage = () => {
         {/* Hero Input Container */}
           <div className='inputdiv'>
             <input type="search" name="search" id="herosearch" placeholder='Where do you want to live?.' />
-            <img src={searchicon} alt="searchicon" className='searchicon'/>
+            <img src={searchicon} alt="searchicon" className='searchicon' onClick={handleClick}/>
           </div>
+          {
+            display ?
+            <SignUp /> : null
+
+          }
 
         {/* Hero Caption */}
           <div className='captiondiv'>

@@ -1,6 +1,7 @@
 import './Signup.css';
 import { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
+import axios from 'axios'
 
 import facebook from '../../Assets/facebook.svg';
 import twitter from '../../Assets/twitter.svg';
@@ -8,6 +9,14 @@ import google from '../../Assets/google.svg'
 
 
 function SignUp () {
+    // if (!props.display) {
+    //     return null;
+    // }
+    const [data, setData] = useState('')
+    const postData = () => {
+       
+    }
+    
 
     const initialValues = {username: "", email: "", password: "", confirmedPassword: ""};
     const [inputValues, setInputValues] = useState(initialValues);
@@ -24,6 +33,14 @@ function SignUp () {
         e.preventDefault();
         setInputErrors(validate(inputValues));
         setIsSubmit(true);
+
+        const user = inputValues;
+
+        axios.post(`lobaglory@gmail.com`, {user})
+        .then(res => {
+            console.log(res);
+            console.log(res.data);
+        })
     }
     
     const validate = (values) => {
@@ -66,25 +83,32 @@ function SignUp () {
     }, [inputErrors]
     );
 
+    const [close, setClose] = useState(true);
+    const handleClose = () => {
+        setClose(close => !close)
+    }
+
 
     return (
 
     <div className="login-form">
-        <small className="success_note">
-                {Object.keys(inputErrors).length === 0 && isSubmit ?
-                <span className='success_note'>Sign up successfully</span> : null}
-            </small>
-        <div className='close_icon'>
-            &times;
+       
+        
+        <div className='close_icon' onClick={handleClose}>
+            {
+                close ? <span>&times;</span> : "closeModal"
+            }
         </div>
-        <h2 className="sign_head">Sign Up</h2>
+        <h2 className="sign_head">
+            Sign Up
+        </h2>
 
         <p className="p-head">
             
             Fill the information below to signup
         </p>
 
-        <form action="" onSubmit={handleSubmit}>
+        <form action="" className="signup_form" onSubmit={handleSubmit}>
             <div className="input-wrap">
                 <label className="input_label" htmlFor="username">Username</label>
                 <input className="input_type" type="text" value={inputValues.username} onChange={handleChange} id="firstName" name="username" placeholder="Enter first name..." />
@@ -109,7 +133,7 @@ function SignUp () {
                 <input className="input_type" type="password" value={inputValues.confirmedPassword} onChange={handleChange} id="password" name="confirmedPassword" placeholder="Confirmed password..." />
                 <small className="small_tag">{inputErrors.confirmedPassword}</small>
             </div>
-            <button className="signButton">Sign Up</button>
+            <button className="signButton" type="submit" onClick={handleClick}>Sign Up</button>
     
             
         </form>
@@ -124,7 +148,7 @@ function SignUp () {
         Sign up with
         
          </p>
-
+            
         <div className="login-opt">
             <a href="#">
                 <img className="m-icon m-icon2" src={google} alt="google icon" />
