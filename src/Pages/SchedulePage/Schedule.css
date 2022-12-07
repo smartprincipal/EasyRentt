@@ -1,0 +1,175 @@
+*{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+.scheduleContainer{
+ background-color: #FCBC0E;
+ height: 730px;
+ display: flex;
+ justify-content: center;
+}
+.scheduleBlock{
+ background-color: #F4F2F2;;
+ height: 700px;
+ max-width: 50%;
+ /* margin-left: auto;
+ margin-right: auto; */
+ margin-top: auto;
+ margin-bottom: auto;
+ text-align: center;
+}
+.scheduleBlock h3{
+font-size: 32px;
+font-weight: 500;
+line-height: 39px;
+letter-spacing: 0em;
+padding-top: 20px;
+}
+.select{
+font-size: 24px;
+font-weight: 300;
+line-height: 39px;
+letter-spacing: 0em;
+}
+.scheduleBlock h4{
+font-size: 32px;
+font-weight: 500;
+line-height: 39px;
+letter-spacing: 0em;
+}
+.scheduleForm{
+ padding: 0 47px 0 77px;
+ margin-top: 50px;
+}
+
+.name{
+ display: flex;
+ justify-content: space-between;
+ padding-bottom: 26px;
+}
+.firstnameLabel{
+ margin-bottom: 10px;
+ position: relative;
+ left: -130px;
+}
+.firstNameInput{
+ height: 45px;
+ width: 333px;
+ padding-left: 15px;
+}
+.lastnameLabel{
+ margin-bottom: 10px;
+ position: relative;
+ left: -90px;
+}
+.lastNameInput{
+ height: 45px;
+ width: 250px;
+ padding-left: 15px;
+}
+.emailLabel{
+ margin-bottom: 10px;
+ position: relative;
+ left: -300px;
+}
+.emailInput{
+ height: 45px;
+ width: 645px;
+ padding-left: 15px;
+}
+.phonenumber{
+ margin-top: 20px;
+}
+.phonenumberLabel{
+ margin-bottom: 10px;
+ position: relative;
+ left: -275px;
+}
+.phonenumberInput{
+ height: 45px;
+ width: 645px;
+ padding-left: 15px;
+}
+.check{
+ position: relative;
+ left: -175px;
+ margin-top: 10px;
+}
+.checkbox{
+ font-family: Inter;
+font-size: 24px;
+font-weight: 300;
+line-height: 29px;
+letter-spacing: 0em;
+text-align: center;
+}
+
+.scheduleBTN{
+ margin-top: 70px;
+}
+@media screen and (max-width: 800px){
+ .name{
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 16px;
+ }
+ .firstnameLabel{
+  left: -130px;
+ }
+ .firstNameInput{
+  height: 45px;
+  width: 100%;
+  padding-left: 15px;
+ }
+ .lastnameLabel{
+  margin-bottom: 10px;
+  position: relative;
+  left: -90px;
+ }
+ .lastNameInput{
+  height: 45px;
+  width: 250px;
+  padding-left: 15px;
+ }
+ .emailLabel{
+  margin-bottom: 10px;
+  position: relative;
+  left: -300px;
+ }
+ .emailInput{
+  height: 45px;
+  width: 645px;
+  padding-left: 15px;
+ }
+ .phonenumber{
+  margin-top: 20px;
+ }
+ .phonenumberLabel{
+  margin-bottom: 10px;
+  position: relative;
+  left: -275px;
+ }
+ .phonenumberInput{
+  height: 45px;
+  width: 645px;
+  padding-left: 15px;
+ }
+ .check{
+  position: relative;
+  left: -175px;
+  margin-top: 10px;
+ }
+ .checkbox{
+  font-family: Inter;
+ font-size: 24px;
+ font-weight: 300;
+ line-height: 29px;
+ letter-spacing: 0em;
+ text-align: center;
+ }
+ 
+ .scheduleBTN{
+  margin-top: 70px;
+ }
+}

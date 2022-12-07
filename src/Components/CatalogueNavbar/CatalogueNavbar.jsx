@@ -1,12 +1,18 @@
-import React from 'react'
+import React, {useEffect}from 'react'
 import './CatalogueNavbar.css';
 import NavBar from '../NavBar/NavBar';
 import { Select, FormControl, MenuItem, InputLabel } from '@mui/material';
 import Searchbar from '../Searchbar/Searchbar';
 import searchicon from '../../Assets/search-icon2.svg';
 import { TbCurrencyNaira } from 'react-icons/tb';
+import axios from 'axios';
+import { useState } from 'react';
 
 const CatalogueNavbar = () => {
+    const [data, setData]= useState('')
+    const sortApartment = () =>{
+        
+    }
   return (
     <div className='catnavbar'>
         <div className='navcontainer'>
