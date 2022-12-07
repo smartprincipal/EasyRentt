@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import NavBar from '../../Components/NavBar/NavBar';
 import Login from '../Login/Login';
+import SignUp from '../Signup/Signup';
 import Locationcard from '../../Components/Locationcard/Locationcard';
 import Button from '../../Components/Button/Button';
 import searchicon from '../../Assets/search-icon.svg';
@@ -58,8 +59,9 @@ const Landingpage = () => {
     {heading: "Betty", img: review6}
       ])
 
-    // State for Login Component
+    // State for Login & Signup Component
     const [loginModal, setLoginModal] = useState(false);
+    
      // Login authorization state 
      const [token, setToken] = useState();
     
@@ -69,7 +71,15 @@ const Landingpage = () => {
     const loginClose = () => {
       setLoginModal(false)
     }
+    
+    // State for Sign-Up component
+    const [signUp, setSignUp] = useState(false);
+    
+    const openSignUp = () => setSignUp(true);
+    const closeSignUp = () => setSignUp(false)
+ 
 
+    // Location click auth
     const LocationLoginAuth = () => {
       if(!token){
         setLoginModal(true)
@@ -84,13 +94,14 @@ const Landingpage = () => {
     <div className='landingPage'>
 
       <Login show={loginModal} closeModal={loginClose}/>
+      <SignUp openModal={signUp} closeModal={closeSignUp} />
       
       {/* Hero section of the landing page */}
       <section className='hero'>
     
         {/* Navbar Component */}
           <div className='navcomponent'>
-              <NavBar loginClick={loginHandler}/>
+              <NavBar loginClick={loginHandler} SignupClick={openSignUp}/>
           </div>
 
         {/* Hero Heading */}
