@@ -1,0 +1,30 @@
+.payment-sidenav-container{
+    background: #2E353A;
+    /* width: 70px; */
+    width: 7.71%;
+    height: auto;
+
+}
+.payment-sidenav{
+    font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 300;
+text-align: center;
+font-size: 24px;
+line-height: 29px;
+color: #FFFFFF;
+}
+.payment-sidenav li{
+    border-top: 1px solid #E0E0E0;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 26px 0px;
+}
+.payment-sidenav li:first-child{
+    border-top: none;
+}
+.payment-sidenav li:last-child{
+    border-bottom: none;
+}
+.payment-sidenav li:active{
+    background: rgba(255, 193, 0, 0.6);
+}
