@@ -11,8 +11,9 @@ import { Routes, Route } from "react-router-dom";
 // import CatalogueCard from "./Components/CatalogueCard/CatalogueCard";
 // import Maryland from "./Pages/Catalogue/Maryland";
 // import Viewmore from "./Pages/Viewmore/Viewmore"
-import Map from "./Components/Map/Map";
-// import SchedulePage from "./Pages/SchedulePage/Schedule";
+// import Map from "./Components/Map/Map";
+// import ViewMap from "./Pages/ViewMap/ViewMap";
+import SchedulePage from "./Pages/SchedulePage/Schedule";
 
 
 
@@ -32,8 +33,9 @@ function App() {
       {/* <Catalogue/> */}
       {/* <SignUp /> */}
       {/* <Viewmore/> */}
-      {/* <SchedulePage/> */}
-      <Map/>
+      <SchedulePage/>
+      {/* <Map/> */}
+      {/* <ViewMap/> */}
 
     </div>
   );
