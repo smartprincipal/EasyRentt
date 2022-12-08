@@ -1,0 +1,96 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+.lease-sub-main{
+    background: #F4F2F2;
+    width: 92.29%;
+    /* width: 90.29%; */
+    padding: 0px 110px 50px 110px;
+    
+}
+.sub-nav-container{
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+.section-2-container{
+    display: flex;
+}
+.lease-info-container{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+color: #7d7f83b3;
+padding: 75px 40px 180px 40px;
+width: 100%;
+border: 1px solid #CBCBCB;
+background: #fff;
+}
+.lease-sub-head{
+    font-size: 30px;
+line-height: 39px;
+color: #838383;
+border-bottom: 1px solid #CBCBCB;
+padding-bottom: 10px;
+}
+.lease-text{
+    padding: 19px 0px 15px 0px;
+}
+.label-date {
+    padding-right: 8px;
+}
+.label-term{
+    padding-right: 20px;
+}
+.date-input{
+    margin-bottom: 20px;
+    padding: 3px;
+    border: 1px solid #CBCBCB;
+}
+.term-input{
+    margin-bottom: 17px;
+    padding: 3px;
+    border: 1px solid #CBCBCB;
+}
+.rent-amount{
+    padding-left: 70px;
+}
+.lease-btn-container{
+    display: flex;
+    gap: 5px;
+    padding-top: 47px;
+}
+
+@media screen and (max-width: 767px){
+    .lease-sub-main{
+        padding: 0px 55px;
+    } 
+}
+@media screen and (max-width: 499px){
+    .lease-sub-main{
+        padding: 0px 25px;
+    } 
+    .lease-info-container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media screen and (max-width: 417px){
+    /* .lease-sub-main{
+        padding: 0px 25px;
+    } 
+    .lease-info-container{
+        padding-left: 15px;
+        padding-right: 15px;
+    } */
+    .lease-form div input{
+        display: block;
+        margin-top: 10px;
+    }
+    .rent-amount{
+        padding-left: 20px;
+    }
+}
