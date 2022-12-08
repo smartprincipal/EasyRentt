@@ -65,6 +65,8 @@ function App() {
         <Route path="/Oshodi" element={<Oshodi />} />
         <Route path="/Victoriaisland" element={<Victoriaisland />} />
         <Route path="/Yaba" element={<Yaba />} />
+        <Route path="/PaymentPersonalInfo" element={<PaymentPersonalInfo />} />
+
       </Routes>
       {/* <Overview /> */}
       {/* <Login /> */}
