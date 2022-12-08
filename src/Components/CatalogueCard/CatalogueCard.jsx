@@ -12,6 +12,7 @@ import { FaTimesCircle } from 'react-icons/fa';
 import { TbCurrencyNaira } from 'react-icons/tb';
 import { FaBed } from 'react-icons/fa';
 import { BiBath } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 
 
 const CatalogueCard = ({location, catcardmaindiv, cardtype}) => {
@@ -69,7 +70,9 @@ const CatalogueCard = ({location, catcardmaindiv, cardtype}) => {
           </div>
           <hr />
           <div className='catcardsubdiv3'>
+            <Link to='/Viewmore'>
               <Button style={viewBlack} text={"View details"}/>
+            </Link>
               <div className='sharelikediv'>
                   <div onClick={handleShareToggle}>
                     {shareToggle ? <FaTimesCircle style={timesButtonStyle}/> :  <img src={ShareIcon} className='shareimg' alt="share-icon" />}
