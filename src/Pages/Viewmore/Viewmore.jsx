@@ -12,9 +12,9 @@ import Pick2 from '../../Assets/Pick2.png';
 import Pick3 from '../../Assets/Pick3.png';
 // import { useState } from 'react';
 import ViewMoreImg from '../../Components/ViewMoreImg/ViewMoreImg';
-// import Map from '../../Components/Map/Map';
+import Map from '../../Components/Map/Map';
 import Footer from '../../Components/Footer/Footer';
-// import { color } from '@mui/system';
+import { color } from '@mui/system';
 import Post from '../../Components/Post/Post'
 
 const Viewmore = () => {
@@ -129,12 +129,13 @@ Pictures are given for furnished apartment but we are offering this apartment wi
 
      </section>
 
-
-     {/* <section className="section4">
+     <section className="section4">
       <div className="mapp">
        <Map/>
       </div>
-     </section> */}
+     </section>
+
+     {/* Post Section */}
      <section className='section5'>
       <Post/>
      </section>
