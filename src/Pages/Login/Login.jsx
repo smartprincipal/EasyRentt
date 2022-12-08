@@ -8,7 +8,7 @@ import * as Yup from "yup";
 import Overlay from "../../Components/Overlay/Overlay";
 import axios from 'axios';
 import { Link } from "react-router-dom";
-import SignUp from "../Signup/Signup";
+// import SignUp from "../Signup/Signup";
 
 const loginStyle = {
   width: "100%",

@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 // import Schedule from "./Pages/SchedulePage/Schedule";
-// import Landingpage from "./Pages/LandingPage/LandingPage";
+import Landingpage from "./Pages/LandingPage/LandingPage";
 // import Login from "./Pages/Login/Login";
 // import Catalogue from "../src/Pages/Catalogue/Catalogue";
 // import SignUp from "./Pages/Signup/Signup";
@@ -11,7 +11,8 @@ import { Routes, Route } from "react-router-dom";
 // import Viewmore from "./Pages/Viewmore/Viewmore"
 // import Map from "./Components/Map/Map";
 // import ViewMap from "./Pages/ViewMap/ViewMap";
-import SchedulePage from "./Pages/SchedulePage/Schedule";
+// import SchedulePage from "./Pages/SchedulePage/Schedule";
+import PaymentPersonalInfo from "./Pages/PaymentPersonalInfo/PaymentPersonalInfo";
 
 
 
@@ -28,11 +29,12 @@ function App() {
       </Routes>
       {/* <Overview /> */}
       {/* <Login /> */}
-      {/* <Landingpage /> */}
+      <Landingpage />
       {/* <Catalogue/> */}
       {/* <SignUp /> */}
       {/* <Viewmore/> */}
-      <SchedulePage/>
+      {/* <SchedulePage/> */}
+      <PaymentPersonalInfo/>
       {/* <Map/> */}
       {/* <ViewMap/> */}
     </div>
