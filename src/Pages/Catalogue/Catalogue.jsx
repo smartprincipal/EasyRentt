@@ -7,7 +7,6 @@ import Button from '../../Components/Button/Button'
 import Review from '../../Components/Review/Review';
 import Post from '../../Components/Post/Post';
 import axios from 'axios';
-import Footer from '../../Components/Footer/Footer';
 
 const Catalogue = () => {
 
@@ -183,9 +182,6 @@ const Catalogue = () => {
      <section className='section4'>
       <Review/>
      </section>
-
-     {/* FOOTER */}
-     <Footer/>
 
 
 

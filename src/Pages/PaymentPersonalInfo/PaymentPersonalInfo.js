@@ -2,7 +2,7 @@ import "./PaymentPersonalInfo.css";
 import PaymentHero from "../../Components/PaymentHero/PaymentHero";
 import Button from "../../Components/Button/Button";
 import PaymentSideNav from "../../Components/PaymentSideNav/PaymentSideNav";
-import LeaseSubNav from "../../Components/LeaseSubNav/LeaseSubNav";
+// import LeaseSubNav from "../../Components/LeaseSubNav/LeaseSubNav";
 import listImg from "../../Assets/list-style.svg";
 
 
@@ -15,7 +15,7 @@ const PaymentPersonalInfo = () => {
         <PaymentSideNav />
         <div className="lease-sub-main">
           <div className="sub-nav-container">
-            <LeaseSubNav />
+            {/* <LeaseSubNav /> */}
           </div>
           <ul className="payment-list-container">
             <li>
@@ -59,8 +59,8 @@ const PaymentPersonalInfo = () => {
                     Title
                   </label>
                   <select id="title-select" name='title'>
-                    <option value='mr'>Mr</option>
-                    <option value='mrs'>Ms.</option>
+                    <option value='Mr'>Mr</option>
+                    <option value='Mrs'>Mrs.</option>
                   </select>
                 </div>
                 <div>
@@ -111,8 +111,9 @@ const PaymentPersonalInfo = () => {
                 <div>
                   <label htmlFor="marital-status" className="payment-label">Marital Status</label>
                   <select id="marital-status" className="marital-select" name='marital_status' >
-                    <option>Single</option>
-                    <option>Married</option>
+                    <option value="">Select</option>
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
                   </select>
                 </div>
                 <div>

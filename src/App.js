@@ -1,5 +1,3 @@
-
-
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 // import Schedule from "./Pages/SchedulePage/Schedule";
@@ -19,8 +17,10 @@ import Oshodi from "./Pages/Catalogue/Oshodi";
 import Victoriaisland from "./Pages/Catalogue/Victoriaisland";
 import Yaba from "./Pages/Catalogue/Yaba";
 // import Viewmore from "./Pages/Viewmore/Viewmore"
-import Map from "./Components/Map/Map";
+// import Map from "./Components/Map/Map";
+// import ViewMap from "./Pages/ViewMap/ViewMap";
 // import SchedulePage from "./Pages/SchedulePage/Schedule";
+import PaymentPersonalInfo from "./Pages/PaymentPersonalInfo/PaymentPersonalInfo";
 
 
 
@@ -28,6 +28,7 @@ import Map from "./Components/Map/Map";
 function App() {
   return (
     <div>
+
       <Routes>
         <Route path="/" element={<Landingpage />} /> 
         <Route path="/Catalogue" element={<Catalogue />} />
@@ -43,13 +44,14 @@ function App() {
       </Routes>
       {/* <Overview /> */}
       {/* <Login /> */}
-      {/* <Landingpage /> */}
+      <Landingpage />
       {/* <Catalogue/> */}
       {/* <SignUp /> */}
       {/* <Viewmore/> */}
       {/* <SchedulePage/> */}
-      <Map/>
-
+      <PaymentPersonalInfo/>
+      {/* <Map/> */}
+      {/* <ViewMap/> */}
     </div>
   );
 }
