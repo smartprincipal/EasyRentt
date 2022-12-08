@@ -1,5 +1,3 @@
-
-
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 // import Schedule from "./Pages/SchedulePage/Schedule";
@@ -21,6 +19,7 @@ import SchedulePage from "./Pages/SchedulePage/Schedule";
 function App() {
   return (
     <div>
+
       <Routes>
         {/* <Route path="/" element={<Landingpage />} /> */}
         {/* <Route path="/Catalogue" element={<Catalogue />} /> */}
@@ -36,7 +35,6 @@ function App() {
       <SchedulePage/>
       {/* <Map/> */}
       {/* <ViewMap/> */}
-
     </div>
   );
 }
