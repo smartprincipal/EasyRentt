@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import Button from "../../Components/Button/Button";
 
-const NavBar = ({loginClick}) => {
+const NavBar = ({loginClick, SignupClick}) => {
 
   // Usestate for Hamburger display
   const [toggle, setToggle] = useState(false)
@@ -37,7 +37,7 @@ const NavBar = ({loginClick}) => {
 
           <div className='buttondiv'>
             <Button text={"Login"} btnclass={'navbutton1'} btnClick={loginClick}/>
-            <Button text={"Sign Up"} btnclass={'navbutton2'} />
+            <Button text={"Sign Up"} btnclass={'navbutton2'} btnClick={SignupClick}/>
           </div>
         </ul>
       
