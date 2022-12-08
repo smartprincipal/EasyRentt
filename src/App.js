@@ -32,6 +32,7 @@ function App() {
         <Route path="/" element={<Landingpage />} /> 
         <Route path="/Catalogue" element={<Catalogue />} />
         <Route path="/Signup" element={<SignUp />} />
+        <Route path="/Login" element={<Login />} />
         <Route path="/Bananaisland" element={<Bananaisland />} />
         <Route path="/Ikeja" element={<Ikeja />} />
         <Route path="/Lekki" element={<Lekki />} />
