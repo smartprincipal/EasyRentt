@@ -1,4 +1,10 @@
 import React from 'react'
+import './Allcatalogue.css';
+import CatalogueCard from '../../Components/CatalogueCard/CatalogueCard';
+import CatalogueNavbar from '../../Components/CatalogueNavbar/CatalogueNavbar';
+import Overview from '../../Components/Overview/Overview';
+import Footer from '../../Components/Footer/Footer';
+import Button from '../../Components/Button/Button'
 
 const Yaba = () => {
 
@@ -20,6 +26,9 @@ const Yaba = () => {
         <div className='cat-carddiv'>
             <CatalogueCard location='Yaba' catcardmaindiv='catcardmaindiv5' cardtype='Suite 9 Bedroom'/>
             <CatalogueCard location='Yaba' catcardmaindiv='catcardmaindiv2' cardtype='Magnolia Height'/>
+        </div>
+        <div className='buttoncontain'>
+            <Button text='MORE' btnclass='catbutton' />
         </div>
         <div>
             <Overview heading='Yaba' />

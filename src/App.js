@@ -7,10 +7,11 @@ import Landingpage from "./Pages/LandingPage/LandingPage";
 // import SignUp from "./Pages/Signup/Signup";
 // import CatalogueNavbar from "./Components/CatalogueNavbar/CatalogueNavbar";
 // import CatalogueCard from "./Components/CatalogueCard/CatalogueCard";
-// import Maryland from "./Pages/Catalogue/Maryland";
+import Maryland from "./Pages/Catalogue/Maryland";
 // import Viewmore from "./Pages/Viewmore/Viewmore"
 // import Map from "./Components/Map/Map";
 // import SchedulePage from "./Pages/SchedulePage/Schedule";
+import Yaba from "./Pages/Catalogue/Yaba";
 
 
 
@@ -19,11 +20,12 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Landingpage />} />
+        {/* <Route path="/" element={<Landingpage />} /> */}
         {/* <Route path="/Catalogue" element={<Catalogue />} /> */}
         {/* <Route path="/Signup" element={<SignUp />} /> */}
         {/* <Route path="/Login" element={<Login />} /> */}
       </Routes>
+      <Yaba />
       {/* <Maryland /> */}
       {/* <Overview /> */}
       {/* <Login /> */}
