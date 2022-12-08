@@ -1,4 +1,7 @@
-import React from 'react'
+import CatalogueNavbar from "../../Components/CatalogueNavbar/CatalogueNavbar"
+import CatalogueCard from "../../Components/CatalogueCard/CatalogueCard"
+import Overview from "../../Components/Overview/Overview"
+import Footer from "../../Components/Footer/Footer"
 
 const Yaba = () => {
 

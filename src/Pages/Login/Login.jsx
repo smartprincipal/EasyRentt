@@ -4,11 +4,18 @@ import google from "../../Assets/google.svg";
 import facebook from "../../Assets/facebook.svg";
 import twitter from "../../Assets/twitter.svg";
 import { useFormik } from "formik";
+import { useState, createContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 import * as Yup from "yup";
 import Overlay from "../../Components/Overlay/Overlay";
 import axios from 'axios';
 import { Link } from "react-router-dom";
-// import SignUp from "../Signup/Signup";
+import useToken from '../../useToken'
+import SignUp from "../Signup/Signup";
+
+
+
+export const LoginContext = createContext();
 
 const loginStyle = {
   width: "100%",
@@ -21,7 +28,20 @@ const loginStyle = {
   fontSize: '19px',
   fontWeight: '700',
 };
-const Login = ({ show, closeModal }) => {
+const Login = ({ show, closeModal, loginNav }) => {
+  // const setToken = (userToken) => {
+  //   sessionStorage.setItem('token', JSON.stringify(userToken));
+  // }
+  // const getToken = () => {
+  //   const tokenString = sessionStorage.getItem('token');
+  // const userToken = JSON.parse(tokenString);
+  // return userToken?.token
+    
+  // }
+  const navigate = useNavigate()
+  const { token, setToken } = useToken();
+
+  // const [token, setToken] = useState()
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -48,7 +68,9 @@ const Login = ({ show, closeModal }) => {
       axios.post('https:easyrent.onrender.com/users/login', values)
       .then(res => {
         console.log(res.data)
-        // setToken(res.data.token)
+        setToken(res.data.token)
+        navigate(`${loginNav}`)
+        
       })
       .catch(err => console.log(err))
       console.log(values)
@@ -77,7 +99,7 @@ const Login = ({ show, closeModal }) => {
 
 
   return (
-    <>
+    <LoginContext.Provider value={token}>
     <Overlay OverlayShow={show} overlayClick={closeModal}/>
     <div className="login-container" style={{transform: show ? 'translateY(0)':'translateY(-100vh)', opacity: show ? '1':'0'}}>
       <h3 className="login-heading">Login</h3>
@@ -161,7 +183,7 @@ const Login = ({ show, closeModal }) => {
       </div>
       <span className="times" onClick={closeModal}>&times;</span>
     </div>
-    </>
+    </LoginContext.Provider>
   );
 };
 
