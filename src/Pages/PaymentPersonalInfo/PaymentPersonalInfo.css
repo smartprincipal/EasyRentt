@@ -1,0 +1,122 @@
+.payment-list-container{
+    list-style-type: none;
+    font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+color: #0A0505;
+border: 1px solid #CBCBCB;
+background: #F4F2F2;
+padding: 30px 22px;
+margin-bottom: 30px;
+}
+.payment-list-container li{
+    display: flex;
+
+}
+.payment-info-container{
+    font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 22px;
+padding: 40px;
+background: #fff;
+}
+.payment-info-head{
+    font-size: 28px;
+line-height: 39px;
+color: #0A0505;
+border-bottom: 1px solid #D9D9D9;
+padding-bottom: 15px;
+font-style: normal;
+font-weight: 400;
+}
+.payment-label{
+    font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+display:inline-block;
+width: 135px;
+}
+
+
+.payment-input-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.asterisk{
+    color: red;
+}
+.payment-input-group div{
+    display: flex;
+}
+.payment-input-group div input{
+    /* width: 200px; */
+    width: 50%;
+    height: 30px;
+    outline: none;
+    font-family: inherit;
+    padding: 6px;
+    margin-left: 10px;
+    /* margin-bottom: 15px; */
+    display: inline-block;
+}
+#checkbox1{
+    width: 12px;
+    height: 12px;
+    margin-left: 140px;
+}
+.payment-input-group div select{
+    display: block;
+    width: 160px;
+    height: 30px;
+    outline: none;
+    font-family: inherit;
+    padding: 6px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+#title-select{
+    /* width: 70px; */
+    width: 40%;
+    margin-left: 20px
+}
+.payment-radio-group{
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.radio-input input{
+    display: initial;
+    margin-left: 20px
+}
+.radio-input label{
+    display: initial;
+    margin-left: 20px
+}
+@media screen and (max-width: 540px) {
+    .payment-info-container{
+    padding: 5px;
+    }
+    .payment-input-group div select{
+        width: 100%;
+        
+    }
+    .payment-input-group div input{
+        width: 100%;
+    }
+    .radio-input input{
+        margin-left: 2px
+    }
+    .radio-input label{
+        margin-left: 2px;
+        font-size: 12px;
+    }
+    .payment-radio-group{
+        font-size: 12px; 
+    }
+}

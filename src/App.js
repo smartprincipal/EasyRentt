@@ -1,5 +1,3 @@
-
-
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 // import Schedule from "./Pages/SchedulePage/Schedule";
@@ -11,8 +9,9 @@ import { Routes, Route } from "react-router-dom";
 // import CatalogueCard from "./Components/CatalogueCard/CatalogueCard";
 // import Maryland from "./Pages/Catalogue/Maryland";
 // import Viewmore from "./Pages/Viewmore/Viewmore"
-import Map from "./Components/Map/Map";
-// import SchedulePage from "./Pages/SchedulePage/Schedule";
+// import Map from "./Components/Map/Map";
+// import ViewMap from "./Pages/ViewMap/ViewMap";
+import SchedulePage from "./Pages/SchedulePage/Schedule";
 
 
 
@@ -20,6 +19,7 @@ import Map from "./Components/Map/Map";
 function App() {
   return (
     <div>
+
       <Routes>
         {/* <Route path="/" element={<Landingpage />} /> */}
         {/* <Route path="/Catalogue" element={<Catalogue />} /> */}
@@ -32,9 +32,9 @@ function App() {
       {/* <Catalogue/> */}
       {/* <SignUp /> */}
       {/* <Viewmore/> */}
-      {/* <SchedulePage/> */}
-      <Map/>
-
+      <SchedulePage/>
+      {/* <Map/> */}
+      {/* <ViewMap/> */}
     </div>
   );
 }
