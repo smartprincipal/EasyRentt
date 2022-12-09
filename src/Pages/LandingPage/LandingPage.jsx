@@ -29,6 +29,7 @@ import review5 from '../../Assets/review5.svg';
 import review6 from '../../Assets/review6.svg';
 import Footer from '../../Components/Footer/Footer';
 import Searchbar from '../../Components/Searchbar/Searchbar';
+// import useToken from '../../useToken'
 
 
 const Landingpage = () => {
@@ -72,6 +73,7 @@ const Landingpage = () => {
       setLoginModal(true)
     }
     const loginClose = () => {
+      console.log(token)
       setLoginModal(false)
     }
     
@@ -85,6 +87,7 @@ const Landingpage = () => {
 
     const LocationLoginAuth = (item, id, index) => {
       if(!token && id === index + 1){
+        console.log(token)
         console.log(item)
         console.log(id)
         console.log(index + 1)
@@ -102,7 +105,7 @@ const Landingpage = () => {
   return (
     <div className='landingPage'>
 
-      <Login show={loginModal} closeModal={loginClose} loginNav={loginNav}/>
+      <Login show={loginModal} closeModal={loginClose} loginNav={loginNav} closeLogin={loginClose} openSignup={openSignUp} />
       <SignUp openModal={signUp} closeModal={closeSignUp} />
 
       
