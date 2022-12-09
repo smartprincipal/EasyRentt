@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import '../../Pages/Catalogue/Allcatalogue.css';
+import './Post.css'
 import { slice, concat} from 'lodash';
 // import Victoria from '../../Assets/Victoria.png';
 // import Lekki2 from '../../Assets/lekki2.png';
@@ -125,7 +126,7 @@ const Post = () => {
         </div>
 
      {/* Import Button */}
-<div className="more">
+<div className="moreBTN">
  <Button style={moreStyle} text={"More"} cursor='pointer'/>
 </div>
     </div>
