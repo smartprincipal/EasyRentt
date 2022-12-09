@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+/* Styles for containers */
+
+.payforms_wrapper {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff;
+    font-family: "DM Sans", "sans serif";
+    
+}
+
+.tag_h2 {
+    border-bottom: 1px solid gray;
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+.btm_h2 {
+    margin: 30px 0;
+    padding: 5px 0;
+}
+.btm_ {
+    margin-top: 30px;
+}
+
+.PI_form, .Add_I, .Emp_I {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    margin-bottom:  30px;
+}
+
+
+/* styles for labels and input */
+.pay_input {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+    /* justify-content: space-between; */
+}
+.tag_label, .tag_input{
+    display: inline-block;
+    margin: 7px 0;
+}
+.tag_input {
+    padding: 7px 10px;
+    font-size: 12px;
+}
+.tag_select {
+    margin: 7px 0;
+    width: 250px;
+    padding: 6px 10px;
+}
+.titled_select {
+    margin: 7px 0;
+    padding: 6px 10px;
+}
+
+.tag_label {
+    width: 150px;
+}
+.tag_input {
+    width: 250px;
+}
+
+/* style for pet vehicle information */
+
+.veh_Info, .veh_check {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.input_radio {
+    margin: 0 10px;
+}
+.type_radio {
+    margin: 0 10px;
+}
+
+/* Agreement */
+.input_check { 
+    display:flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.type_check, .label_check {
+    display:block;
+    align-content: flex-start;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+
+
+
+/* .saveBtn {
+    background: #0B0000;
+    border-radius: 16px;
+    padding: 5px 20px;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: inherit;
+}
+.saveContinue {
+    padding: 8px 20px;
+    background: #FFC100;
+    border-radius: 15px;
+    border: none;
+    font-family: inherit;
+} */
