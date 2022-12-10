@@ -28,7 +28,7 @@ const loginStyle = {
   fontSize: '19px',
   fontWeight: '700',
 };
-const Login = ({ show, closeModal, loginNav }) => {
+const Login = ({ show, closeModal, loginNav, closeLogin, openSignup }) => {
   // const setToken = (userToken) => {
   //   sessionStorage.setItem('token', JSON.stringify(userToken));
   // }
@@ -38,6 +38,13 @@ const Login = ({ show, closeModal, loginNav }) => {
   // return userToken?.token
     
   // }
+  const loginHide = closeLogin
+  const signupShow = openSignup
+
+  const switchLogin = () => {
+    loginHide()
+    signupShow()
+  }
   const navigate = useNavigate()
   const { token, setToken } = useToken();
 
@@ -65,11 +72,18 @@ const Login = ({ show, closeModal, loginNav }) => {
       console.log(values);
       console.log(values.password);
       // let data = {...values}
-      axios.post('https:easyrent.onrender.com/users/login', values)
+      axios.post('https://easyrent.onrender.com/users/login', values)
       .then(res => {
         console.log(res.data)
         setToken(res.data.token)
-        navigate(`${loginNav}`)
+        console.log(loginNav)
+        if(loginNav !== undefined) {
+          console.log(typeof loginNav)
+          navigate(`${loginNav}`)
+        } else {
+          loginHide()
+        }
+        // loginNav ? navigate(`${loginNav}`) : navigate('/')
         
       })
       .catch(err => console.log(err))
@@ -173,7 +187,7 @@ const Login = ({ show, closeModal, loginNav }) => {
       </form>
       <p className="login-account-paragraph">
         Don’t have an account yet?{" "}
-        <Link to={'SignUp'}><span className="login-signup">Sign Up</span></Link>
+        <span className="login-signup" onClick={switchLogin}>Sign Up</span>
       </p>
       <p className="login-switch">Or Login with </p>
       <div className="login-social-logos">
