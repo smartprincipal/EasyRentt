@@ -20,21 +20,11 @@ function App() {
   return (
     <div>
       <Routes>
-        {/* <Route path="/" element={<Landingpage />} /> */}
+        <Route path="/" element={<Landingpage />} />
         {/* <Route path="/Catalogue" element={<Catalogue />} /> */}
         {/* <Route path="/Signup" element={<SignUp />} /> */}
         {/* <Route path="/Login" element={<Login />} /> */}
       </Routes>
-      <Yaba />
-      {/* <Maryland /> */}
-      {/* <Overview /> */}
-      {/* <Login /> */}
-      {/* <Landingpage /> */}
-      {/* <Catalogue/> */}
-      {/* <SignUp /> */}
-      {/* <Viewmore/> */}
-      {/* <SchedulePage/> */}
-      {/* <Map/> */}
 
     </div>
   );

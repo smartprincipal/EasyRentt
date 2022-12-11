@@ -134,7 +134,7 @@ const Landingpage = () => {
           <h4 className='section3heading'>Find homes that suit your style</h4>
 
           {/* Carousel Component */}
-          <Carousel className='carousel' autoPlay='true' infiniteLoop='true' interval='3000' showThumbs='false'>
+          <Carousel className='carousel' autoPlay='true' infiniteLoop='true' interval='3000' showThumbs={false}>
             <div className='carouseldiv1'>
               <p className='carouseltext'>3-Bedroom Flat</p>
               <div>
