@@ -21,6 +21,9 @@ import Map from "./Components/Map/Map";
 import ViewMap from "./Pages/ViewMap/ViewMap";
 import SchedulePage from "./Pages/SchedulePage/Schedule";
 import PaymentPersonalInfo from "./Pages/PaymentPersonalInfo/PaymentPersonalInfo";
+import Calendar from "./Components/Calendar/Calendar";
+import PaymentCardPage from "./Pages/PaymentCardPage/PaymentCardPage";
+import Schedule from "./Pages/SchedulePage/Schedule";
 
 
 
@@ -28,7 +31,7 @@ function App() {
   return (
     <div>
 
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Landingpage />} /> 
         <Route path="/Catalogue" element={<Catalogue />} />
         <Route path="/Signup" element={<SignUp />} />
@@ -46,13 +49,11 @@ function App() {
         <Route path="/ViewMap" element={<ViewMap />} />
         <Route path="/Viewmore" element={<Viewmore />} />
         <Route path="/Map" element={<Map />} />
+      </Routes> */}
 
-
-
-
-
-
-      </Routes>
+      {/* <Calendar/> */}
+      {/* <PaymentCardPage/> */}
+      <Viewmore/>
     </div>
   );
 }

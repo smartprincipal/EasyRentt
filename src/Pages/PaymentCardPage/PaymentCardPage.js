@@ -2,6 +2,7 @@ import './PaymentCardPage.css'
 
 import React from 'react'
 import PaymentHero from '../../Components/PaymentHero/PaymentHero'
+import PaymentSideNav from '../../Components/PaymentSideNav/PaymentSideNav'
 
 const PaymentCardPage = () => {
   return (
@@ -11,7 +12,7 @@ const PaymentCardPage = () => {
             <PaymentSideNav />
             <div className='lease-sub-main'>
                 <div className='sub-nav-container'>
-                  <LeaseSubNav />
+                  {/* <LeaseSubNav /> */}
                 </div>
                 <div className='lease-info-container'>
                     <h3 className='lease-sub-head'> Payment </h3>
