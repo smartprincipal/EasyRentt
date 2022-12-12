@@ -1,0 +1,117 @@
+.paymentBlock{
+ max-width: 1105px;
+ height: 500px;
+ padding: 39px 39px 79px 51px;
+ border: 2px solid gold;
+}
+.paymentHeading{
+padding-bottom: 24px;
+border-bottom: 1px solid #0A0505;
+font-family: Inter;
+font-size: 32px;
+font-weight: 400;
+line-height: 39px;
+}
+.paymentSubBlock{
+ display: flex;
+ margin-top: 40px;font-family: Inter;
+ font-size: 18px;
+ font-weight: 400;
+ line-height: 22px;
+}
+.paymentImages{
+ color: blue;
+}
+.paymentInputFlex{
+ display: flex;
+ padding-top: 33px;
+ padding-right: 231px;
+ justify-content: space-between;
+ /* align-items: center; */
+}
+.label1{
+ padding-right: 15px;
+ 
+}
+.label2{
+ padding-right: 15px;
+ padding-left: 50px;
+}
+.label3{
+ padding-right: 21px;
+}
+.label4{
+ padding-right: 47px;
+ padding-left: 50px;
+
+}
+.cardp{
+ height: 30px;
+ width: 258px;
+ border: 1px solid #0A0505;
+ padding-left: 10px;
+}
+.cardp::placeholder{
+ opacity: 0;
+}
+.cardw{
+ height: 30px;
+ width: 205px;
+ border: 1px solid #0A0505;
+ padding-left: 10px;
+}
+.cardw::placeholder{
+ opacity: 0;
+}
+.paymentInputFlex2{
+ display: flex;
+ padding-top: 28px;
+ padding-right: 231px;
+ justify-content: space-between;
+}
+.paynowBTNBlock{
+ margin-top: 78px;
+ margin-left: auto;
+ margin-right: auto;
+ width: 25%;
+}
+@media screen and (max-width:800px) {
+ .paymentBlock{
+ padding: 39px 39px 79px 25px;
+
+ }
+ .paymentInputFlex{
+  flex-direction: column;
+  padding-top: 33px;
+  padding-right: 0px;
+  gap: 15px;
+  justify-content: center;
+ }
+ .paymentInputFlex2{
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 15px;
+  padding-right: 0px;
+ }
+ .label1,.label2,.label3,.label4{
+  display: none;
+  padding-right: 0px;
+ padding-left: 0px;
+ }
+ .cardp{
+  height: 30px;
+  width: 258px;
+  border: 1px solid #0A0505;
+ }
+ .cardp::placeholder{
+  opacity: 1;
+ }
+ .cardw{
+  height: 30px;
+  width: 258px;
+  border: 1px solid #0A0505;
+ }
+ .cardw::placeholder{
+  opacity: 1;
+ }
+}
