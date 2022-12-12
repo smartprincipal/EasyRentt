@@ -5,8 +5,13 @@ import { Select, FormControl, MenuItem, InputLabel } from '@mui/material';
 import Searchbar from '../Searchbar/Searchbar';
 import searchicon from '../../Assets/search-icon2.svg';
 import { TbCurrencyNaira } from 'react-icons/tb';
+import { useState } from 'react';
 
 const CatalogueNavbar = () => {
+
+    const [priceFilter, setPriceFilter] = useState()
+    
+    
   return (
     <div className='catnavbar'>
         <div className='navcontainer'>
