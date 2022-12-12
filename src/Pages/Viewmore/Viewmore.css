@@ -119,10 +119,32 @@ padding: 20px 0 14px 0;
  font-size: 24px;
  padding: 32px 0 150px 0;
 }
+.calendarSection{
+ height: 880px;
+width: 811px;
+background: #F4F2F2;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+font-size: 32px;
+margin-top: 350px;
+
+}
+.calendarSectionh3{
+ padding: 54px 0 24px 0;
+}
+.calendarBlock{
+ width: 60%;
+ margin: 56px auto 52px auto;
+}
+.calendarSectionlastp{
+ font-size: 24px;
+ margin-bottom: 50px;
+}
 .viewmoresection3{
  padding-left: 117px;
  padding-right: 220px;
- margin-top: 350px;
+ margin-top: 40px;
  background-color: #FFFFFF;
 }
 .viewmoresection3 h2{

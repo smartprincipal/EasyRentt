@@ -2,6 +2,7 @@ import React from 'react'
 import Button from '../../Components/Button/Button'
 import './Schedule.css'
 import { Link } from 'react-router-dom'
+import Calendar from '../../Components/Calendar/Calendar'
 
 const Schedule = () => {
  const scheduleTour={
@@ -25,6 +26,10 @@ textAlign: 'center'
       <h4>Victoria Island</h4>
 
       <form action="" method="post" className='scheduleForm'>
+        <div className='scheduleCalendar'>
+          <Calendar/>
+
+        </div>
        <div className="name">
         <div className="firstName">
          <div className='firstnameLabel'>
