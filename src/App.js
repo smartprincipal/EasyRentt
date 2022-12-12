@@ -21,11 +21,8 @@ import Map from "./Components/Map/Map";
 import ViewMap from "./Pages/ViewMap/ViewMap";
 import SchedulePage from "./Pages/SchedulePage/Schedule";
 import PaymentPersonalInfo from "./Pages/PaymentPersonalInfo/PaymentPersonalInfo";
-import Calendar from "./Components/Calendar/Calendar";
 import PaymentCardPage from "./Pages/PaymentCardPage/PaymentCardPage";
 import Schedule from "./Pages/SchedulePage/Schedule";
-import Time from "./Components/Time/Time";
-import Payment from "./Components/Payment/Payment";
 
 
 
@@ -55,10 +52,7 @@ function App() {
       </Routes>
 
       {/* <Calendar/> */}
-      {/* <PaymentCardPage/> */}
-      {/* <Viewmore/> */}
-      {/* <Time/> */}
-      {/* <Payment/> */}
+
     </div>
   );
 }
