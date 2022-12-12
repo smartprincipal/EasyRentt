@@ -13,6 +13,7 @@ import { Routes, Route } from "react-router-dom";
 // import ViewMap from "./Pages/ViewMap/ViewMap";
 // import SchedulePage from "./Pages/SchedulePage/Schedule";
 import PaymentPersonalInfo from "./Pages/PaymentPersonalInfo/PaymentPersonalInfo";
+import ForgetPassword from "./Pages/ForgetPassword/ForgetPassword";
 
 
 
@@ -34,9 +35,10 @@ function App() {
       {/* <SignUp /> */}
       {/* <Viewmore/> */}
       {/* <SchedulePage/> */}
-      <PaymentPersonalInfo/>
+      {/* <PaymentPersonalInfo/> */}
       {/* <Map/> */}
       {/* <ViewMap/> */}
+      <ForgetPassword/>
     </div>
   );
 }

@@ -18,7 +18,7 @@ function SignUp ({openModal, closeModal}) {
     const initialValues = {username: "", email: "", password: "", confirmPassword: ""};
     const formik = useFormik({initialValues, 
 
-        // Formik Submit 
+        // Formik Submit
         onSubmit: (values) => {
             console.log(values)
 

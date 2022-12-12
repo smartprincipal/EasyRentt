@@ -27,6 +27,9 @@ const PaymentPersonalInfo = () => {
     }
   ]
 
+  
+    
+
     return (
       <div>
         <PaymentHero />
@@ -45,8 +48,12 @@ const PaymentPersonalInfo = () => {
               </ul>
               
             </div>
-            <div>
+            
+              {/* <DetailsForm/> */}
+            
+            <div className="detailsForm">
               <DetailsForm/>
+            
             </div>
           </div>
         </div>
