@@ -33,7 +33,7 @@ function App() {
   return (
     <div>
 
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<Landingpage />} /> 
         <Route path="/Catalogue" element={<Catalogue />} />
         <Route path="/Signup" element={<SignUp />} />
@@ -52,10 +52,10 @@ function App() {
         <Route path="/Viewmore" element={<Viewmore />} />
         <Route path="/Map" element={<Map />} />
         <Route path="/PaymentCardPage" element={<PaymentCardPage />} />
-      </Routes> */}
+      </Routes>
 
       {/* <Calendar/> */}
-      <PaymentCardPage/>
+      {/* <PaymentCardPage/> */}
       {/* <Viewmore/> */}
       {/* <Time/> */}
       {/* <Payment/> */}
