@@ -4,11 +4,18 @@ import google from "../../Assets/google.svg";
 import facebook from "../../Assets/facebook.svg";
 import twitter from "../../Assets/twitter.svg";
 import { useFormik } from "formik";
+import { useState, createContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 import * as Yup from "yup";
 import Overlay from "../../Components/Overlay/Overlay";
 import axios from 'axios';
 import { Link } from "react-router-dom";
+import useToken from '../../useToken'
 import SignUp from "../Signup/Signup";
+
+
+
+export const LoginContext = createContext();
 
 const loginStyle = {
   width: "100%",
@@ -21,7 +28,27 @@ const loginStyle = {
   fontSize: '19px',
   fontWeight: '700',
 };
-const Login = ({ show, closeModal }) => {
+const Login = ({ show, closeModal, loginNav, closeLogin, openSignup }) => {
+  // const setToken = (userToken) => {
+  //   sessionStorage.setItem('token', JSON.stringify(userToken));
+  // }
+  // const getToken = () => {
+  //   const tokenString = sessionStorage.getItem('token');
+  // const userToken = JSON.parse(tokenString);
+  // return userToken?.token
+    
+  // }
+  const loginHide = closeLogin
+  const signupShow = openSignup
+
+  const switchLogin = () => {
+    loginHide()
+    signupShow()
+  }
+  const navigate = useNavigate()
+  const { token, setToken } = useToken();
+
+  // const [token, setToken] = useState()
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -45,10 +72,19 @@ const Login = ({ show, closeModal }) => {
       console.log(values);
       console.log(values.password);
       // let data = {...values}
-      axios.post('https:easyrent.onrender.com/users/login', values)
+      axios.post('https://easyrent.onrender.com/users/login', values)
       .then(res => {
         console.log(res.data)
-        // setToken(res.data.token)
+        setToken(res.data.token)
+        console.log(loginNav)
+        if(loginNav !== undefined) {
+          console.log(typeof loginNav)
+          navigate(`${loginNav}`)
+        } else {
+          loginHide()
+        }
+        // loginNav ? navigate(`${loginNav}`) : navigate('/')
+        
       })
       .catch(err => console.log(err))
       console.log(values)
@@ -77,7 +113,7 @@ const Login = ({ show, closeModal }) => {
 
 
   return (
-    <>
+    <LoginContext.Provider value={token}>
     <Overlay OverlayShow={show} overlayClick={closeModal}/>
     <div className="login-container" style={{transform: show ? 'translateY(0)':'translateY(-100vh)', opacity: show ? '1':'0'}}>
       <h3 className="login-heading">Login</h3>
@@ -151,7 +187,7 @@ const Login = ({ show, closeModal }) => {
       </form>
       <p className="login-account-paragraph">
         Don’t have an account yet?{" "}
-        <Link to={'SignUp'}><span className="login-signup">Sign Up</span></Link>
+        <span className="login-signup" onClick={switchLogin}>Sign Up</span>
       </p>
       <p className="login-switch">Or Login with </p>
       <div className="login-social-logos">
@@ -161,7 +197,7 @@ const Login = ({ show, closeModal }) => {
       </div>
       <span className="times" onClick={closeModal}>&times;</span>
     </div>
-    </>
+    </LoginContext.Provider>
   );
 };
 

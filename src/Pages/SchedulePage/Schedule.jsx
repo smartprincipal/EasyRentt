@@ -15,7 +15,6 @@ fontSize: '32px',
 fontWeight: '500px',
 lineHeight: '39px',
 textAlign: 'center'
-
  }
 
   return (

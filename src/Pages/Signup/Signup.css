@@ -1,8 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 
-body {
-    /* background-color: #000000; */
-    /* background: transparent; */
 }
+body {
+    font-family: "DM sans", sans-serif;
+    font-size: 16px;
+    /* background-color: rgba(0,0,0,0.9) */
+} 
+
+.login-form {
+    width: 40%;
+    height: 75%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px 30px 20px 30px;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    overflow-y: auto;
+    transition: all 1s ease-out;
+}
+
+
 .success_note {
     color: darkgreen;
     text-align: center;
@@ -10,16 +35,28 @@ body {
     margin: 0 auto;
 }
 
-.close_icon {
-    font-weight: bold;
-    font-size: 40px;
+.x-icon {
+    font-weight: 400;
+    font-size: 30px;
+    display: inline-block;
     text-align: right;
-    
+    position: absolute;
+    width: 20px;
+    top: 10px;
+    right: 30px;
+    cursor: pointer;
 }
+.x-icon:hover {
+    background-color: #0B0000;
+    color: #ffffff
+    
+
+}
+
 
 .sign_head {
     text-align: center;
-    font-size: 45px;
+    font-size: 35px;
 }
 
 .p-head {
@@ -28,42 +65,44 @@ body {
     margin: 10px 0;
 }
 
-.login-form {
-    width: 50%;
-    height: 100%;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 20px 40px;
-    font-family: "DM sans", sans-serif;
+
+.signup_form {
+    padding: 0 20px;
+    width: 100%;
 }
 
 .input_label {
     display: block;
-    font-weight: 600;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 12px;
 }
 
 .input-wrap  {
-    margin: 25px 0;
+    margin: 10px 0;
+    width: 100%;
 }
 
 .input_type {
-    display: block;
+    display: inline-block;
     width: 100%;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px 0;
-    font-size: 16px;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0 auto;
+    font-size: 12px;
     border: 1px solid #FCBC0E;
 }
 
+
 .signButton {
     width:100%;
-    padding: 15px 10px;
-    border-radius: 10px;
+    padding: 10px 10px;
+    border-radius: 8px;
     border: none;
     background-color: #FCBC0E;
-    margin: 20px 0;
-    font-size: 20px;
+    margin: 15px 0;
+    font-size: 16px;
+    font-weight: 400;
     color: #ffffff;
 }
 
@@ -79,7 +118,7 @@ body {
 
 .hav-acct {
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
 }
 .login {
     font-weight: bold;
@@ -94,15 +133,18 @@ body {
     color: red;
     font-size: 12px;
     font-weight: 600;
+    /* display: none; */
 }
+
+
 .or-opt {
     text-align: center;
-    margin: 15px 0;
+    margin: 10px 0;
     line-height: 30px;
 }
 .or {
     font-weight: bold;
-    margin: 20px 0;
+    margin: 10px 0;
     display: inline-block;
 }
 
@@ -111,7 +153,7 @@ body {
     width: 90%;
     display: flex;
     justify-content: space-around;
-    /* padding: 10px 0;*/
+    
 }
 .m-icon {
     display: inline-block;

@@ -1,10 +1,12 @@
 import React from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './LandingPage.css';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { LoginContext } from '../Login/Login'
 import { Carousel } from 'react-responsive-carousel';
 import NavBar from '../../Components/NavBar/NavBar';
 import Login from '../Login/Login';
+import SignUp from '../Signup/Signup';
 import Locationcard from '../../Components/Locationcard/Locationcard';
 import Button from '../../Components/Button/Button';
 import searchicon from '../../Assets/search-icon.svg';
@@ -27,22 +29,24 @@ import review5 from '../../Assets/review5.svg';
 import review6 from '../../Assets/review6.svg';
 import Footer from '../../Components/Footer/Footer';
 import Searchbar from '../../Components/Searchbar/Searchbar';
-
+// import useToken from '../../useToken'
 
 
 const Landingpage = () => {
+  const [loginNav, setLoginNav] = useState()
+  const token = useContext(LoginContext)
 
   // Usestate for Locationcard Component
   const [editLocation] = useState([
-    {content: "Lekki", img: lekki},  
-    {content: "Victoria Island", img: vicIsland},
-    {content: "Banana Island", img: bananaIsland},
-    {content: "Ikeja", img: ikeja},
-    {content: "Yaba", img: yaba},
-    {content: "Magodo", img: magodo},
-    {content: "Ajah", img: ajah},
-    {content: "MaryLand", img: maryLand},
-    {content: "Oshodi", img: oshodi},
+    {id: 1, content: "Lekki", img: lekki, nav: '/Lekki'},  
+    {id: 2, content: "Victoria Island", img: vicIsland, nav: '/Victoriaisland'},
+    {id: 3, content: "Banana Island", img: bananaIsland, nav: '/Bananaisland'},
+    {id: 4, content: "Ikeja", img: ikeja, nav: '/Ikeja'},
+    {id: 5, content: "Yaba", img: yaba, nav: '/Yaba'},
+    {id: 6, content: "Magodo", img: magodo, nav: '/Lekki'},
+    {id: 7, content: "Ajah", img: ajah, nav: '/Ajah'},
+    {id: 8, content: "MaryLand", img: maryLand, nav: '/Maryland'},
+    {id: 9, content: "Oshodi", img: oshodi, nav: '/Oshodi'},
       ]);
 
 
@@ -59,21 +63,38 @@ const Landingpage = () => {
     {heading: "Betty", img: review6}
       ])
 
-    // State for Login Component
+    // State for Login & Signup Component
     const [loginModal, setLoginModal] = useState(false);
+    
      // Login authorization state 
-     const [token, setToken] = useState();
+    //  const [token, setToken] = useState();
     
     const loginHandler = () => {
       setLoginModal(true)
     }
     const loginClose = () => {
+      console.log(token)
       setLoginModal(false)
     }
+    
+    // State for Sign-Up component
+    const [signUp, setSignUp] = useState(false);
+    
+    const openSignUp = () => setSignUp(true);
+    const closeSignUp = () => setSignUp(false)
+ 
 
-    const LocationLoginAuth = () => {
-      if(!token){
+
+    const LocationLoginAuth = (item, id, index) => {
+      if(!token && id === index + 1){
+        console.log(token)
+        console.log(item)
+        console.log(id)
+        console.log(index + 1)
+        setLoginNav(item)
         setLoginModal(true)
+      } else{
+
       }
     }
 
@@ -84,14 +105,16 @@ const Landingpage = () => {
   return (
     <div className='landingPage'>
 
-      <Login show={loginModal} closeModal={loginClose}/>
+      <Login show={loginModal} closeModal={loginClose} loginNav={loginNav} closeLogin={loginClose} openSignup={openSignUp} />
+      <SignUp openModal={signUp} closeModal={closeSignUp} />
+
       
       {/* Hero section of the landing page */}
       <section className='hero'>
     
         {/* Navbar Component */}
           <div className='navcomponent'>
-              <NavBar loginClick={loginHandler}/>
+              <NavBar loginClick={loginHandler} SignupClick={openSignUp}/>
           </div>
 
         {/* Hero Heading */}
@@ -123,8 +146,8 @@ const Landingpage = () => {
           {/* Locationcard Component */}
         <div className='locationcarddiv'>
 
-          {editLocation.map((item, index) =>(
-          <Locationcard content={item.content} img={item.img} key={index} locationClick={LocationLoginAuth}/>))}   
+          {editLocation.map((item, index) =>
+          <Locationcard content={item.content} img={item.img} key={index} item={item.nav} locationClick={() => LocationLoginAuth(item.nav, item.id, index)}/>)}   
         
         </div>
       </section>

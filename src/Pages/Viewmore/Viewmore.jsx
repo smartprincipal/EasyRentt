@@ -12,9 +12,9 @@ import Pick2 from '../../Assets/Pick2.png';
 import Pick3 from '../../Assets/Pick3.png';
 // import { useState } from 'react';
 import ViewMoreImg from '../../Components/ViewMoreImg/ViewMoreImg';
-// import Map from '../../Components/Map/Map';
+import Map from '../../Components/Map/Map';
 import Footer from '../../Components/Footer/Footer';
-// import { color } from '@mui/system';
+import { color } from '@mui/system';
 import Post from '../../Components/Post/Post'
 
 const Viewmore = () => {
@@ -27,12 +27,12 @@ const Viewmore = () => {
 
   return (
     <div>
-     <section className="section1">
+     <section className="viewmoresection1">
      {/* Hero Section */}
      <CatalogueNavbar/>
      </section>
 
-     <section className='section2'>
+     <section className='viewmoresection2'>
       <div className="apartmentView">
        <div className="apartmentBlock">
        Apartment for Rent
@@ -103,7 +103,7 @@ const Viewmore = () => {
 
      </section>
 
-     <section className='section3'>
+     <section className='viewmoresection3'>
         {/* <AppointmentPicker/> */}
 
         <div className='apartmentDescription'>
@@ -129,17 +129,18 @@ Pictures are given for furnished apartment but we are offering this apartment wi
 
      </section>
 
-
-     {/* <section className="section4">
+     <section className="viewmoresection4">
       <div className="mapp">
        <Map/>
       </div>
-     </section> */}
-     <section className='section5'>
+     </section>
+
+     {/* Post Section */}
+     <section className='viewmoresection5'>
       <Post/>
      </section>
 
-     <section className='section6'>
+     <section className='viewmoresection6'>
       <Footer/>
      </section>
     </div>
