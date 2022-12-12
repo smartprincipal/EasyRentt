@@ -24,6 +24,8 @@ import PaymentPersonalInfo from "./Pages/PaymentPersonalInfo/PaymentPersonalInfo
 import Calendar from "./Components/Calendar/Calendar";
 import PaymentCardPage from "./Pages/PaymentCardPage/PaymentCardPage";
 import Schedule from "./Pages/SchedulePage/Schedule";
+import Time from "./Components/Time/Time";
+import Payment from "./Components/Payment/Payment";
 
 
 
@@ -49,11 +51,14 @@ function App() {
         <Route path="/ViewMap" element={<ViewMap />} />
         <Route path="/Viewmore" element={<Viewmore />} />
         <Route path="/Map" element={<Map />} />
+        <Route path="/PaymentCardPage" element={<PaymentCardPage />} />
       </Routes> */}
 
       {/* <Calendar/> */}
-      {/* <PaymentCardPage/> */}
-      <Viewmore/>
+      <PaymentCardPage/>
+      {/* <Viewmore/> */}
+      {/* <Time/> */}
+      {/* <Payment/> */}
     </div>
   );
 }

@@ -3,20 +3,29 @@ import './PaymentCardPage.css'
 import React from 'react'
 import PaymentHero from '../../Components/PaymentHero/PaymentHero'
 import PaymentSideNav from '../../Components/PaymentSideNav/PaymentSideNav'
+import Payment from '../../Components/Payment/Payment'
 
 const PaymentCardPage = () => {
   return (
     <div>
         <PaymentHero />
         <div className='section-2-container'>
+          <div className='PaymentSideNav'>
             <PaymentSideNav />
+          </div>
             <div className='lease-sub-main'>
                 <div className='sub-nav-container'>
                   {/* <LeaseSubNav /> */}
                 </div>
-                <div className='lease-info-container'>
+                {/* <div className='lease-info-container'>
                     <h3 className='lease-sub-head'> Payment </h3>
                     <p className='lease-text'>Confirm Payment</p>
+                    </div> */}
+
+
+                <div className='paymentOptionBlock'>
+                    <Payment/>
+                </div>
                     {/* <form className='lease-form'>
                       <div>
                         <label htmlFor='move-in' className='label-date'>Move-in-Date</label>
@@ -33,7 +42,6 @@ const PaymentCardPage = () => {
                       </div>
                     </form> */}
                     
-                </div>
             </div>
         </div>
     </div>
