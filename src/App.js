@@ -21,7 +21,6 @@ import Map from "./Components/Map/Map";
 import ViewMap from "./Pages/ViewMap/ViewMap";
 import SchedulePage from "./Pages/SchedulePage/Schedule";
 import PaymentPersonalInfo from "./Pages/PaymentPersonalInfo/PaymentPersonalInfo";
-import ForgetPassword from "./Pages/ForgetPassword/ForgetPassword";
 import Calendar from "./Components/Calendar/Calendar";
 import PaymentCardPage from "./Pages/PaymentCardPage/PaymentCardPage";
 import Schedule from "./Pages/SchedulePage/Schedule";
@@ -47,9 +46,9 @@ function App() {
         <Route path="/Oshodi" element={<Oshodi />} />
         <Route path="/Victoriaisland" element={<Victoriaisland />} />
         <Route path="/Yaba" element={<Yaba />} />
-        {/* <Route path="/PaymentPersonalInfo" element={<PaymentPersonalInfo />} />
+        <Route path="/PaymentPersonalInfo" element={<PaymentPersonalInfo />} />
         <Route path="/SchedulePage" element={<SchedulePage />} />
-        <Route path="/ViewMap" element={<ViewMap />} /> */}
+        <Route path="/ViewMap" element={<ViewMap />} />
         <Route path="/Viewmore" element={<Viewmore />} />
         <Route path="/Map" element={<Map />} />
         <Route path="/PaymentCardPage" element={<PaymentCardPage />} />
