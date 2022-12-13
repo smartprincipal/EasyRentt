@@ -20,6 +20,17 @@ lineHeight: '22px',
 textAlign: 'center'
 
  }
+
+ const [ , ] = useState([ ])
+
+  const getSearchFilter = () =>{
+    axios.get('https://easyrent.onrender.com/users/book/sort'). then((res)=>{
+
+    })
+
+    }
+  }
+
   return (
     <div className='paymentBlock'>
      <h3 className='paymentHeading'> Payment </h3>

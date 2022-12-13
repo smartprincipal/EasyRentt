@@ -23,6 +23,7 @@ import SchedulePage from "./Pages/SchedulePage/Schedule";
 import PaymentPersonalInfo from "./Pages/PaymentPersonalInfo/PaymentPersonalInfo";
 import PaymentCardPage from "./Pages/PaymentCardPage/PaymentCardPage";
 import Schedule from "./Pages/SchedulePage/Schedule";
+import Time from "./Components/Time/Time";
 
 
 
@@ -52,6 +53,7 @@ function App() {
       </Routes>
 
       {/* <Calendar/> */}
+      {/* <Time/> */}
 
     </div>
   );
