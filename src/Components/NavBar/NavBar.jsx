@@ -4,8 +4,11 @@ import Logo from '../../Assets/EasyRent.svg';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import Button from "../../Components/Button/Button";
+import {useIsAuthenticated} from 'react-auth-kit';
 
 const NavBar = ({loginClick, SignupClick}) => {
+
+  const isAuthenticated = useIsAuthenticated()
 
   // Usestate for Hamburger display
   const [toggle, setToggle] = useState(false)
@@ -35,10 +38,10 @@ const NavBar = ({loginClick, SignupClick}) => {
             </div>
           </div>
 
-          <div className='buttondiv'>
+          {isAuthenticated() ? null : <div className='buttondiv'>
             <Button text={"Login"} btnclass={'navbutton1'} btnClick={loginClick}/>
             <Button text={"Sign Up"} btnclass={'navbutton2'} btnClick={SignupClick}/>
-          </div>
+          </div>} 
         </ul>
       
         
