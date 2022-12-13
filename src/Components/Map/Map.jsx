@@ -47,3 +47,25 @@ function MyComponent() {
 }
 
 export default React.memo(MyComponent)
+
+
+// import React from 'react'
+// import { Wrapper, Status } from "@googlemaps/react-wrapper";
+
+// const Map = () => {
+//   const render = (status: Status ): ReactElement => {
+//     if (status === Status.FAILURE) return <ErrorComponent />;
+//     return <Spinner />;
+//   };
+//   return (
+//     <div>
+
+// <Wrapper apiKey={"AIzaSyCVvPfU4YWSFJoCusIsZ15gwzETDuAxN88"}>
+//     <MyMapComponent />
+//   </Wrapper>
+
+//     </div>
+//   )
+// }
+
+// export default Map
