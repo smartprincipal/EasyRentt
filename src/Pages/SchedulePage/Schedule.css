@@ -5,13 +5,13 @@
 }
 .scheduleContainer{
  background-color: #FCBC0E;
- height: 730px;
+ height: 100%;
  display: flex;
  justify-content: center;
 }
 .scheduleBlock{
  background-color: #F4F2F2;;
- height: 700px;
+ height: 1000px;
  width: 50%;
  /* margin-left: auto;
  margin-right: auto; */
@@ -40,9 +40,14 @@ letter-spacing: 0em;
 }
 .scheduleForm{
  padding: 0 47px 0 77px;
- margin-top: 50px;
+ margin-top: 30px;
 }
-
+.scheduleCalendar{
+ width: 60%;
+ margin-left: auto;
+ margin-right: auto;
+ margin-bottom: 20px;
+}
 .name{
  display: flex;
  justify-content: space-between;
@@ -84,7 +89,7 @@ letter-spacing: 0em;
 .phonenumberLabel{
  margin-bottom: 10px;
  position: relative;
- left: -275px;
+ left: -260px;
 }
 .phonenumberInput{
  height: 45px;
@@ -93,7 +98,7 @@ letter-spacing: 0em;
 }
 .check{
  position: relative;
- left: -175px;
+ left: -150px;
  margin-top: 10px;
 }
 .checkbox{
