@@ -1,10 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 // import Schedule from "./Pages/SchedulePage/Schedule";
-import Landingpage from "./Pages/LandingPage/LandingPage";
-import Catalogue from "../src/Pages/Catalogue/Catalogue";
-import SignUp from "./Pages/Signup/Signup";
-import Login from "./Pages/Login/Login";
+
 // import CatalogueNavbar from "./Components/CatalogueNavbar/CatalogueNavbar";
 // import CatalogueCard from "./Components/CatalogueCard/CatalogueCard";
 import Ajah from "./Pages/Catalogue/Ajah";
@@ -23,6 +20,10 @@ import SchedulePage from "./Pages/SchedulePage/Schedule";
 import PaymentPersonalInfo from "./Pages/PaymentPersonalInfo/PaymentPersonalInfo";
 import { RequireAuth } from 'react-auth-kit';
 import Spinner from './Components/Spinner/Spinner'
+import ForgetPassword from "./Pages/ForgetPassword/ForgetPassword";
+import PaymentCardPage from "./Pages/PaymentCardPage/PaymentCardPage";
+import Schedule from "./Pages/SchedulePage/Schedule";
+import Time from "./Components/Time/Time";
 
 
 
@@ -77,13 +78,14 @@ function App() {
         <Route path="/ViewMap" element={<ViewMap />} />
         <Route path="/Viewmore" element={<Viewmore />} />
         <Route path="/Map" element={<Map />} />
-
-
-
-
-
-
+        <Route path="/PaymentCardPage" element={<PaymentCardPage />} />
       </Routes>
+
+      {/* <Calendar/> */}
+      {/* <Time/> */}
+
+       <ForgetPassword/>
+
     </div>
   );
 }

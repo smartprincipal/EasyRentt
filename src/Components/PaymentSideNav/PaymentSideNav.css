@@ -19,6 +19,7 @@ color: #FFFFFF;
     border-bottom: 1px solid #E0E0E0;
     padding: 26px 0px;
 }
+
 .payment-sidenav li:first-child{
     border-top: none;
 }

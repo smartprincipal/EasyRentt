@@ -25,6 +25,7 @@ body {
     z-index: 99999;
     overflow-y: auto;
     transition: all 1s ease-out;
+    
 }
 
 
@@ -182,6 +183,11 @@ body {
 
 }
 @media screen and (max-width: 800px) {
+
+    .login-form {
+        width: 50%;
+        height: 100%m;
+    }
     .login-form {
         width: 90%; 
     }

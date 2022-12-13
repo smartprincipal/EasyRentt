@@ -1,0 +1,16 @@
+.section-2-container{
+ display: flex;
+}
+.paymentOptionBlock{
+ margin-top: 90px;
+ margin-left: 129px;
+}
+@media screen and (max-width:800px) {
+ .PaymentSideNav{
+  display: none;
+ }
+ .paymentOptionBlock{
+  margin-left: 0px;
+ }
+ 
+}
