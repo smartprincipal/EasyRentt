@@ -3,20 +3,20 @@ import './Catalogue.css'
 import NavBar from '../../Components/NavBar/NavBar';
 import SearchImg from '../../Assets/searchImg.png';
 // import CatalogueCard from '../../Components/CatalogueCard/CatalogueCard'
-import Button from '../../Components/Button/Button'
+// import Button from '../../Components/Button/Button'
 import Review from '../../Components/Review/Review';
 import Post from '../../Components/Post/Post';
-import axios from 'axios';
+// import axios from 'axios';
 
 const Catalogue = () => {
 
-  const [availableSearch , setAvailableSearch] = useState('')
-  const searches = () => {
-    axios.get('https://easyrent.onrender.com/users/query') .then((response) => {
-      setAvailableSearch(response.data)
-    }
-    )
-  }
+  // const [availableSearch , setAvailableSearch] = useState('')
+  // const searches = () => {
+  //   axios.get('https://easyrent.onrender.com/users/query').then((response) => {
+  //     setAvailableSearch(response.data)
+  //   }
+  //   )
+  // }
     const [toggle, setToggle] =useState('')
     // const [bedToggle, setBedToggle] =useState(true)
     // const [bathToggle, setBathToggle] =useState(true)
@@ -74,7 +74,7 @@ const Catalogue = () => {
           ▼
           </p>
         </div>
-        <div className={toggle =='price' ? 'pricebox' : 'inactive'} >
+        <div className={toggle ==+'price' ? 'pricebox' : 'inactive'} >
         <div className="price">
           <button className="minPrice">
             <div className="symbol">
@@ -129,7 +129,7 @@ const Catalogue = () => {
           ▼
           </p>
         </div>
-        <div className={toggle == 'bed' ?'bedBox': 'inactive'}>
+        <div className={toggle ==+ 'bed' ?'bedBox': 'inactive'}>
           <div className="bedAmount">
             <div className="count">Any</div>
             <div className="count">Studio</div>
@@ -144,7 +144,7 @@ const Catalogue = () => {
         <div className='opss' onClick={handleBath}>
           Bathroom ▼
           </div>
-          <div className={toggle == 'bath' ?  'bathroomBox':'inactive'} >
+          <div className={toggle ==+ 'bath' ?  'bathroomBox':'inactive'} >
             <div className="bathroomAmount">
               <div className="bathroomCount">1</div>
               <div className="bathroomCount">2</div>
@@ -161,7 +161,7 @@ const Catalogue = () => {
           id="" 
           className='searchBox' 
           placeholder='Where do you want to live'
-          onClick={searches}
+          // onClick={searches}
           />
           
           <div className="searchimg">

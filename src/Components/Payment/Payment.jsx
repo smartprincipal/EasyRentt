@@ -5,6 +5,7 @@ import { FaCcMastercard } from 'react-icons/fa';
 import { FaCcPaypal } from 'react-icons/fa';
 import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
+// import axios from 'axios';
 
 const Payment = () => {
  const paynowBTN = {
@@ -20,16 +21,16 @@ lineHeight: '22px',
 textAlign: 'center'
 
  }
+//  const Payment = () => {
+//  const [ ] = useState([ ])
 
- const [ , ] = useState([ ])
+//   const getSearchFilter = () =>{
+//     axios.get('https://easyrent.onrender.com/users/book/sort').then((res)=>{
 
-  const getSearchFilter = () =>{
-    axios.get('https://easyrent.onrender.com/users/book/sort'). then((res)=>{
+//     })
 
-    })
-
-    }
-  }
+//     }
+//   }
 
   return (
     <div className='paymentBlock'>
@@ -98,7 +99,7 @@ textAlign: 'center'
      </div>
 
      <div className="paynowBTNBlock">
-      <Link to=''>
+      <Link to='./'>
       <Button style={paynowBTN} text={'Pay Now'}/>
       </Link>
      </div>

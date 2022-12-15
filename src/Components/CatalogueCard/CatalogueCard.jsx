@@ -3,11 +3,11 @@ import './CatalogueCard.css'
 import Button from '../Button/Button'
 import locateIcon from '../../Assets/location-icon.svg'
 import imgtab from '../../Assets/imgtab.png'
-import Victoria from '../../Assets/Victoria.png';
+// import Victoria from '../../Assets/Victoria.png';
 import ShareIcon from '../../Assets/shareIcon.svg'
 import Likebutton from "../Button/LikeButton/Likebutton";
 import {EmailShareButton, FacebookShareButton,  TwitterShareButton, WhatsappShareButton, EmailIcon, FacebookIcon, TwitterIcon, WhatsappIcon,} from "react-share";
-import FavouriteIcon from '../../Assets/favouriteIcon.svg';
+// import FavouriteIcon from '../../Assets/favouriteIcon.svg';
 import { FaTimesCircle } from 'react-icons/fa';
 import { TbCurrencyNaira } from 'react-icons/tb';
 import { FaBed } from 'react-icons/fa';
