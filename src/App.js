@@ -18,13 +18,16 @@ import Map from "./Components/Map/Map";
 import ViewMap from "./Pages/ViewMap/ViewMap";
 import SchedulePage from "./Pages/SchedulePage/Schedule";
 import PaymentPersonalInfo from "./Pages/PaymentPersonalInfo/PaymentPersonalInfo";
-import { RequireAuth } from 'react-auth-kit';
-import Spinner from './Components/Spinner/Spinner'
+// import { RequireAuth } from 'react-auth-kit';
+// import Spinner from './Components/Spinner/Spinner'
 import ForgetPassword from "./Pages/ForgetPassword/ForgetPassword";
 import PaymentCardPage from "./Pages/PaymentCardPage/PaymentCardPage";
-import Schedule from "./Pages/SchedulePage/Schedule";
-import Time from "./Components/Time/Time";
-
+// import Schedule from "./Pages/SchedulePage/Schedule";
+// import Time from "./Components/Time/Time";
+import Landingpage from './Pages/LandingPage/LandingPage';
+import Signup from './Pages/Signup/Signup';
+import Login from './Pages/Login/Login';
+import Catalogue from './Pages/Catalogue/Catalogue'
 
 
 function App() {
@@ -34,7 +37,7 @@ function App() {
       {/* <Routes>
         <Route path="/" element={<Landingpage />} /> 
         <Route path="/Catalogue" element={<Catalogue />} />
-        <Route path="/Signup" element={<SignUp />} />
+        <Route path="/SignUp" element={<SignUp />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Bananaisland" element={<Bananaisland />} />
         <Route path="/Ikeja" element={<Ikeja />} />
@@ -62,7 +65,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landingpage />} /> 
         <Route path="/Catalogue" element={<Catalogue />} />
-        <Route path="/Signup" element={<SignUp />} />
+        <Route path="/Signup" element={<Signup />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Bananaisland" element={ <Bananaisland />} />
         <Route path="/Ikeja" element={<Ikeja />} />
@@ -79,12 +82,13 @@ function App() {
         <Route path="/Viewmore" element={<Viewmore />} />
         <Route path="/Map" element={<Map />} />
         <Route path="/PaymentCardPage" element={<PaymentCardPage />} />
+        <Route path="/ForgetPassword" element={<ForgetPassword />} />
       </Routes>
 
       {/* <Calendar/> */}
       {/* <Time/> */}
 
-       <ForgetPassword/>
+       {/* <ForgetPassword/> */}
 
     </div>
   );
