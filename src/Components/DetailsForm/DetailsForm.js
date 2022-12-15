@@ -2,7 +2,7 @@ import '../DetailsForm/DetailsForm.css'
 import Button from '../Button/Button';
 
 import { useFormik } from 'formik';
-import * as Yup from "yup";
+// import * as Yup from "yup";
 
 
 
