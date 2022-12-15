@@ -3,11 +3,9 @@ import './Signup.css';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import Overlay from '../../Components/Overlay/Overlay';
-
 import facebook from '../../Assets/facebook.svg';
 import twitter from '../../Assets/twitter.svg';
 import google from '../../Assets/google.svg';
-
 import { useFormik } from 'formik';
 import * as Yup from "yup";
 
@@ -26,10 +24,13 @@ function SignUp ({openModal, closeModal}) {
         // console.log(user)
             axios.post("https://easyrent.onrender.com/users/signup", values)
             .then(res => {
+                alert('Please check your email')
                 console.log(res);
                 console.log(res.data);
                 
-            }).catch(err => console.log(err))
+            }).catch(err => {
+                alert(err)
+                console.log(err)})
         },
 
         // Validation of form values

@@ -23,9 +23,7 @@ const Searchbar = ({searchdiv, imgsource, searchinput}) => {
 
 
     };
-      // const routeclick = () => {
-      //   return <Link></Link>
-      // }
+      
   return (
     <div className='searchmaindiv'>
       <div className={searchdiv}>

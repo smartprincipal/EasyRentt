@@ -347,3 +347,9 @@
     }
 
 }
+
+@media screen and (max-width: 325px) {
+    #herosearch{
+        padding: 1rem 0;
+    }
+    }

@@ -9,24 +9,67 @@
 }
 .searchfilter{
     position: absolute;
-    top: 4rem;
+    top: 5rem;
+    left: 35%;
     margin: 0 auto;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid white;
+    overflow: hidden;
+    overflow-y: auto;
+    height: fit-content;
+    width: 23rem;
+    background-color: rgba(134, 125, 125, 0.459);
+    z-index: 1;
+    
 }
 
 .searchfilter li{
-    padding: 1rem 3rem;
     list-style: none;
-    border: 1px solid black;
+    padding: 1rem 4rem;
+    border: 1px solid white;
 }
 
 .searchfilter a{
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    color: white;
 }
+
+.searchfilter a:hover{
+    color: black ;
+    /* font-size: 1.55rem; */
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+
+@media screen and (max-width: 900px) {
+    .searchfilter{
+        left: 27%;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .searchfilter{
+        /* left: 22%; */
+        width: 17rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .searchfilter{
+        left: 18%;
+        /* width: 17rem; */
+    }
+}
+
 @media screen and (max-width: 350px) {
     .searchicon{
         width: 2rem;
     }
+    .searchfilter{
+        left: 10%;
+        width: 14rem;
+    }
+    
 }
