@@ -1,28 +1,37 @@
 [{
     "id": 1,
-    "location": "Ajah"
+    "location": "Ajah",
+    "route": "/Ajah"
 }, {
     "id": 2,
-    "location": "Banana Island"
+    "location": "Banana Island",
+    "route": "/Bananaisland"
 }, {
     "id": 3,
-    "location": "Ikeja"
+    "location": "Ikeja",
+    "route": "/Ikeja"
 }, {
     "id": 4,
-    "location": "Lekki"
+    "location": "Lekki",
+    "route": "/Lekki"
 }, {
     "id": 5,
-    "location": "Magodo"
+    "location": "Magodo",
+    "route": "/Magodo"
 }, {
     "id": 6,
-    "location": "Maryland"
+    "location": "Maryland",
+    "route": "/Maryland"
 }, {
     "id": 7,
-    "location": "Oshodi"
+    "location": "Oshodi",
+    "route": "/Oshodi"
 }, {
     "id": 8,
-    "location": "Victoria Island"
+    "location": "Victoria Island",
+    "route": "/Victoriaisland"
 }, {
     "id": 9,
-    "location": "Yaba"
+    "location": "Yaba",
+    "route": "/Yaba"
 }]

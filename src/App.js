@@ -21,15 +21,14 @@ import Map from "./Components/Map/Map";
 import ViewMap from "./Pages/ViewMap/ViewMap";
 import SchedulePage from "./Pages/SchedulePage/Schedule";
 import PaymentPersonalInfo from "./Pages/PaymentPersonalInfo/PaymentPersonalInfo";
-import Searchbar from "./Components/Searchbar/Searchbar";
+
 
 
 
 function App() {
   return (
     <div>
-      <Searchbar />
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<Landingpage />} /> 
         <Route path="/Catalogue" element={<Catalogue />} />
         <Route path="/Signup" element={<SignUp />} />
@@ -48,7 +47,7 @@ function App() {
         <Route path="/ViewMap" element={<ViewMap />} />
         <Route path="/Viewmore" element={<Viewmore />} />
         <Route path="/Map" element={<Map />} />
-      </Routes> */}
+      </Routes>
     </div>
   );
 }

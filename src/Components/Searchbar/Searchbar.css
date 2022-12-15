@@ -1,8 +1,30 @@
+.searchmaindiv{
+    font-family: 'Inter';
+    position: relative;
+}
+
 .searchicon{
     width: 3rem;
     cursor: pointer;
 }
+.searchfilter{
+    position: absolute;
+    top: 4rem;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid black;
+}
 
+.searchfilter li{
+    padding: 1rem 3rem;
+    list-style: none;
+    border: 1px solid black;
+}
+
+.searchfilter a{
+    text-decoration: none;
+    font-size: 1rem;
+}
 @media screen and (max-width: 350px) {
     .searchicon{
         width: 2rem;
