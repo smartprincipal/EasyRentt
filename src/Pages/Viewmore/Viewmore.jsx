@@ -85,8 +85,7 @@ textAlign: 'center'
       <div className="apartmentSection">
        <div className="save">
         <div className="favIcon">
-
-
+         
         </div>
         <p>Save</p>
        </div>
