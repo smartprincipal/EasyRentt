@@ -124,10 +124,6 @@ const Landingpage = () => {
         <div>
           <Searchbar searchdiv='inputdiv' imgsource={searchicon} searchinput='herosearch' />
         </div>
-          {/* <div className='inputdiv'>
-            <input type="search" name="search" id="herosearch" placeholder='Where do you want to live?.' />
-            <img src={searchicon} alt="searchicon" className='searchicon'/>
-          </div> */}
 
         {/* Hero Caption */}
           <div className='captiondiv'>

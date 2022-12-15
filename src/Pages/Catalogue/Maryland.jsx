@@ -36,7 +36,11 @@ const Maryland = () => {
 
   return (
     <div className='maincatcardcontainer'>
-        <div>
+        {/* <>
+        <h3>{data[2].apartment_name}</h3>
+        </> */}
+        <h1>{data.users}</h1>
+        {/* <div>
 
             {data.map((data, index) => {
                 return (
@@ -45,7 +49,7 @@ const Maryland = () => {
                     </div>
                 )
             })} 
-        </div>
+        </div> */}
         <div>
             <CatalogueNavbar />
         </div>

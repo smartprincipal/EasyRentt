@@ -21,14 +21,15 @@ import Map from "./Components/Map/Map";
 import ViewMap from "./Pages/ViewMap/ViewMap";
 import SchedulePage from "./Pages/SchedulePage/Schedule";
 import PaymentPersonalInfo from "./Pages/PaymentPersonalInfo/PaymentPersonalInfo";
+import Searchbar from "./Components/Searchbar/Searchbar";
 
 
 
 function App() {
   return (
     <div>
-
-      <Routes>
+      <Searchbar />
+      {/* <Routes>
         <Route path="/" element={<Landingpage />} /> 
         <Route path="/Catalogue" element={<Catalogue />} />
         <Route path="/Signup" element={<SignUp />} />
@@ -41,18 +42,13 @@ function App() {
         <Route path="/Oshodi" element={<Oshodi />} />
         <Route path="/Victoriaisland" element={<Victoriaisland />} />
         <Route path="/Yaba" element={<Yaba />} />
+        <Route path="/Ajah" element={<Ajah />} />
         <Route path="/PaymentPersonalInfo" element={<PaymentPersonalInfo />} />
         <Route path="/SchedulePage" element={<SchedulePage />} />
         <Route path="/ViewMap" element={<ViewMap />} />
         <Route path="/Viewmore" element={<Viewmore />} />
         <Route path="/Map" element={<Map />} />
-
-
-
-
-
-
-      </Routes>
+      </Routes> */}
     </div>
   );
 }

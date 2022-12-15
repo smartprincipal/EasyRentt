@@ -1,8 +1,27 @@
-import React from 'react'
-import './Searchbar.css'
-import searchicon from '../../Assets/search-icon.svg';
+import './Searchbar.css';
+import { useState } from 'react';
+import data from '../../SearchData.json'
+
 
 const Searchbar = ({searchdiv, imgsource, searchinput}) => {
+
+    const [filteredData, setFilteredData] = useState([])
+
+    const handleFilter = (e) => {
+        const wordSearch = e.target.value;
+        const newFilter = data.filter((item) => {
+            return item.location.toLowerCase().includes(wordSearch.toLowerCase());
+        });
+        setFilteredData(newFilter);
+
+        if(wordSearch === ""){
+            setFilteredData([]);
+        } else {
+            setFilteredData(newFilter);
+        };
+
+
+    };
 
   return (
     <div className={searchdiv}>
