@@ -7,13 +7,13 @@
 .viewmoresection2{
  background: #FCBC0E;
  opacity: 0.8;
- height: 814px;
- padding: 78px 117px 0 105px;
+ height: 514px;
+ padding: 28px 117px 0 105px;
 }
 .apartmentView{
  display: flex;
  align-items: center;
- justify-content: space-between;
+ justify-content: space-evenly;
 }
 .apartmentBlock{
  height: 50px;
@@ -38,13 +38,13 @@ background-color: #FFFFFF;
 
 .apartmentDetailsBlock{
  display: flex;
- margin-top: 80px;
+ margin-top: 50px;
  justify-content: space-between;
- margin-bottom: 124px;
+ margin-bottom: 34px;
 }
 
 .apart{
- margin-bottom: 52px;
+ margin-bottom: 12px;
  font-family: Inter;
 font-size: 64px;
 font-weight: 700;
@@ -73,22 +73,22 @@ max-width: 561px;
  padding: 0 7px 0 7px;
 }
 .apartmentSection{
- height: 300px;
-max-width: 286px;
+ height: 153px;
+max-width: 236px;
 background: #FFFFFF;
-border-radius: 15px;
+border-radius: 15px 15px 0 0;
 }
 .save{
  display: flex;
  justify-content: center;
  align-items: center;
- padding: 22px 0 13px 0;
+ padding: 13px 0 13px 0;
  border-bottom: 2px solid #DBDBDB;;
 }
 .saveSecond{
  display: block;
  text-align: center;
- padding: 60px 0 70px 0;
+ padding: 15px 0 35px 0;
 }
 
 .saveSecond p{
@@ -100,7 +100,7 @@ border-radius: 15px;
 opacity: 0.9;
 border-radius: 0px 0px 15px 15px;
 height: 63px;
-width: 286px;
+width: 236px;
 text-align: center;
 padding: 20px 0 14px 0;
 }
@@ -112,17 +112,39 @@ padding: 20px 0 14px 0;
 
 .blockImg{
  display: flex;
- justify-content: space-between;
+ justify-content: space-evenly;
 }
 .blockShow{
  text-align: center;
  font-size: 24px;
- padding: 32px 0 150px 0;
+ padding: 22px 0 150px 0;
+}
+.calendarSection{
+ height: 760px;
+width: 811px;
+background: #F4F2F2;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+font-size: 32px;
+margin-top: 290px;
+
+}
+.calendarSectionh3{
+ padding: 24px 0 8px 0;
+}
+.calendarBlock{
+ width: 60%;
+ margin: 26px auto 26px auto;
+}
+.calendarSectionlastp{
+ font-size: 24px;
+ margin-bottom: 30px;
 }
 .viewmoresection3{
  padding-left: 117px;
  padding-right: 220px;
- margin-top: 350px;
+ margin-top: 40px;
  background-color: #FFFFFF;
 }
 .viewmoresection3 h2{
@@ -146,10 +168,10 @@ text-align: justified;
 
 }
 .amenities{
- margin-top: 72px;
+ margin-top: 36px;
  background: #F4F2F2;
- padding: 49px 0 54px 0;
- margin-bottom: 121px;
+ padding: 20px 0 20px 0;
+ margin-bottom: 41px;
  
 }
 .amenities h2{

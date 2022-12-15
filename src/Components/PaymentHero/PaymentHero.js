@@ -20,7 +20,7 @@ const PaymentHero = () => {
         <div className='payment-sub-container'>
             <h1 className='payment-head'> Payment Online</h1>
             <p className='payment-text'>Make payments quickly and easy</p>
-            <Button text={'Make payment'} btnclass={'payment-btn'} style={{background: '#FCBC0E', borderRadius: '90px', padding: '16px 65px', color: 'black', border: 'none', fontFamily: 'inherit', display: 'block', margin: '0 auto'}}/>
+            <Button text={'Fill your Personal Information'} btnclass={'payment-btn'} style={{background: '#FCBC0E', borderRadius: '90px', padding: '16px 65px', color: 'black', border: 'none', fontFamily: 'inherit', display: 'block', margin: '0 auto', cursor: 'pointer'}}/>
         </div>
     </div>
   )

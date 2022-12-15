@@ -1,32 +1,18 @@
-import React from 'react'
-import './Calendar.css';
-import AppointmentPicker from 'appointment-picker';
+import './Calendar.css'
+import React, { useState } from 'react';
+import Calendarlib from "@fall-out/react-calendar";
+import "@fall-out/react-calendar/dist/Calendar.css";
+// import Time from '../Time/Time'
 
-class AppoPicker extends React.Component {
- 
- constructor(props) {
-   super(props);
-   this.pickerRef = React.createRef();
-   this.onTimeSelect = this.onTimeSelect.bind(this);
- }
- 
- render() {
-   return <input type="text" ref={ this.pickerRef }></input>;
- }
 
- onTimeSelect(event) {
-   console.log(event.time);
- }
- 
- componentDidMount() {
-   this.picker = new AppointmentPicker(this.pickerRef.current, {});
-   this.pickerRef.current.addEventListener('change.appo.picker', this.onTimeSelect);
- }
- 
- componentWillUnmount() {
-   this.pickerRef.current.removeEventListener('change.appo.picker', this.onTimeSelect);
-   this.picker.destroy();
- }
+const Calendar = () => {
+  const [value, onChange] = useState(new Date());
+  return (
+    <div className='calendarOn'>
+      <Calendarlib onChange={onChange} value={value} />
+      {/* <Time/> */}
+    </div>
+  )
 }
 
 export default Calendar

@@ -16,6 +16,8 @@ import Map from '../../Components/Map/Map';
 import Footer from '../../Components/Footer/Footer';
 import { color } from '@mui/system';
 import Post from '../../Components/Post/Post'
+import Calendar from '../../Components/Calendar/Calendar';
+import Button from '../../Components/Button/Button';
 
 const Viewmore = () => {
  const bedBathIcon = { color: "grey"}
@@ -24,6 +26,19 @@ const Viewmore = () => {
   {id:1 , viewImg: Pick2},
   {id:2 , viewImg: Pick3}
  ]
+
+ const scheduleTour={
+  background:'#FCBC0E',
+  height: '80px',
+width: '403px',
+borderRadius: '90px',
+border:'none',
+cursor:'pointer',
+fontSize: '32px',
+fontWeight: '500px',
+lineHeight: '39px',
+textAlign: 'center'
+ }
 
   return (
     <div>
@@ -70,8 +85,7 @@ const Viewmore = () => {
       <div className="apartmentSection">
        <div className="save">
         <div className="favIcon">
-
-
+         
         </div>
         <p>Save</p>
        </div>
@@ -101,6 +115,20 @@ const Viewmore = () => {
       <p className='blockShow'> Show More</p>
 
 
+     </section>
+
+     <section className="calendarSection">
+
+      <h3 className='calendarSectionh3'>Select Date & Time</h3>
+      <p className='calendarSectionp'>Schedule a private view</p>
+      <div className="calendarBlock">
+        <Calendar/>
+      </div>
+      <p className='calendarSectionlastp'>Property in high demand! 11 other people are currently interested in this property. Schedule a private viewing
+</p>
+        <div>
+          <Link to='/SchedulePage'><Button style={scheduleTour} text={'Schedule Tour'}/></Link>
+        </div>
      </section>
 
      <section className='viewmoresection3'>

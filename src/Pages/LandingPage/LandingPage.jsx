@@ -4,6 +4,7 @@ import './LandingPage.css';
 import { useState, useContext } from 'react';
 import { LoginContext } from '../Login/Login'
 import { Carousel } from 'react-responsive-carousel';
+import { useNavigate } from 'react-router-dom';
 import NavBar from '../../Components/NavBar/NavBar';
 import Login from '../Login/Login';
 import SignUp from '../Signup/Signup';
@@ -29,10 +30,12 @@ import review5 from '../../Assets/review5.svg';
 import review6 from '../../Assets/review6.svg';
 import Footer from '../../Components/Footer/Footer';
 import Searchbar from '../../Components/Searchbar/Searchbar';
+import {useIsAuthenticated} from 'react-auth-kit';
 // import useToken from '../../useToken'
 
 
 const Landingpage = () => {
+  const navigate = useNavigate()
   const [loginNav, setLoginNav] = useState()
   const token = useContext(LoginContext)
 
@@ -43,7 +46,7 @@ const Landingpage = () => {
     {id: 3, content: "Banana Island", img: bananaIsland, nav: '/Bananaisland'},
     {id: 4, content: "Ikeja", img: ikeja, nav: '/Ikeja'},
     {id: 5, content: "Yaba", img: yaba, nav: '/Yaba'},
-    {id: 6, content: "Magodo", img: magodo, nav: '/Lekki'},
+    {id: 6, content: "Magodo", img: magodo, nav: '/Magodo'},
     {id: 7, content: "Ajah", img: ajah, nav: '/Ajah'},
     {id: 8, content: "MaryLand", img: maryLand, nav: '/Maryland'},
     {id: 9, content: "Oshodi", img: oshodi, nav: '/Oshodi'},
@@ -84,24 +87,34 @@ const Landingpage = () => {
     const closeSignUp = () => setSignUp(false)
  
 
+    const isAuthenticated = useIsAuthenticated()
 
+    // const LocationLoginAuth = (item, id, index) => {
+    //   if(!token && id === index + 1){
+    //     console.log(token)
+    //     console.log(item)
+    //     console.log(id)
+    //     console.log(index + 1)
+    //     setLoginNav(item)
+    //     setLoginModal(true)
+    //   } else{
+    //     navigate(item)
+    //   }
+    // }
     const LocationLoginAuth = (item, id, index) => {
-      if(!token && id === index + 1){
-        console.log(token)
+      if(!isAuthenticated() && id === index + 1){
+        console.log(isAuthenticated())
         console.log(item)
         console.log(id)
         console.log(index + 1)
         setLoginNav(item)
         setLoginModal(true)
       } else{
-
+        console.log(isAuthenticated())
+        navigate(item)
       }
     }
 
-   
-  // if (!token) {
-  //   return <Login setToken={setToken} />;
-  // }
   return (
     <div className='landingPage'>
 

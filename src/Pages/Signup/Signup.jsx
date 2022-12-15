@@ -16,7 +16,7 @@ function SignUp ({openModal, closeModal}) {
     const initialValues = {username: "", email: "", password: "", confirmPassword: ""};
     const formik = useFormik({initialValues, 
 
-        // Formik Submit 
+        // Formik Submit
         onSubmit: (values) => {
             console.log(values)
 
@@ -47,12 +47,18 @@ function SignUp ({openModal, closeModal}) {
             password: Yup.string()
                 .min(8, "Password character must have at least 8 characters")
                 .max(20, "Password character must not exceed 20 characters")
+                .matches(
+                    /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+                    "Password must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character")
                 .required("Enter a password with 8-20 characters")
             ,
             confirmPassword: Yup.string()
-            .min(8, "Password character must have at least 8 characters")
-            .max(20, "Password character must not exceed 20 characters")
-            .required("Confirm your password")
+                .oneOf([Yup.ref('password'), null], 'Confirm your password')
+                .test('passwords-match', 'Passwords must match', function(value){
+                    return this.parent.password === value
+                })
+            ,
+                
         })
     });
 
