@@ -19,7 +19,7 @@ import { color } from '@mui/system';
 import Post from '../../Components/Post/Post'
 import Calendar from '../../Components/Calendar/Calendar';
 import Button from '../../Components/Button/Button';
-import ViewmoreCarousel from './ViewmoreCarousel';
+// import ViewmoreCarousel from './ViewmoreCarousel';
 
 
 const Viewmore = () => {
@@ -133,9 +133,9 @@ textAlign: 'center'
         <Button text='Show More' btnclass='blockShow' btnClick={modalHandler}/>
       </div>
 
-        <div>
+        {/* <div>
             <ViewmoreCarousel openMyModal={modalShow} closeMyModal={modalClose}/>
-        </div>
+        </div> */}
         
 
      </section>

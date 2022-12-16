@@ -15,7 +15,7 @@ const ViewmoreCarousel = ({openMyModal, closeMyModal}) => {
   return (
     <>
         <div >
-            <Overlay OverlayShow={true} overlayClick={true} />
+            <Overlay OverlayShow={false} overlayClick={false} />
             {/* <h1>This is Carousel deployment</h1> */}
             <Carousel style={{transform: openMyModal ? 'translateY(0)':'translateY(-100vh)', opacity: openMyModal ? '1':'0'}} className='viewmorecarousel' autoPlay='true' infiniteLoop='true' interval='3000' showThumbs={false}>
                 <div>
