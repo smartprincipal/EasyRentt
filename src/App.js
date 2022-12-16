@@ -34,7 +34,7 @@ import Catalogue from './Pages/Catalogue/Catalogue'
 function App() {
   return (
     <div>
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Landingpage />} /> 
         <Route path="/Catalogue" element={<Catalogue />} />
         <Route path="/Signup" element={<Signup />} />
@@ -56,11 +56,11 @@ function App() {
         <Route path="/Map" element={<Map />} />
         <Route path="/PaymentCardPage" element={<PaymentCardPage />} />
         <Route path="/ForgetPassword" element={<ForgetPassword />} />
-      </Routes>
+      </Routes> */}
 
       {/* <Calendar/> */}
       {/* <Time/> */}
-
+      <Viewmore />
        {/* <ForgetPassword/> */}
 
     </div>
