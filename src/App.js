@@ -55,7 +55,8 @@ function App() {
       </Routes> */}
 
       {/* <Calendar/> */}
-      <PaymentCardPage/>
+      {/* <PaymentCardPage/> */}
+      <PaymentPersonalInfo />
       {/* <Viewmore/> */}
       {/* <Time/> */}
       {/* <Payment/> */}
