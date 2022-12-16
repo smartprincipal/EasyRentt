@@ -3,6 +3,7 @@ import './NavBar.css';
 import Logo from '../../Assets/EasyRent.svg';
 import { Link } from 'react-router-dom';
 import { useState , useEffect} from 'react';
+import Button from '../Button/Button'
 import UserAvatar from '../../Assets/Avatar.jpg'
 import axios  from 'axios';
 import {useIsAuthenticated} from 'react-auth-kit';
@@ -40,10 +41,10 @@ const NavBar = ({loginClick, SignupClick}) => {
             </div>
           </div>
 
-          {isAuthenticated() ? null : <div className='buttondiv'>
-            {/* <Button text={"Login"} btnclass={'navbutton1'} btnClick={loginClick}/>
-            <Button text={"Sign Up"} btnclass={'navbutton2'} btnClick={SignupClick}/> */}
-            <img src={UserAvatar} alt=" UserIcon" className='userIcon'/>
+          {isAuthenticated() ? <img src={UserAvatar} alt=" UserIcon" className='userIcon'/> : <div className='buttondiv'>
+            <Button text={"Login"} btnclass={'navbutton1'} btnClick={loginClick}/>
+            <Button text={"Sign Up"} btnclass={'navbutton2'} btnClick={SignupClick}/>
+            
           </div>} 
         </ul>
       

@@ -7,7 +7,7 @@ import paymentHero from '../../Assets/payment-hero2.svg'
 import React from 'react'
 import Button from '../Button/Button'
 
-const PaymentHero = () => {
+const PaymentHero = ({paystackBtn}) => {
   return (
     <div className='payment-container'>
         <div className='hero-bg'>
@@ -20,7 +20,7 @@ const PaymentHero = () => {
         <div className='payment-sub-container'>
             <h1 className='payment-head'> Payment Online</h1>
             <p className='payment-text'>Make payments quickly and easy</p>
-            <Button text={'Fill your Personal Information'} btnclass={'payment-btn'} style={{background: '#FCBC0E', borderRadius: '90px', padding: '16px 65px', color: 'black', border: 'none', fontFamily: 'inherit', display: 'block', margin: '0 auto', cursor: 'pointer'}}/>
+            <Button text={'Make Payment'} btnclass={'payment-btn'} style={{background: '#FCBC0E', borderRadius: '90px', padding: '16px 65px', color: 'black', border: 'none', fontFamily: 'inherit', display: 'block', margin: '0 auto', cursor: 'pointer'}} btnClick={paystackBtn}/>
         </div>
     </div>
   )
