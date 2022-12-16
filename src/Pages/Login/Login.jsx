@@ -17,7 +17,6 @@ import SignUp from "../Signup/Signup";
 
 import { useSignIn } from 'react-auth-kit';
 import Spinner from "../../Components/Spinner/Spinner";
-import { Link } from "react-router-dom";
 
 
 const loginStyle = {
