@@ -37,7 +37,7 @@ const CatalogueCard = ({location, catcardmaindiv, cardtype}) => {
      return setShareToggle(prevToggle =>!prevToggle)
    };
 
-  const sharedUrl = 'www.google.com';
+  const sharedUrl = 'https://easy-rentt.vercel.app';
 
   const timesButtonStyle = { fontSize: "2rem", cursor: 'pointer' };
   const bedBathIcon = { color: "grey"}

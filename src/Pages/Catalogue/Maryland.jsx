@@ -6,31 +6,31 @@ import CatalogueNavbar from '../../Components/CatalogueNavbar/CatalogueNavbar';
 import Overview from '../../Components/Overview/Overview';
 import Footer from '../../Components/Footer/Footer';
 import Button from '../../Components/Button/Button'
-import axios from 'axios';
+// import axios from 'axios';
 
 
 
 const Maryland = () => {
 
-    const [data, setData] = useState([])
+    // const [data, setData] = useState([])
 
     
-    useEffect(() => {
-        const getData = () => {
-            try {
-                axios
-                .get('https://easyrent.onrender.com/users/query')
-                .then((result) => { 
-                    const {data:{users}} = result;
-                    console.log(users);
-                    setData(users); })
-            } catch (error) {
-                console.log(error)
-            }
-        };
+    // useEffect(() => {
+    //     const getData = () => {
+    //         try {
+    //             axios
+    //             .get('https://easyrent.onrender.com/users/query')
+    //             .then((result) => { 
+    //                 const {data:{users}} = result;
+    //                 console.log(users);
+    //                 setData(users); })
+    //         } catch (error) {
+    //             console.log(error)
+    //         }
+    //     };
         
-        getData()
-    }, []);
+    //     getData()
+    // }, []);
 
 
 
@@ -39,7 +39,7 @@ const Maryland = () => {
         {/* <>
         <h3>{data[2].apartment_name}</h3>
         </> */}
-        <h1>{data.users}</h1>
+        {/* <h1>{data.users}</h1> */}
         {/* <div>
 
             {data.map((data, index) => {
