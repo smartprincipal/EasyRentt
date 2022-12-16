@@ -113,7 +113,7 @@ textAlign: 'center'
        </p>
        </div>
        <div className="saveSecondApply">
-         <Link to='./'>
+         <Link to='/Payment'>
           Apply
          </Link>
        </div>

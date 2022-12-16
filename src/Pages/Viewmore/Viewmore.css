@@ -103,6 +103,7 @@ height: 63px;
 width: 236px;
 text-align: center;
 padding: 20px 0 14px 0;
+cursor: pointer;
 }
 .saveSecondApply a{
  color: #FCBC0E;
@@ -130,7 +131,7 @@ padding: 20px 0 14px 0;
 }
 
 .viewmorecarousel{
-    /* z-index: 1000 !important; */
+    z-index: 1000 !important;
 }
 .calendarSection{
  height: 760px;
@@ -264,7 +265,7 @@ text-align: left;
   margin-left: 0;
   margin-right: 0;
  }
- .viewmoresection5{
-  /* width: 270px; */
- }
+ /* .viewmoresection5{
+  width: 270px;
+ } */
 }
