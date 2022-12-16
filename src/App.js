@@ -23,6 +23,7 @@ import PaymentPersonalInfo from "./Pages/PaymentPersonalInfo/PaymentPersonalInfo
 // import Spinner from './Components/Spinner/Spinner'
 import ForgetPassword from "./Pages/ForgetPassword/ForgetPassword";
 import PaymentCardPage from "./Pages/PaymentCardPage/PaymentCardPage";
+
 // import Schedule from "./Pages/SchedulePage/Schedule";
 // import Time from "./Components/Time/Time";
 import Landingpage from './Pages/LandingPage/LandingPage';
@@ -32,13 +33,16 @@ import Catalogue from './Pages/Catalogue/Catalogue'
 
 
 
+
 function App() {
   return (
     <div>
+
       <Routes>
         <Route path="/" element={<Landingpage />} /> 
         <Route path="/Catalogue" element={<Catalogue />} />
-        <Route path="/Signup" element={<Signup />} />4
+        <Route path="/Signup" element={<Signup />} />
+
         <Route path="/Login" element={<Login />} />
         <Route path="/Bananaisland" element={ <Bananaisland />} />
         <Route path="/Ikeja" element={<Ikeja />} />
@@ -61,10 +65,7 @@ function App() {
 
       </Routes>
 
-      {/* <Calendar/> */}
-      {/* <Time/> */}
-      {/* <Viewmore /> */}
-       {/* <ForgetPassword/> */}
+     
 
     </div>
   );

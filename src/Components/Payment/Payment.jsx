@@ -1,24 +1,44 @@
-import React from 'react'
+
+import React from "react";
+import "./Payment.css";
+import Button from "../Button/Button";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import PaymentHero from "../PaymentHero/PaymentHero";
+import PaymentSideNav from "../PaymentSideNav/PaymentSideNav";
+import { PaystackButton } from "react-paystack";
+
 import './Payment.css'
-import { FaCcVisa } from 'react-icons/fa';
-import { FaCcMastercard } from 'react-icons/fa';
-import { FaCcPaypal } from 'react-icons/fa';
-import Button from '../Button/Button';
-import { Link } from 'react-router-dom';
-// import axios from 'axios';
+
 
 const Payment = () => {
- const paynowBTN = {
-  background: '#FFC100',
-  width: '175px',
-  height: '40px',
-  border: '1px solid #CBCBCB',
-borderRadius: "15px",
-fontFamily: 'Inter',
-fontSize: '18px',
-fontWeight: '400px',
-lineHeight: '22px',
-textAlign: 'center'
+  
+
+  const publicKey = "pk_test_db37bd29f06bd4a133fbf14beb58aa2358ce7d41";
+  const amount = 1000000; // Remember, set in kobo!
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+
+  const componentProps = {
+    email,
+    amount,
+    metadata: {
+      name,
+      phone,
+    },
+    publicKey,
+    text: "Pay Now",
+    onSuccess: () =>
+      alert("Thanks for doing business with us! Come back soon!!"),
+    onClose: () => alert("Wait! You need this oil, don't go!!!!"),
+  };
+
+  //  const [ , ] = useState([ ])
+
+  //   const getSearchFilter = () =>{
+  //     axios.get('https://easyrent.onrender.com/users/book/sort'). then((res)=>{
 
  }
 //  const Payment = () => {
@@ -32,79 +52,61 @@ textAlign: 'center'
 //     }
 //   }
 
+
+  //     })
+
+  //     }
+
+  // const PaymentHandler = () => {
+  //   // ('https://sandbox-flw-web-v3.herokuapp.com/pay/htfx7pvbwqgl')
+  //   .then(res => console.log(res))
+  //   .catch(err => console.log(err))
+  // }
+
+
   return (
-    <div className='paymentBlock'>
-     <h3 className='paymentHeading'> Payment </h3>
-     <div className="paymentSubBlock">
-     <p>Confirm Payment</p>
-     <div className='paymentImages'>
-     <img src={FaCcVisa} alt="" />
-     <img src={FaCcMastercard} alt="" />
-     <img src={FaCcPaypal} alt="" />
-     </div>
+    <div>
+      <PaymentHero />
+      <div className="payment-form-flex">
+        <PaymentSideNav />
+        {/* <div className="checkout-form"> */}
+        <div className="checkout-form">
+          <form >
+            <div >
+              <div className="checkout-field">
+                <label>Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+              <div className="checkout-field">
+                <label>Email</label>
+                <input
+                  type="text"
+                  id="email"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <div className="checkout-field">
+                <label>Phone</label>
+                <input
+                  type="text"
+                  id="phone"
+                  onChange={(e) => setPhone(e.target.value)}
+                />
+              </div>
+            </div>
+          </form>
+          <PaystackButton className="paystack-button" {...componentProps} />
+        </div>
       </div>
-      {/* Card Input */}
-     <div className='paymentInputFlex'>
-     <div className='block1'>
-      <label 
-      htmlFor="" className='label1'>
-       Name on Card
-       </label>
-      
-      <input 
-      type="text" 
-      name="" 
-      id="" 
-      className='cardp' 
-      placeholder='Name on Card'
-      />
-     </div>
-     <div className='block2'>
-      <label 
-      htmlFor=""
-      className='label2'>Exp Date
-      </label>
-      <input 
-      type="text" 
-      name="" 
-      id="" 
-      className='cardw'
-      placeholder='Exp Date'
-      />
-     </div>
-     </div>
 
-      <div className='paymentInputFlex2'>
-     <div className='block3'>
-      <label htmlFor="" className='label3'>Card Number</label>
-      <input 
-      type="text" 
-      name="" 
-      id="" 
-      className='cardp'
-      placeholder='Card Number'
-      />
-     </div>
-
-     <div className='block4'>
-      <label htmlFor="" className='label4'>CVV</label>
-      <input 
-      type="text" 
-      name="" 
-      id="" 
-      className='cardw'
-      placeholder='CVV'
-      />
-     </div>
-     </div>
-
-     <div className="paynowBTNBlock">
-      <Link to='./'>
-      <Button style={paynowBTN} text={'Pay Now'}/>
-      </Link>
-     </div>
     </div>
-  )
-}
 
-export default Payment
+    // </div>
+  );
+};
+
+export default Payment;
