@@ -40,7 +40,7 @@ const Payment = () => {
   //   const getSearchFilter = () =>{
   //     axios.get('https://easyrent.onrender.com/users/book/sort'). then((res)=>{
 
- }
+//  }
 //  const Payment = () => {
 //  const [ ] = useState([ ])
 
