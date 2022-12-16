@@ -71,3 +71,18 @@
 .accordionimg{
     text-align: center;
 }
+
+
+@media screen and  (max-width: 500px){
+    .overheading1{
+        font-size: 2rem;
+    }
+    .overheading2{
+        font-size: 1.75rem;
+
+    }
+    .oversubdiv h3{
+        font-size: 1.25rem;
+    }
+
+}

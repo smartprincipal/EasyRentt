@@ -1,7 +1,7 @@
-import React, { useState, useEffect} from 'react'
+import React from 'react'
 import '../../Pages/Catalogue/Allcatalogue.css';
 import './Post.css'
-import { slice, concat} from 'lodash';
+// import { slice, concat} from 'lodash';
 // import Victoria from '../../Assets/Victoria.png';
 // import Lekki2 from '../../Assets/lekki2.png';
 // import Lekki from '../../Assets/lekki.png';

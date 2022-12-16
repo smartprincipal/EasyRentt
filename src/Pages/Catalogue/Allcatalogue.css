@@ -5,19 +5,18 @@
 
 .catcardheading{
     font-weight: 500;
-    font-size: 48px;
+    font-size: 40px;
     line-height: 58px;
     text-align: center;
     margin: 1.5rem 0;
 }
+
 .cat-carddiv{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* flex-wrap: wrap; */
     margin: 2rem 0;
     padding: 0 5rem;
-    /* width: 4rem; */
 }
 
 .catcardmaindiv1, .catcardmaindiv2, .catcardmaindiv3,
@@ -28,7 +27,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1rem 15rem 1rem;
+    padding: 1rem 1rem 13rem 1rem;
     border-radius: 20px 20px 0 0;
 }
 
@@ -56,6 +55,25 @@
     background-image: url('../../Assets/Victoria.png');   
 }
 
+.catbutton{
+    background-color:#FCBC0E;
+    color: white;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.catbutton:hover{
+    color: grey;
+}
+.buttoncontain{
+    text-align: center;
+    margin-top: 1rem;
+    
+}
+
 @media screen and  (max-width: 970px){
     .cat-carddiv{
         padding: 0 2rem;
@@ -63,16 +81,13 @@
     }
 }
 
-@media screen and  (max-width: 870px){
-    .cat-carddiv{
-        padding: 0;
-    }
-}
-
 @media screen and  (max-width: 600px){
     .cat-carddiv{
         flex-wrap: wrap;
         margin: 0;
+    }
+    .catcardheading{
+        font-size: 30px;
     }
 }
 

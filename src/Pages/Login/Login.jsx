@@ -9,9 +9,12 @@ import { useNavigate } from 'react-router-dom'
 import * as Yup from "yup";
 import Overlay from "../../Components/Overlay/Overlay";
 import axios from 'axios';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import useToken from '../../useToken'
-import SignUp from "../Signup/Signup";
+// import SignUp from "../Signup/Signup";
+import { useSignIn } from 'react-auth-kit';
+import Spinner from "../../Components/Spinner/Spinner";
+import { Link } from "react-router-dom";
 
 
 
@@ -38,6 +41,8 @@ const Login = ({ show, closeModal, loginNav, closeLogin, openSignup }) => {
   // return userToken?.token
     
   // }
+  const [loginSpin, setLoginSpin] = useState(false)
+  const signIn = useSignIn()
   const loginHide = closeLogin
   const signupShow = openSignup
 
@@ -71,11 +76,31 @@ const Login = ({ show, closeModal, loginNav, closeLogin, openSignup }) => {
     onSubmit: (values, onSubmitProps) => {
       console.log(values);
       console.log(values.password);
-      // let data = {...values}
+
+      // const response = axios.post('https://easyrent.onrender.com/users/login', values);
+      // console.log(response)
+      // signIn({
+      //   token: response.data.token,
+      //   expiresIn: 3000,
+      //   tokenType: 'Bearer',
+      //   authState: { email: values.email }
+        
+      // })
+      setLoginSpin(true)
       axios.post('https://easyrent.onrender.com/users/login', values)
       .then(res => {
+        setLoginSpin(false)
+        signIn({
+             token: res.data.token,
+             expiresIn: 3000,
+             tokenType: 'Bearer',
+             authState: { email: values.email }
+            
+           })
+           
         console.log(res.data)
-        setToken(res.data.token)
+        // setToken(res.data.token)
+        console.log(token)
         console.log(loginNav)
         if(loginNav !== undefined) {
           console.log(typeof loginNav)
@@ -83,7 +108,6 @@ const Login = ({ show, closeModal, loginNav, closeLogin, openSignup }) => {
         } else {
           loginHide()
         }
-        // loginNav ? navigate(`${loginNav}`) : navigate('/')
         
       })
       .catch(err => console.log(err))
@@ -113,7 +137,7 @@ const Login = ({ show, closeModal, loginNav, closeLogin, openSignup }) => {
 
 
   return (
-    <LoginContext.Provider value={token}>
+    loginSpin ? <Spinner /> : <LoginContext.Provider value={token}>
     <Overlay OverlayShow={show} overlayClick={closeModal}/>
     <div className="login-container" style={{transform: show ? 'translateY(0)':'translateY(-100vh)', opacity: show ? '1':'0'}}>
       <h3 className="login-heading">Login</h3>
@@ -181,7 +205,9 @@ const Login = ({ show, closeModal, loginNav, closeLogin, openSignup }) => {
               Remember Me
             </label>
           </div>
+          <Link to='/ForgetPassword'>
           <p className="login-forgot-password">Forgot Password?</p>
+          </Link>
         </div>
         <Button style={loginStyle} text={"Login"} btnclass={'submit-btn'} />
       </form>

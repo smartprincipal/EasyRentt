@@ -4,6 +4,8 @@ import CatalogueCard from '../../Components/CatalogueCard/CatalogueCard';
 import CatalogueNavbar from '../../Components/CatalogueNavbar/CatalogueNavbar';
 import Overview from '../../Components/Overview/Overview';
 import Footer from '../../Components/Footer/Footer';
+import Button from '../../Components/Button/Button';
+
 
 const Ikeja = () => {
 
@@ -25,6 +27,9 @@ const Ikeja = () => {
         <div className='cat-carddiv'>
             <CatalogueCard location='Ikeja' catcardmaindiv='catcardmaindiv6' cardtype='Plant View Bedroom'/>
             <CatalogueCard location='Ikeja' catcardmaindiv='catcardmaindiv4' cardtype='Magnolia Height'/>
+        </div>
+        <div className='buttoncontain'>
+            <Button text='MORE' btnclass='catbutton' />
         </div>
         <div>
             <Overview heading='Ikeja' />

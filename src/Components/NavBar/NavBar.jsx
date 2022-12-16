@@ -2,10 +2,15 @@ import React from 'react'
 import './NavBar.css';
 import Logo from '../../Assets/EasyRent.svg';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import Button from "../../Components/Button/Button";
+import { useState} from 'react';
+// import UserAvatar from '../../Assets/Avatar.jpg'
+// import axios  from 'axios';
+import {useIsAuthenticated} from 'react-auth-kit';
+import Button from '../Button/Button';
 
 const NavBar = ({loginClick, SignupClick}) => {
+
+  const isAuthenticated = useIsAuthenticated()
 
   // Usestate for Hamburger display
   const [toggle, setToggle] = useState(false)
@@ -13,13 +18,14 @@ const NavBar = ({loginClick, SignupClick}) => {
   const handleToggle = () => {
     return setToggle(prevToggle =>!prevToggle)
   }
-
   
   return (
    <div className='navbar'>
 
       <div className="navlogo">
+        <Link to='/'>
         <img src={Logo} alt="EasyRent-Logo" />
+        </Link>
       </div>
 
       <div className={toggle ? 'active' : 'menuList' }>
@@ -35,10 +41,11 @@ const NavBar = ({loginClick, SignupClick}) => {
             </div>
           </div>
 
-          <div className='buttondiv'>
+          {isAuthenticated() ? null : <div className='buttondiv'>
             <Button text={"Login"} btnclass={'navbutton1'} btnClick={loginClick}/>
             <Button text={"Sign Up"} btnclass={'navbutton2'} btnClick={SignupClick}/>
-          </div>
+            {/* <img src={UserAvatar} alt=" UserIcon" className='userIcon'/> */}
+          </div>} 
         </ul>
       
         
