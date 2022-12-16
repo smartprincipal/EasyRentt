@@ -2,11 +2,12 @@ import React from 'react'
 import './NavBar.css';
 import Logo from '../../Assets/EasyRent.svg';
 import { Link } from 'react-router-dom';
-import { useState , useEffect} from 'react';
-import Button from '../Button/Button'
+
+import { useState} from 'react';
 import UserAvatar from '../../Assets/Avatar.jpg'
-import axios  from 'axios';
+// import axios  from 'axios';
 import {useIsAuthenticated} from 'react-auth-kit';
+import Button from '../Button/Button';
 
 const NavBar = ({loginClick, SignupClick}) => {
 
@@ -45,6 +46,7 @@ const NavBar = ({loginClick, SignupClick}) => {
             <Button text={"Login"} btnclass={'navbutton1'} btnClick={loginClick}/>
             <Button text={"Sign Up"} btnclass={'navbutton2'} btnClick={SignupClick}/>
             
+
           </div>} 
         </ul>
       

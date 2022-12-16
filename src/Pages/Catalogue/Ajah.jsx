@@ -4,6 +4,7 @@ import CatalogueCard from '../../Components/CatalogueCard/CatalogueCard'
 import CatalogueNavbar from '../../Components/CatalogueNavbar/CatalogueNavbar'
 import Overview from '../../Components/Overview/Overview'
 import Footer from '../../Components/Footer/Footer'
+import Button from '../../Components/Button/Button'
 
 const Ajah = () => {
   return (
@@ -23,6 +24,9 @@ const Ajah = () => {
         <div className='cat-carddiv'>
             <CatalogueCard location='Ajah' catcardmaindiv='catcardmaindiv6' cardtype='Magnolia Height'/>
             <CatalogueCard location='Ajah' catcardmaindiv='catcardmaindiv5'cardtype='Suite 9 Bedroom'/>
+        </div>
+        <div className='buttoncontain'>
+            <Button text='MORE' btnclass='catbutton' />
         </div>
         <div>
             <Overview heading='Ajah' />

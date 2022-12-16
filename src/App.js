@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 
 // import CatalogueNavbar from "./Components/CatalogueNavbar/CatalogueNavbar";
 // import CatalogueCard from "./Components/CatalogueCard/CatalogueCard";
+import Payment from "./Components/Payment/Payment";
 import Ajah from "./Pages/Catalogue/Ajah";
 import Bananaisland from "./Pages/Catalogue/Bananaisland";
 import Ikeja from "./Pages/Catalogue/Ikeja";
@@ -18,27 +19,30 @@ import Map from "./Components/Map/Map";
 import ViewMap from "./Pages/ViewMap/ViewMap";
 import SchedulePage from "./Pages/SchedulePage/Schedule";
 import PaymentPersonalInfo from "./Pages/PaymentPersonalInfo/PaymentPersonalInfo";
-import { RequireAuth } from 'react-auth-kit';
-import Spinner from './Components/Spinner/Spinner'
+// import { RequireAuth } from 'react-auth-kit';
+// import Spinner from './Components/Spinner/Spinner'
 import ForgetPassword from "./Pages/ForgetPassword/ForgetPassword";
 import PaymentCardPage from "./Pages/PaymentCardPage/PaymentCardPage";
-import Schedule from "./Pages/SchedulePage/Schedule";
-import Time from "./Components/Time/Time";
+
+// import Schedule from "./Pages/SchedulePage/Schedule";
+// import Time from "./Components/Time/Time";
 import Landingpage from './Pages/LandingPage/LandingPage';
+import Signup from './Pages/Signup/Signup';
+import Login from './Pages/Login/Login';
 import Catalogue from './Pages/Catalogue/Catalogue'
-import Login from './Pages/Login/Login'
-import SignUp from "./Pages/Signup/Signup";
-import Payment from './Components/Payment/Payment'
+
 
 
 
 function App() {
   return (
     <div>
-      {/* <Routes>
+
+      <Routes>
         <Route path="/" element={<Landingpage />} /> 
         <Route path="/Catalogue" element={<Catalogue />} />
-        <Route path="/Signup" element={<SignUp />} />
+        <Route path="/Signup" element={<Signup />} />
+
         <Route path="/Login" element={<Login />} />
         <Route path="/Bananaisland" element={ <Bananaisland />} />
         <Route path="/Ikeja" element={<Ikeja />} />
@@ -49,20 +53,19 @@ function App() {
         <Route path="/Oshodi" element={<Oshodi />} />
         <Route path="/Victoriaisland" element={<Victoriaisland />} />
         <Route path="/Yaba" element={<Yaba />} />
+        <Route path="/Ajah" element={<Ajah />} />
         <Route path="/PaymentPersonalInfo" element={<PaymentPersonalInfo />} />
         <Route path="/SchedulePage" element={<SchedulePage />} />
         <Route path="/ViewMap" element={<ViewMap />} />
         <Route path="/Viewmore" element={<Viewmore />} />
         <Route path="/Map" element={<Map />} />
         <Route path="/PaymentCardPage" element={<PaymentCardPage />} />
-      </Routes>  */}
+        <Route path="/ForgetPassword" element={<ForgetPassword />} />
+        <Route path="/Payment" element={<Payment />} />
 
-      <Payment />
+      </Routes>
 
-      {/* <Calendar/> */}
-      {/* <Time/> */}
-
-       {/* <ForgetPassword/> */}
+     
 
     </div>
   );

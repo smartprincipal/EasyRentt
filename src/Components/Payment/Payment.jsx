@@ -1,8 +1,6 @@
+
 import React from "react";
 import "./Payment.css";
-import { FaCcVisa } from "react-icons/fa";
-import { FaCcMastercard } from "react-icons/fa";
-import { FaCcPaypal } from "react-icons/fa";
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -11,20 +9,11 @@ import PaymentHero from "../PaymentHero/PaymentHero";
 import PaymentSideNav from "../PaymentSideNav/PaymentSideNav";
 import { PaystackButton } from "react-paystack";
 
-const Payment = () => {
-  //  const paynowBTN = {
-  //   background: '#FFC100',
-  //   width: '175px',
-  //   height: '40px',
-  //   border: '1px solid #CBCBCB',
-  // borderRadius: "15px",
-  // fontFamily: 'Inter',
-  // fontSize: '18px',
-  // fontWeight: '400px',
-  // lineHeight: '22px',
-  // textAlign: 'center'
+import './Payment.css'
 
-  //  }
+
+const Payment = () => {
+  
 
   const publicKey = "pk_test_db37bd29f06bd4a133fbf14beb58aa2358ce7d41";
   const amount = 1000000; // Remember, set in kobo!
@@ -51,6 +40,19 @@ const Payment = () => {
   //   const getSearchFilter = () =>{
   //     axios.get('https://easyrent.onrender.com/users/book/sort'). then((res)=>{
 
+ }
+//  const Payment = () => {
+//  const [ ] = useState([ ])
+
+//   const getSearchFilter = () =>{
+//     axios.get('https://easyrent.onrender.com/users/book/sort').then((res)=>{
+
+//     })
+
+//     }
+//   }
+
+
   //     })
 
   //     }
@@ -60,6 +62,7 @@ const Payment = () => {
   //   .then(res => console.log(res))
   //   .catch(err => console.log(err))
   // }
+
 
   return (
     <div>
@@ -99,6 +102,7 @@ const Payment = () => {
           <PaystackButton className="paystack-button" {...componentProps} />
         </div>
       </div>
+
     </div>
 
     // </div>

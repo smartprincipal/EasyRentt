@@ -1,6 +1,9 @@
 .passProps{
  display: flex;
 }
+.viewMoreImg{
+ height: 300px;
+}
 @media screen  and (max-width:800px) {
  .viewMoreImg{
   width: 280px;

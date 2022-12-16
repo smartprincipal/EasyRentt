@@ -4,9 +4,13 @@ import CatalogueCard from '../../Components/CatalogueCard/CatalogueCard';
 import CatalogueNavbar from '../../Components/CatalogueNavbar/CatalogueNavbar';
 import Overview from '../../Components/Overview/Overview';
 import Footer from '../../Components/Footer/Footer';
+import Button from '../../Components/Button/Button';
+
 
 const Oshodi = () => {
+
   return (
+
     <div className='maincatcardcontainer'>
         <div>
             <CatalogueNavbar />
@@ -23,6 +27,9 @@ const Oshodi = () => {
         <div className='cat-carddiv'>
             <CatalogueCard location='Oshodi' catcardmaindiv='catcardmaindiv1' cardtype='Suite 9 Bedroom'/>
             <CatalogueCard location='Oshodi' catcardmaindiv='catcardmaindiv6' cardtype='Plant View Bedroom'/>
+        </div>
+        <div className='buttoncontain'>
+            <Button text='MORE' btnclass='catbutton' />
         </div>
         <div>
             <Overview heading='Oshodi' />

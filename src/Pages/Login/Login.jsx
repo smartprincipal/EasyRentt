@@ -9,10 +9,15 @@ import { useNavigate } from 'react-router-dom'
 import * as Yup from "yup";
 import Overlay from "../../Components/Overlay/Overlay";
 import axios from 'axios';
+
 import { Link } from "react-router-dom";
 import SignUp from "../Signup/Signup";
+
+
+
 import { useSignIn } from 'react-auth-kit';
 import Spinner from "../../Components/Spinner/Spinner";
+import { Link } from "react-router-dom";
 
 
 const loginStyle = {
@@ -172,7 +177,9 @@ const Login = ({ show, closeModal, loginNav, closeLogin, openSignup }) => {
               Remember Me
             </label>
           </div>
+          <Link to='/ForgetPassword'>
           <p className="login-forgot-password">Forgot Password?</p>
+          </Link>
         </div>
         <Button style={loginStyle} text={"Login"} btnclass={'submit-btn'} />
       </form>
