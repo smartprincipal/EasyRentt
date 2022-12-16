@@ -48,7 +48,7 @@
 .catcardsubdiv1 p{
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 29px;
     /* text-align: center; */
     display: flex;
@@ -79,7 +79,7 @@
 .bed-div p, .bath-div p{
     font-style: normal;
     font-weight: 500;
-    font-size: 10px;
+    font-size: 8px;
     line-height: 22px;
     color: rgba(125, 127, 131, 0.7);
     padding: 0 0.5rem;
@@ -103,72 +103,6 @@
     margin-left: 0.75rem;
 }
 
-
-/*.catalogueImg{
- border-radius: 15px 15px 0px 0px;
-width: 599px;
-height: 500px;
-transition: 1s;
-cursor: pointer;
-}
-.cardContent1{
- padding-left:36px;
- padding-right: 18px;
- border-bottom: 3px solid rgba(125, 127, 131, 0.7);
-}
-.subCardContent1{
- display: flex;
- gap: 100px;
- justify-content: space-between;
- padding-right: 36px;
- padding-left: 18px;
- padding-top: 20px;
-}
-
-.catalogueHead{
- font-style: italic;
- font-family: Inter;
-font-size: 24px;
-font-weight: 600;
-line-height: 29px;
-letter-spacing: 0em;
-text-align: center;
-}
-.catalogueAmount{
- font-style: italic;
- font-family: Inter;
-font-size: 24px;
-font-weight: 700;
-line-height: 29px;
-letter-spacing: 0em;
-text-align: center;
-}
-
-.subCardcontent2{
- display: flex;
- gap: 30px;
- padding-right: 36px;
- padding-left: 18px;
- padding-top: 15px;
- padding-bottom: 10px;
- border-bottom: 2px solid red;
-}
-.subCardcontent22{
- display: flex;
- gap: 10px;
-}
-.viewSection{
- padding: 15px 18px 20px 36px;
- display: flex;
- align-items: center;
- justify-content: space-between;
-}
-.viewSectionIcon{
- display: flex;
- gap: 10px;
-} */
-
-
 /* Strictly for Share button toggle */
 .shareinactive{
     display: none;
@@ -190,28 +124,23 @@ text-align: center;
 
 @media screen and  (max-width: 850px){
     .catCard{
-        width: 350px;
-    }
-
-}
-
-@media screen and  (max-width: 730px){
-    .catCard{
         width: 300px;
     }
 
 }
 
-@media screen and  (max-width: 730px){
+@media screen and  (max-width: 700px){
     .catCard{
-        margin-bottom: 1rem;
+
+        margin: 0.5rem 0.5rem;
     }
 
-}
+} 
 
 @media screen and  (max-width: 350px){
+
     .catCard{
         width: 270px;
     }
-
+    
 }

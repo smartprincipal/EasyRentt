@@ -1,7 +1,7 @@
 import React from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './LandingPage.css';
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { LoginContext } from '../Login/Login'
 import { Carousel } from 'react-responsive-carousel';
 import { useNavigate } from 'react-router-dom';
@@ -31,13 +31,12 @@ import review6 from '../../Assets/review6.svg';
 import Footer from '../../Components/Footer/Footer';
 import Searchbar from '../../Components/Searchbar/Searchbar';
 import {useIsAuthenticated} from 'react-auth-kit';
-// import useToken from '../../useToken'
+
 
 
 const Landingpage = () => {
   const navigate = useNavigate()
   const [loginNav, setLoginNav] = useState()
-  const token = useContext(LoginContext)
 
   // Usestate for Locationcard Component
   const [editLocation] = useState([
@@ -76,7 +75,6 @@ const Landingpage = () => {
       setLoginModal(true)
     }
     const loginClose = () => {
-      console.log(token)
       setLoginModal(false)
     }
     
@@ -89,24 +87,8 @@ const Landingpage = () => {
 
     const isAuthenticated = useIsAuthenticated()
 
-    // const LocationLoginAuth = (item, id, index) => {
-    //   if(!token && id === index + 1){
-    //     console.log(token)
-    //     console.log(item)
-    //     console.log(id)
-    //     console.log(index + 1)
-    //     setLoginNav(item)
-    //     setLoginModal(true)
-    //   } else{
-    //     navigate(item)
-    //   }
-    // }
     const LocationLoginAuth = (item, id, index) => {
       if(!isAuthenticated() && id === index + 1){
-        console.log(isAuthenticated())
-        console.log(item)
-        console.log(id)
-        console.log(index + 1)
         setLoginNav(item)
         setLoginModal(true)
       } else{
@@ -137,10 +119,6 @@ const Landingpage = () => {
         <div>
           <Searchbar searchdiv='inputdiv' imgsource={searchicon} searchinput='herosearch' />
         </div>
-          {/* <div className='inputdiv'>
-            <input type="search" name="search" id="herosearch" placeholder='Where do you want to live?.' />
-            <img src={searchicon} alt="searchicon" className='searchicon'/>
-          </div> */}
 
         {/* Hero Caption */}
           <div className='captiondiv'>
@@ -170,7 +148,7 @@ const Landingpage = () => {
           <h4 className='section3heading'>Find homes that suit your style</h4>
 
           {/* Carousel Component */}
-        <Carousel className='carousel' autoPlay='true' infiniteLoop='true' interval='3000' showThumbs={false}>
+          <Carousel className='carousel' autoPlay='true' infiniteLoop='true' interval='3000' showThumbs={false}>
             <div className='carouseldiv1'>
               <p className='carouseltext'>3-Bedroom Flat</p>
               <div>

@@ -26,6 +26,7 @@
     "react-dropdown-timepicker": "^1.0.4",
     "react-icon": "^1.0.0",
     "react-icons": "^4.7.1",
+    "react-paystack": "^4.0.1",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react';
 import CatalogueNavbar from '../../Components/CatalogueNavbar/CatalogueNavbar'
 import './Viewmore.css'
 import { FaEye } from 'react-icons/fa';
@@ -18,6 +19,8 @@ import { color } from '@mui/system';
 import Post from '../../Components/Post/Post'
 import Calendar from '../../Components/Calendar/Calendar';
 import Button from '../../Components/Button/Button';
+import ViewmoreCarousel from './ViewmoreCarousel';
+
 
 const Viewmore = () => {
  const bedBathIcon = { color: "grey"}
@@ -39,6 +42,18 @@ fontWeight: '500px',
 lineHeight: '39px',
 textAlign: 'center'
  }
+
+  // useState of the modal component for Login
+  const [modalShow, setModalShow] = useState(false);
+
+  const modalHandler = () => {
+    setModalShow(true)
+  }
+
+  const modalClose = () => {
+    setModalShow(false)
+  }
+
 
   return (
     <div>
@@ -98,7 +113,7 @@ textAlign: 'center'
        </p>
        </div>
        <div className="saveSecondApply">
-         <Link to='./'>
+         <Link to='/Payment'>
           Apply
          </Link>
        </div>
@@ -112,8 +127,16 @@ textAlign: 'center'
        />
       ))}
       </div>
-      <p className='blockShow'> Show More</p>
 
+      {/* Button for modal carousel pop up */}
+      <div className='blockShowdiv'>
+        <Button text='Show More' btnclass='blockShow' btnClick={modalHandler}/>
+      </div>
+
+        <div>
+            <ViewmoreCarousel openMyModal={modalShow} closeMyModal={modalClose}/>
+        </div>
+        
 
      </section>
 
