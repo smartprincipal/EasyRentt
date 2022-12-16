@@ -30,6 +30,7 @@ import Login from './Pages/Login/Login';
 import Catalogue from './Pages/Catalogue/Catalogue'
 
 
+
 function App() {
   return (
     <div>
@@ -47,6 +48,7 @@ function App() {
         <Route path="/Oshodi" element={<Oshodi />} />
         <Route path="/Victoriaisland" element={<Victoriaisland />} />
         <Route path="/Yaba" element={<Yaba />} />
+        <Route path="/Ajah" element={<Ajah />} />
         <Route path="/PaymentPersonalInfo" element={<PaymentPersonalInfo />} />
         <Route path="/SchedulePage" element={<SchedulePage />} />
         <Route path="/ViewMap" element={<ViewMap />} />
@@ -58,7 +60,7 @@ function App() {
 
       {/* <Calendar/> */}
       {/* <Time/> */}
-
+      {/* <Viewmore /> */}
        {/* <ForgetPassword/> */}
 
     </div>

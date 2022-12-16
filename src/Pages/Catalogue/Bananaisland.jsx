@@ -4,6 +4,7 @@ import CatalogueCard from '../../Components/CatalogueCard/CatalogueCard';
 import CatalogueNavbar from '../../Components/CatalogueNavbar/CatalogueNavbar';
 import Overview from '../../Components/Overview/Overview';
 import Footer from '../../Components/Footer/Footer';
+import Button from '../../Components/Button/Button';
 
 const Bananaisland = () => {
   return (
@@ -23,6 +24,9 @@ const Bananaisland = () => {
         <div className='cat-carddiv'>
             <CatalogueCard location='Banana Island' catcardmaindiv='catcardmaindiv6' cardtype='Plant View Bedroom'/>
             <CatalogueCard location='Banana Island' catcardmaindiv='catcardmaindiv5' cardtype='Suite 9 Bedroom'/>
+        </div>
+        <div className='buttoncontain'>
+            <Button text='MORE' btnclass='catbutton' />
         </div>
         <div>
             <Overview heading='Banana Island' />

@@ -4,6 +4,8 @@ import CatalogueCard from '../../Components/CatalogueCard/CatalogueCard';
 import CatalogueNavbar from '../../Components/CatalogueNavbar/CatalogueNavbar';
 import Overview from '../../Components/Overview/Overview';
 import Footer from '../../Components/Footer/Footer';
+import Button from '../../Components/Button/Button';
+
 
 const Lekki = () => {
 
@@ -25,6 +27,9 @@ const Lekki = () => {
         <div className='cat-carddiv'>
             <CatalogueCard location='Lekki' catcardmaindiv='catcardmaindiv3' cardtype='Magnolia Height'/>
             <CatalogueCard location='Lekki' catcardmaindiv='catcardmaindiv5' cardtype='Magnolia Height'/>
+        </div>
+        <div className='buttoncontain'>
+            <Button text='MORE' btnclass='catbutton' />
         </div>
         <div>
             <Overview heading='Lekki' />
