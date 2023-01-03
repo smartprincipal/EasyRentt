@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 
 // import CatalogueNavbar from "./Components/CatalogueNavbar/CatalogueNavbar";
 // import CatalogueCard from "./Components/CatalogueCard/CatalogueCard";
+import Payment from "./Components/Payment/Payment";
 import Ajah from "./Pages/Catalogue/Ajah";
 import Bananaisland from "./Pages/Catalogue/Bananaisland";
 import Ikeja from "./Pages/Catalogue/Ikeja";
@@ -22,6 +23,7 @@ import PaymentPersonalInfo from "./Pages/PaymentPersonalInfo/PaymentPersonalInfo
 // import Spinner from './Components/Spinner/Spinner'
 import ForgetPassword from "./Pages/ForgetPassword/ForgetPassword";
 import PaymentCardPage from "./Pages/PaymentCardPage/PaymentCardPage";
+
 // import Schedule from "./Pages/SchedulePage/Schedule";
 // import Time from "./Components/Time/Time";
 import Landingpage from './Pages/LandingPage/LandingPage';
@@ -31,13 +33,16 @@ import Catalogue from './Pages/Catalogue/Catalogue'
 
 
 
+
 function App() {
   return (
     <div>
+
       <Routes>
         <Route path="/" element={<Landingpage />} /> 
         <Route path="/Catalogue" element={<Catalogue />} />
         <Route path="/Signup" element={<Signup />} />
+
         <Route path="/Login" element={<Login />} />
         <Route path="/Bananaisland" element={ <Bananaisland />} />
         <Route path="/Ikeja" element={<Ikeja />} />
@@ -56,12 +61,11 @@ function App() {
         <Route path="/Map" element={<Map />} />
         <Route path="/PaymentCardPage" element={<PaymentCardPage />} />
         <Route path="/ForgetPassword" element={<ForgetPassword />} />
+        <Route path="/Payment" element={<Payment />} />
+
       </Routes>
 
-      {/* <Calendar/> */}
-      {/* <Time/> */}
-      {/* <Viewmore /> */}
-       {/* <ForgetPassword/> */}
+     
 
     </div>
   );

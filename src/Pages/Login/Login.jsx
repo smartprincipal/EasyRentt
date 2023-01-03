@@ -4,21 +4,20 @@ import google from "../../Assets/google.svg";
 import facebook from "../../Assets/facebook.svg";
 import twitter from "../../Assets/twitter.svg";
 import { useFormik } from "formik";
-import { useState, createContext } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import * as Yup from "yup";
 import Overlay from "../../Components/Overlay/Overlay";
 import axios from 'axios';
-// import { Link } from "react-router-dom";
-import useToken from '../../useToken'
-// import SignUp from "../Signup/Signup";
+
+import { Link } from "react-router-dom";
+import SignUp from "../Signup/Signup";
+
+
+
 import { useSignIn } from 'react-auth-kit';
 import Spinner from "../../Components/Spinner/Spinner";
-import { Link } from "react-router-dom";
 
-
-
-export const LoginContext = createContext();
 
 const loginStyle = {
   width: "100%",
@@ -32,17 +31,9 @@ const loginStyle = {
   fontWeight: '700',
 };
 const Login = ({ show, closeModal, loginNav, closeLogin, openSignup }) => {
-  // const setToken = (userToken) => {
-  //   sessionStorage.setItem('token', JSON.stringify(userToken));
-  // }
-  // const getToken = () => {
-  //   const tokenString = sessionStorage.getItem('token');
-  // const userToken = JSON.parse(tokenString);
-  // return userToken?.token
-    
-  // }
+ 
   const [loginSpin, setLoginSpin] = useState(false)
-  const signIn = useSignIn()
+  const signIn = useSignIn() 
   const loginHide = closeLogin
   const signupShow = openSignup
 
@@ -51,9 +42,7 @@ const Login = ({ show, closeModal, loginNav, closeLogin, openSignup }) => {
     signupShow()
   }
   const navigate = useNavigate()
-  const { token, setToken } = useToken();
 
-  // const [token, setToken] = useState()
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -77,15 +66,6 @@ const Login = ({ show, closeModal, loginNav, closeLogin, openSignup }) => {
       console.log(values);
       console.log(values.password);
 
-      // const response = axios.post('https://easyrent.onrender.com/users/login', values);
-      // console.log(response)
-      // signIn({
-      //   token: response.data.token,
-      //   expiresIn: 3000,
-      //   tokenType: 'Bearer',
-      //   authState: { email: values.email }
-        
-      // })
       setLoginSpin(true)
       axios.post('https://easyrent.onrender.com/users/login', values)
       .then(res => {
@@ -94,28 +74,19 @@ const Login = ({ show, closeModal, loginNav, closeLogin, openSignup }) => {
              token: res.data.token,
              expiresIn: 3000,
              tokenType: 'Bearer',
-             authState: { email: values.email }
-            
+             authState: { email: values.email }     
            })
-           
-        console.log(res.data)
-        // setToken(res.data.token)
-        console.log(token)
-        console.log(loginNav)
         if(loginNav !== undefined) {
-          console.log(typeof loginNav)
           navigate(`${loginNav}`)
         } else {
           loginHide()
-        }
-        
+        }  
       })
       .catch(err => console.log(err))
       console.log(values)
       onSubmitProps.resetForm()
     },
   });
-  // console.log(formik.errors);
 
 
   const googleLoginHandler = () =>  {
@@ -137,7 +108,7 @@ const Login = ({ show, closeModal, loginNav, closeLogin, openSignup }) => {
 
 
   return (
-    loginSpin ? <Spinner /> : <LoginContext.Provider value={token}>
+    loginSpin ? <Spinner /> : <>
     <Overlay OverlayShow={show} overlayClick={closeModal}/>
     <div className="login-container" style={{transform: show ? 'translateY(0)':'translateY(-100vh)', opacity: show ? '1':'0'}}>
       <h3 className="login-heading">Login</h3>
@@ -223,7 +194,7 @@ const Login = ({ show, closeModal, loginNav, closeLogin, openSignup }) => {
       </div>
       <span className="times" onClick={closeModal}>&times;</span>
     </div>
-    </LoginContext.Provider>
+    </>
   );
 };
 
